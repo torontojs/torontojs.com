@@ -9,9 +9,8 @@ import Home from "./components/Home.js"
 import AboutUs from "./components/AboutUs.js";
 
 import EntryPointStore from "./entryPoint/Store";
-import {serverPort} from "./appConfig";
+import {serverPort, environment} from "./appConfig";
 
-const productionEnv = process.env.NODE_ENV === "production";
 const app = koa();
 
 let webpackEntryFileName = EntryPointStore.entryPoint;
