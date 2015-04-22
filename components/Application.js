@@ -5,7 +5,7 @@ export default class extends React.Component {
     return (
       <html>
         <head>
-          <script src={this.props.clientPath} async deferred />
+          <script src={this.props.clientPath} async="async" />
         </head>
         <body>
           <this.props.page />

@@ -10,18 +10,22 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node server.js --harmony"
+    "start": "babel-node server.js",
+    "debug": "babel-node --debug server.js"
   },
   "dependencies": {
     "babel": "~5.0.0",
     "babel-core": "^5.1.10",
     "babel-loader": "^5.0.0",
     "css-loader": "^0.10.1",
+    "events": "^1.0.2",
+    "flux": "^2.0.1",
     "koa": "~0.19.0",
     "koa-route": "~2.4.1",
     "less": "^2.5.0",
     "less-loader": "^2.2.0",
     "react": "~0.13.0",
+    "react-hot-loader": "^1.2.5",
     "style-loader": "^0.10.2",
     "webpack": "~1.8.5",
     "webpack-dev-server": "~1.8.0"

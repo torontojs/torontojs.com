@@ -46,4 +46,5 @@ export default {
 , plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(true)
   ]
+, devtool: "eval"
 }
