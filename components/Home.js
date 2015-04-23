@@ -10,9 +10,6 @@ export default React.createClass({
     this.setState({
       greeting: event.target.value
     });
-
-    debugger;
-
   }
 , render: function() {
     return (

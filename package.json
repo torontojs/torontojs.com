@@ -10,8 +10,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node server.js",
-    "debug": "babel-node --debug server.js"
+    "start": "babel-node --harmony server.js",
+    "debug": "babel-node --harmony --debug server.js"
   },
   "dependencies": {
     "babel": "~5.0.0",
