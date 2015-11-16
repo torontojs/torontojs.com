@@ -25,6 +25,10 @@ export default class ContactComponent extends React.Component {
         <p>
           Watch our videos on <a href="http://youtube.com/torontojavascript" target="_blank">YouTube</a>
         </p>
+
+        <p>
+          Check out our code on <a href="http://github.com/torontojs">Github</a>
+        </p>
       </div>
     );
   }
