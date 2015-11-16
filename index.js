@@ -25,6 +25,11 @@ ReactDOM.render(
       />
 
       <Route
+        path="sponsors"
+        component={require("./sponsors")}
+      />
+
+      <Route
         path="about"
         component={require("./about")}
       />

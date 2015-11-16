@@ -41,6 +41,12 @@ export default class SideBarComponent extends React.Component {
               Videos
             </Link>
           </li>
+
+          <li className={this.classNameForPath("/sponsors")}>
+            <Link to="/sponsors">
+              Sponsors
+            </Link>
+          </li>
         </ul>
 
         <BottomNav />
