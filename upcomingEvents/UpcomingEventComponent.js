@@ -3,8 +3,17 @@ import React from "react";
 export default class UpcomingEventComponent extends React.Component {
   render() {
     let event = this.props.event;
+    let meetupName, startDate, description, url;
 
-    let [meetupName, startDate,, description,,url] = event.description.split("\n");
+    if(event.organizer.displayName === "NodeSchool Toronto") {
+      meetupName = "NodeSchool";
+      startDate = (new Date(event.start.date)).toDateString();
+      description = event.description;
+      url = "http://nodeschool.io/toronto/";
+    }
+    else {
+      [meetupName, startDate,, description,,url] = event.description.split("\n");
+    }
 
     return (
       <div className="event">
