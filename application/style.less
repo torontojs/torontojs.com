@@ -1,0 +1,27 @@
+@import "./base.less";
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  min-width: @screen-md-min;
+}
+
+.content-area {
+  padding-top: 60px;
+  padding-left: 30px;
+
+  hr {
+    margin: 0 -@grid-gutter-width / 2;
+    border: 0;
+    border-top: 2px solid @gray-light;
+  }
+}
+
+.sidebar-container {
+  height: 100vh;
+  position: fixed;
+  padding-right: 30px;
+  width: 250px;
+}
