@@ -43,7 +43,7 @@ export default class UpcomingEventsComponent extends React.Component {
         );
 
         if(index < sortedEvents.length - 1) {
-          memo.push(<hr />);
+          memo.push(<hr key={`hr-${eventID}`} />);
         }
 
         return memo;
