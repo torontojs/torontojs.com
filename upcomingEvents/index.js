@@ -20,9 +20,8 @@ export default class UpcomingEventsComponent extends React.Component {
 
     if(this.props.upcomingEvents) {
       let sortedEvents = Object.keys(this.props.upcomingEvents).sort((x, y) => {
-        //           this is Meetup formatting...                   and this is NodeSchool formatting
-        let xStart = this.props.upcomingEvents[x].start.dateTime || this.props.upcomingEvents[x].start.date;
-        let yStart = this.props.upcomingEvents[y].start.dateTime || this.props.upcomingEvents[y].start.date;
+        let xStart = this.props.upcomingEvents[x].start.dateTime;
+        let yStart = this.props.upcomingEvents[y].start.dateTime;
 
         if(xStart > yStart) {
           return 1;

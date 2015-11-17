@@ -7,7 +7,7 @@ export default class UpcomingEventComponent extends React.Component {
 
     if(event.organizer.displayName === "NodeSchool Toronto") {
       meetupName = "NodeSchool";
-      startDate = (new Date(event.start.date)).toDateString();
+      startDate = (new Date(event.start.dateTime)).toDateString();
       description = event.description;
       url = "http://nodeschool.io/toronto/";
     }
