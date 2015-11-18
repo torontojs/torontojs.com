@@ -33,7 +33,8 @@ if(!config.plugins) config.plugins = [];
 
 config.plugins.push(
   new webpack.DefinePlugin({
-    "process.env.NODE_ENV": JSON.stringify("development")
+    __DEV__: true
+  , "process.env.NODE_ENV": JSON.stringify("development")
   })
 );
 

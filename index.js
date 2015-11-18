@@ -4,11 +4,11 @@ import {Router, Route, IndexRoute} from "react-router";
 
 import history from "./history";
 
-import {ga} from "./analytics";
+import analytics from "./analytics";
 
 function handleRouterUpdate() {
   if(process.env.NODE_ENV === "production") {
-    ga("send", "pageview");
+    analytics("send", "pageview");
   }
 }
 
