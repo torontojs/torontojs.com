@@ -1,6 +1,14 @@
 var webpack = require("webpack");
 var config = require("./webpack.config.js");
 
+config.module.loaders[0].query = {
+  stage: 0
+, optional: [
+    "optimisation.react.constantElements"
+  , "optimisation.react.inlineElements"
+  ]
+}
+
 if(!config.plugins) config.plugins = [];
 
 config.plugins.push(
