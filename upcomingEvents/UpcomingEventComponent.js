@@ -28,7 +28,7 @@ const MONTHS = [
 export default class UpcomingEventComponent extends React.Component {
   render() {
     let event = this.props.event;
-    let meetupName, startDate, displayStartDate, description, url;
+    let meetupName, description, url;
 
     if(event.organizer.displayName === "NodeSchool Toronto") {
       meetupName = "NodeSchool";
@@ -39,12 +39,12 @@ export default class UpcomingEventComponent extends React.Component {
       [meetupName,,,description,,url] = event.description.split("\n");
     }
 
-    startDate = new Date(event.start.dateTime);
+    let startDate = new Date(event.start.dateTime);
 
     let day = DAYS_OF_WEEK[startDate.getDay()];
     let month = MONTHS[startDate.getMonth()];
     let date = startDate.getDate();
-    let hours = (startDate.getHours() % 12) + 1;
+    let hours = startDate.getHours() % 12;
     let minutes = startDate.getMinutes();
     let AMPM = startDate.getHours() < 12 ? "AM" : "PM";
 
@@ -52,7 +52,7 @@ export default class UpcomingEventComponent extends React.Component {
       minutes = `0${minutes}`;
     }
 
-    displayStartDate = `${day}, ${month} ${date} at ${hours}:${minutes}${AMPM}`;
+    let displayStartDate = `${day}, ${month} ${date} at ${hours}:${minutes}${AMPM}`;
 
     return (
       <div className="event">
