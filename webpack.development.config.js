@@ -29,4 +29,12 @@ config.module.loaders[0].query = {
   }
 }
 
+if(!config.plugins) config.plugins = [];
+
+config.plugins.push(
+  new webpack.DefinePlugin({
+    "process.env.NODE_ENV": JSON.stringify("development")
+  })
+);
+
 module.exports = config;
