@@ -4,8 +4,16 @@ import {Router, Route, IndexRoute} from "react-router";
 
 import history from "./history";
 
+import {ga} from "./analytics";
+
+function handleRouterUpdate() {
+  if(process.env.NODE_ENV === "production") {
+    ga("send", "pageview");
+  }
+}
+
 ReactDOM.render(
-  <Router history={history}>
+  <Router history={history} onUpdate={handleRouterUpdate}>
     <Route
       component={require("./application")}
       path="/"
