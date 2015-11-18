@@ -16,6 +16,10 @@ export default class ContactComponent extends React.Component {
 
         <p>
           Find us on <a href="http://www.meetup.com/torontojs/" target="_blank">Meetup</a>
+          <br/>
+          Please do not message us on Meetup.
+          <br/>
+          Email us instead at <a href="mailto:team@torontojs.com">team@torontojs.com</a>
         </p>
 
         <p>
