@@ -1,15 +1,24 @@
 import path from "path";
 import express from "express";
+import compression from "compression";
 
 const app = express();
 const port = process.env.PORT || 1337;
 
-app.use("/assets", express.static("build"));
+// express static wants this in milliseconds
+// even when the Cache-Control header is in seconds :P
+const oneDay = 1000 * 60 * 60 * 24;
 
-app.use("/public", express.static("public"));
+const staticContentOptions = { maxAge: oneDay };
+
+app.use(compression());
+
+app.use("/assets", express.static("build", staticContentOptions));
+
+app.use("/public", express.static("public", staticContentOptions));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(__dirname, "public", "index.html"), staticContentOptions);
 });
 
 app.listen(port);
