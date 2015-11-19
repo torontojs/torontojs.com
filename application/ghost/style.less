@@ -1,0 +1,29 @@
+@import "../variables.less";
+
+.ghost {
+  background-color: @gray-lighter;
+  z-index: -1000;
+  position: absolute;
+  left: @grid-gutter-width / 2;
+  width: @sidebar-container-width - @sidebar-padding-right - @grid-gutter-width / 2;
+  height: 40px;
+  border-radius: @border-radius-large;
+}
+
+.ghost-enter {
+  opacity: 0.01;
+}
+
+.ghost-enter.ghost-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-out;
+}
+
+.ghost-leave {
+  opacity: 1;
+}
+
+.ghost-leave.ghost-leave-active {
+  opacity: 0.01;
+  transition: opacity 250ms ease-out;
+}
