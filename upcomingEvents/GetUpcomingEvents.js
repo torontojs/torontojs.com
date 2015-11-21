@@ -13,6 +13,7 @@ const javaScriptMeetups = {
 , htmlto: makeGoogleCalendarURL("89aheia1si29mqt1kvuprggnid983m87@import.calendar.google.com")
 , meteorjs: makeGoogleCalendarURL("sv5rg9q32cg6qhabdgi33fjur45vcilh@import.calendar.google.com")
 , nodeschool: makeGoogleCalendarURL("3drnie5h5b5mr73acgcqpvvc2k@group.calendar.google.com")
+, oneoffevents: makeGoogleCalendarURL("torontojs.com_o83mhhuck726m114hgkk3hl79g@group.calendar.google.com")
 , reactjs: makeGoogleCalendarURL("59s1qmiqr7bo98uqkek5ba7er2eduk3t@import.calendar.google.com")
 , torontojs: makeGoogleCalendarURL("k6l8oiu416ftcjpjetn0r7a79me8pq4r@import.calendar.google.com")
 };

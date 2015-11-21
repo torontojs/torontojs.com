@@ -30,13 +30,17 @@ export default class UpcomingEventComponent extends React.Component {
     let event = this.props.event;
     let meetupName, description, url;
 
-    if(event.organizer.displayName === "NodeSchool Toronto") {
-      meetupName = "NodeSchool";
-      description = event.description;
-      url = "http://nodeschool.io/toronto/";
-    }
-    else {
-      [meetupName,,,description,,url] = event.description.split("\n");
+    switch(event.organizer.displayName) {
+      case "NodeSchool Toronto":
+        meetupName = "NodeSchool";
+        description = event.description;
+        url = "http://nodeschool.io/toronto/";
+        break;
+      case "One-Off JavaScript Events in Toronto":
+        [,url,meetupName,...description] = event.description.split("\n");
+        break;
+      default:
+        [meetupName,,,description,,url] = event.description.split("\n");
     }
 
     let startDate = new Date(event.start.dateTime);
