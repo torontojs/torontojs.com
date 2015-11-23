@@ -17,9 +17,14 @@ export default class UpcomingEventsComponent extends React.Component {
 
   render() {
     let upcomingEvents = [];
+    let currentTime = Date.now();
 
     if(this.props.upcomingEvents) {
-      let sortedEvents = Object.keys(this.props.upcomingEvents).sort((x, y) => {
+      let sortedEvents = Object.keys(this.props.upcomingEvents).filter((key) => {
+        let eventFinish = (new Date(this.props.upcomingEvents[key].end.dateTime)).getTime();
+
+        return (currentTime - eventFinish) <= 0;
+      }).sort((x, y) => {
         let xStart = this.props.upcomingEvents[x].start.dateTime;
         let yStart = this.props.upcomingEvents[y].start.dateTime;
 
