@@ -1,51 +1,52 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import {Router, Route, IndexRoute} from "react-router";
+import SideBar from "./application/sideBar/Component";
+import Ghost from "./application/ghost/Component";
 
-import history from "./history";
+export default class ApplicationComponent extends React.Component {
+  componentDidMount() {
+    require("./application/style.less");
+  }
 
-import analytics from "./analytics";
+  render() {
+    let content = this.props.children;
 
-function handleRouterUpdate() {
-  if(process.env.NODE_ENV === "production") {
-    analytics("send", "pageview");
+    if(!content) {
+      content = (
+        <div>
+          <h1>Welcome!</h1>
+
+          <p>
+            There are so many different JavaScript events happening, how does one possibly keep up with it all?
+          </p>
+
+          <p>
+            That's what we're here for. We help the Toronto and surrounding communities learn, promote, schedule,
+            host, record, share, and participate in front-end web related culture.
+          </p>
+
+          <p>
+            We also host our own events every two weeks. Join us for a Tech Talk night, Hack night, and Pub night
+            to get away from the restrictions of work and discuss the latest tech with fellow members.
+          </p>
+
+          <p>
+            Toronto JavaScript is an entirely community run organization. We are developers
+            managing a community for other developers.
+          </p>
+        </div>
+      );
+    };
+
+    return (
+      <div className="row">
+        <div className="col-xs-3 sidebar-container">
+          <SideBar />
+          <Ghost />
+        </div>
+        <div className="col-xs-9 col-xs-offset-3 content-area">
+          {content}
+        </div>
+      </div>
+    );
   }
 }
-
-ReactDOM.render(
-  <Router history={history} onUpdate={handleRouterUpdate}>
-    <Route
-      component={require("./application")}
-      path="/"
-    >
-      <IndexRoute
-        component={require("./home")}
-      />
-
-      <Route
-        path="upcoming_events"
-        component={require("./upcomingEvents")}
-      />
-
-      <Route
-        path="videos"
-        component={require("./videos")}
-      />
-
-      <Route
-        path="sponsors"
-        component={require("./sponsors")}
-      />
-
-      <Route
-        path="about"
-        component={require("./about")}
-      />
-
-      <Route
-        path="contact"
-        component={require("./contact")}
-      />
-    </Route>
-  </Router>
-, document.getElementsByClassName("container")[0]);

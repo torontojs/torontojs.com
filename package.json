@@ -26,6 +26,7 @@
     "isomorphic-fetch": "^2.2.0",
     "less": "^2.5.3",
     "less-loader": "^2.2.1",
+    "pegasus-loader": "^0.5.0",
     "react": "^0.14.2",
     "react-addons-css-transition-group": "^0.14.3",
     "react-dom": "^0.14.2",
@@ -44,6 +45,6 @@
     "webpack-hot-middleware": "^2.5.0"
   },
   "engines": {
-    "node": "5.0.x"
+    "node": "5.1.x"
   }
 }
