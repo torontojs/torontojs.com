@@ -25,51 +25,48 @@ const MONTHS = [
 , "December"
 ];
 
-export default class UpcomingEventComponent extends React.Component {
-  render() {
-    let event = this.props.event;
-    let meetupName, description, url;
+export default ({ event }) => {
+  let meetupName, description, url;
 
-    switch(event.organizer.displayName) {
-      case "NodeSchool Toronto":
-        meetupName = "NodeSchool";
-        description = event.description;
-        url = "http://nodeschool.io/toronto/";
-        break;
-      case "One-Off JavaScript Events in Toronto":
-        [,url,meetupName,...description] = event.description.split("\n");
-        break;
-      default:
-        [meetupName,,,description,,url] = event.description.split("\n");
-    }
-
-    let startDate = new Date(event.start.dateTime);
-
-    let day = DAYS_OF_WEEK[startDate.getDay()];
-    let month = MONTHS[startDate.getMonth()];
-    let date = startDate.getDate();
-    let hours = startDate.getHours() % 12;
-    let minutes = startDate.getMinutes();
-    let AMPM = startDate.getHours() < 12 ? "AM" : "PM";
-
-    if(minutes <= 10) {
-      minutes = `0${minutes}`;
-    }
-
-    let displayStartDate = `${day}, ${month} ${date} at ${hours}:${minutes}${AMPM}`;
-
-    return (
-      <div className="event">
-        <h4>{meetupName} - {event.summary}</h4>
-        <p>{displayStartDate}</p>
-        <p>{event.location}</p>
-        <p>{description}</p>
-        <p>
-          <a href={url} target="_blank">
-            {url}
-          </a>
-        </p>
-      </div>
-    );
+  switch(event.organizer.displayName) {
+    case "NodeSchool Toronto":
+      meetupName = "NodeSchool";
+      description = event.description;
+      url = "http://nodeschool.io/toronto/";
+      break;
+    case "One-Off JavaScript Events in Toronto":
+      [,url,meetupName,...description] = event.description.split("\n");
+      break;
+    default:
+      [meetupName,,,description,,url] = event.description.split("\n");
   }
+
+  let startDate = new Date(event.start.dateTime);
+
+  let day = DAYS_OF_WEEK[startDate.getDay()];
+  let month = MONTHS[startDate.getMonth()];
+  let date = startDate.getDate();
+  let hours = startDate.getHours() % 12;
+  let minutes = startDate.getMinutes();
+  let AMPM = startDate.getHours() < 12 ? "AM" : "PM";
+
+  if(minutes <= 10) {
+    minutes = `0${minutes}`;
+  }
+
+  let displayStartDate = `${day}, ${month} ${date} at ${hours}:${minutes}${AMPM}`;
+
+  return (
+    <div className="event">
+      <h4>{meetupName} - {event.summary}</h4>
+      <p>{displayStartDate}</p>
+      <p>{event.location}</p>
+      <p>{description}</p>
+      <p>
+        <a href={url} target="_blank">
+          {url}
+        </a>
+      </p>
+    </div>
+  );
 }
