@@ -6,6 +6,8 @@ import history from "./history";
 
 import analytics from "./analytics";
 
+import "./application/style.less";
+
 import pegasus from "pegasus!.";
 
 function handleRouterUpdate() {

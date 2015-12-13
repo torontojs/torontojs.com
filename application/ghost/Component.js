@@ -4,7 +4,7 @@ import {Motion, spring} from "react-motion";
 import CSSTransitionGroup from "react-addons-css-transition-group";
 import GhostStore from "./Store";
 
-const springRate = [90, 11];
+const springRate = [90, 12]; // stiffness, dampening
 
 @connect({top: GhostStore})
 export default class GhostComponent extends React.Component {
