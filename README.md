@@ -20,7 +20,7 @@ The official website for TorontoJS.
     
     `npm run dev`
 
-## Disussion
+## Discussion
 
 Join the [TorontoJS Slack](http://slack.torontojs.com) chat in the #help channel.
 
