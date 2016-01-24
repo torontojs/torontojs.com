@@ -13,6 +13,7 @@
   "author": "Tasveer Singh",
   "license": "MIT",
   "dependencies": {
+    "babel": "<6.0.0",
     "babel-core": "<6.0.0",
     "babel-loader": "<6.0.0",
     "babel-runtime": "<6.0.0",
