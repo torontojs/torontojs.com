@@ -10,7 +10,7 @@ import moveGhost from "../ghost/move";
 
 @connect(mapReducersToProps({route: routeReducer}))
 export default class SideBarComponent extends React.Component {
-  componentDidMount() {
+  componentDidMount = () => {
     require("./style.less");
 
     // give it a bit to set the styles
@@ -18,6 +18,10 @@ export default class SideBarComponent extends React.Component {
   }
 
   resetGhostPosition = () => {
+    if(!this.props.route.location) {
+      return this.props.dispatch(moveGhost(0));
+    }
+
     let dimensions;
 
     switch(this.props.route.location.pathname) {
@@ -53,7 +57,7 @@ export default class SideBarComponent extends React.Component {
     this.props.dispatch(moveGhost(dimensions.top));
   }
 
-  render() {
+  render = () => {
     return (
       <div className="sidebar" onMouseLeave={this.resetGhostPosition}>
         <Link to="/">
