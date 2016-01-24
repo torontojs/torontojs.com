@@ -1,26 +1,26 @@
 import React from "react";
 
+import {connect} from "react-redux";
+import {mapReducersToProps} from "incremental-redux-reducers";
+import routeReducer from "../../routeReducer";
 import {Link} from "react-router";
 
 import TorontoJSLogo from "../logo";
-import MoveGhost from "../ghost/Move";
+import moveGhost from "../ghost/move";
 
+@connect(mapReducersToProps({route: routeReducer}))
 export default class SideBarComponent extends React.Component {
-  static contextTypes = {
-    location: React.PropTypes.object
-  }
-
   componentDidMount() {
     require("./style.less");
 
-    // give it a second to set the styles
+    // give it a bit to set the styles
     setTimeout(this.resetGhostPosition, 0);
   }
 
   resetGhostPosition = () => {
     let dimensions;
 
-    switch(this.context.location.pathname) {
+    switch(this.props.route.location.pathname) {
       case "/upcoming_events":
         dimensions = this.refs.upcoming_events;
         break;
@@ -37,20 +37,20 @@ export default class SideBarComponent extends React.Component {
         dimensions = this.refs.contact;
         break;
       default:
-        return new MoveGhost(0);
+        return this.props.dispatch(moveGhost(0));
     }
 
     if(dimensions) {
       dimensions = dimensions.getBoundingClientRect();
 
-      new MoveGhost(dimensions.top);
+      this.props.dispatch(moveGhost(dimensions.top));
     }
   }
 
-  handleMouseOver(event) {
+  handleMouseOver = (event) => {
     let dimensions = event.target.getBoundingClientRect();
 
-    new MoveGhost(dimensions.top);
+    this.props.dispatch(moveGhost(dimensions.top));
   }
 
   render() {
