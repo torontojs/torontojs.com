@@ -1,12 +1,9 @@
 import React from "react";
 
-//import {connect} from "griffin.js";
 import {connect} from "react-redux";
 import {mapReducersToProps} from "incremental-redux-reducers";
 
-//import UpcomingEventsStore from "./UpcomingEventsStore";
 import upcomingEventsReducer from "./reducer";
-//import GetUpcomingEvents from "./GetUpcomingEvents";
 import getUpcomingEvents from "./getUpcomingEvents";
 
 import UpcomingEvent from "./UpcomingEventComponent";
@@ -14,7 +11,6 @@ import UpcomingEvent from "./UpcomingEventComponent";
 @connect(mapReducersToProps({upcomingEvents: upcomingEventsReducer}))
 export default class UpcomingEventsComponent extends React.Component {
   componentDidMount() {
-    //new GetUpcomingEvents();
     this.props.dispatch(getUpcomingEvents());
 
     require("./style.less");
