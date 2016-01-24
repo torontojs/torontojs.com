@@ -1,30 +1,25 @@
-import {Action} from "griffin.js";
-
 import fetch from "isomorphic-fetch";
 
-export default class GetUpcomingEvent extends Action {
-  constructor(meetupName, meetupInfoURL) {
-    super();
+export default function getUpcomingEvent(meetupName, meetupInfoURL) {
+  return (dispatch) => {
+    const handleSuccess = (response) => {
+      response.json().then((calendar) => {
+        dispatch({
+          type: "UPCOMING_EVENTS_ADD"
+        , events: calendar.items
+        });
+      })
+    }
 
-    this.meetupName = meetupName;
-    this.meetupInfoURL = meetupInfoURL;
+    const handleFailure = (error) => {
+      console.log("ERROR!!!");
 
-    fetch(this.meetupInfoURL, {mode: "cors"}).then(
-      this.handleSuccess.bind(this)
-    , this.handleFailure.bind(this)
-    )
-  }
+      console.trace();
+    }
 
-  handleSuccess(response) {
-    response.json().then((calendar) => {
-      this.events = calendar.items;
-      this.dispatch();
-    });
-  }
-
-  handleFailure(response) {
-    console.log("ERROR!!!");
-
-    console.trace();
+    fetch(meetupInfoURL, {mode: "cors"}).then(
+      handleSuccess
+    , handleFailure
+    );
   }
 }

@@ -1,12 +1,13 @@
 import React from "react";
-import {connect} from "griffin.js";
+import {connect} from "react-redux";
+import {mapReducersToProps} from "incremental-redux-reducers";
 import {Motion, spring} from "react-motion";
 import CSSTransitionGroup from "react-addons-css-transition-group";
-import GhostStore from "./Store";
+import ghostReducer from "./reducer";
 
 const springRate = [90, 12]; // stiffness, dampening
 
-@connect({top: GhostStore})
+@connect(mapReducersToProps({top: ghostReducer}))
 export default class GhostComponent extends React.Component {
   componentDidMount() {
     require("./style.less");

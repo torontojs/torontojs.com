@@ -1,6 +1,4 @@
-import {Action} from "griffin.js";
-
-import GetUpcomingEvent from "./GetUpcomingEvent";
+import getUpcomingEvent from "./getUpcomingEvent";
 
 function makeGoogleCalendarURL(calID) {
   return `https://www.googleapis.com/calendar/v3/calendars/${calID}/events?singleEvents=true&key=AIzaSyA-xW0xIfYvro-zD0JCLRfJwqs6s2MmKmU`;
@@ -18,14 +16,12 @@ const javaScriptMeetups = {
 , torontojs: makeGoogleCalendarURL("k6l8oiu416ftcjpjetn0r7a79me8pq4r@import.calendar.google.com")
 };
 
-export default class GetUpcomingEvents extends Action {
-  constructor() {
-    super();
-
+export default function getUpcomingEvents() {
+  return (dispatch) => {
     for(let meetupName in javaScriptMeetups) {
       let meetupInfoURL = javaScriptMeetups[meetupName];
 
-      new GetUpcomingEvent(meetupName, meetupInfoURL);
+      dispatch(getUpcomingEvent(meetupName, meetupInfoURL));
     }
   }
 }
