@@ -14,6 +14,8 @@ const javaScriptMeetups = {
 , oneoffevents: makeGoogleCalendarURL("torontojs.com_o83mhhuck726m114hgkk3hl79g@group.calendar.google.com")
 , reactjs: makeGoogleCalendarURL("59s1qmiqr7bo98uqkek5ba7er2eduk3t@import.calendar.google.com")
 , torontojs: makeGoogleCalendarURL("k6l8oiu416ftcjpjetn0r7a79me8pq4r@import.calendar.google.com")
+, webgl: makeGoogleCalendarURL("1sdm6dini4ii2rvgqcmincg48h34v82l@import.calendar.google.com")
+, webperf: makeGoogleCalendarURL("h1tmhrt7ruckpk3ad20jaq55amvaiubu@import.calendar.google.com")
 };
 
 export default function getUpcomingEvents() {
