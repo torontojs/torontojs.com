@@ -8,7 +8,7 @@ export default () =>
   <div className={container}>
     <div className={innerContainer}>
       <div className={titleContainer}>
-        <div className={title}>TORONTO<b>JS</b></div>
+        <div className={title}>TORONTO<b style={{ color: `#fdd8d6` }}>JS</b></div>
         <ReactRotatingText
           className={rotator}
           items={[`MEETUPS`, `TECH TALKS`, `WORKSHOPS`, `SOCIAL EVENTS`]}
@@ -41,11 +41,12 @@ let titleContainer = css({
   justifyContent: `center`,
   flexDirection: `column`,
   alignItems: `center`,
-  fontFamily: `'Montserrat', sans-serif`,
+  fontFamily: theme.fancyFont,
   color: `white`,
   padding: `100px 0 25px`,
   zIndex: 1,
   position: `relative`,
+  letterSpacing: `4px`,
 })
 
 let title = css({
