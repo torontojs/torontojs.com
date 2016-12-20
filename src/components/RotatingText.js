@@ -1,23 +1,4 @@
 let React = require(`react`)
-import { insertRule } from 'glamor'
-
-insertRule(`
-  .react-rotating-text-cursor {
-    animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
-  }
-
-  @keyframes blinking-cursor {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-`)
 
 class ReactRotatingText extends React.Component {
   state = {

@@ -15,6 +15,30 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>TorontoJS.com</title>
+
+    <style>
+      html {
+        font-family: 'Roboto', sans-serif;
+      }
+      body {
+        margin: 0;
+      }
+      .react-rotating-text-cursor {
+        animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+      }
+
+      @keyframes blinking-cursor {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
