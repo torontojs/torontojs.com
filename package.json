@@ -16,7 +16,6 @@
     "glamor": "^2.20.12",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "react-rotating-text": "^1.1.2",
     "recompose": "^0.21.0"
   },
   "homepage": "https://torontojs.github.io/torontojs.com",
