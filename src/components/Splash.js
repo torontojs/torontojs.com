@@ -3,9 +3,14 @@ import { css } from 'glamor'
 import theme from '../theme'
 import ReactRotatingText from './RotatingText'
 import Logo from './Logo'
+import SlackIcon from './SlackIcon'
 
-export default () =>
-  <div className={container}>
+export default ({ backgroundColor }) =>
+  <div className={container(backgroundColor)}>
+    <a className={slackLink} href="http://slack.torontojs.com/" target="_blank">
+      <SlackIcon style={{ width: `30px`, marginRight: `10px` }} />
+      <b>Join us on Slack</b>
+    </a>
     <div className={innerContainer}>
       <div className={titleContainer}>
         <div className={title}>TORONTO<b style={{ color: `#fdd8d6` }}>JS</b></div>
@@ -18,9 +23,17 @@ export default () =>
     </div>
   </div>
 
-let container = css({
-  height: `100vh`,
-  backgroundColor: theme.primary,
+let slackLink = css({
+  color: `white`,
+  padding: `10px`,
+  display: `flex`,
+  alignItems: `center`,
+  textDecoration: `none`,
+})
+
+let container = backgroundColor => css({
+  height: `80vh`,
+  backgroundColor: theme[backgroundColor || `primary`],
   position: `relative`,
 })
 

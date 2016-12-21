@@ -23,23 +23,21 @@ compose(
     },
   })
 )
-(({ events }) => {
-  return (
-    <div>
-      <div className={sectionTitle}>
-        UPCOMING EVENTS
-      </div>
-      <div className={card}>
-        {events.map((e, i) =>
-          <div key={e.id}>
-            <Event event={e} />
-            {i < events.length - 1 && <hr />}
-          </div>
-        )}
-      </div>
+(({ events }) =>
+  <div>
+    <div className={sectionTitle}>
+      UPCOMING EVENTS
     </div>
-  )
-})
+    <div className={card}>
+      {events.map((e, i) =>
+        <div key={e.id}>
+          <Event event={e} />
+          {i < events.length - 1 && <hr />}
+        </div>
+      )}
+    </div>
+  </div>
+)
 
 let sectionTitle = css({
   fontFamily: theme.fancyFont,
