@@ -4,34 +4,34 @@ import Color from 'color'
 import theme from '../theme'
 
 const DAYS_OF_WEEK = [
-  `Sunday`
-, `Monday`
-, `Tuesday`
-, `Wednesday`
-, `Thursday`
-, `Friday`
-, `Saturday`,
+  `Sunday`,
+  `Monday`,
+  `Tuesday`,
+  `Wednesday`,
+  `Thursday`,
+  `Friday`,
+  `Saturday`,
 ]
 
 const MONTHS = [
-  `January`
-, `February`
-, `March`
-, `April`
-, `May`
-, `June`
-, `July`
-, `August`
-, `September`
-, `October`
-, `November`
-, `December`,
+  `January`,
+  `February`,
+  `March`,
+  `April`,
+  `May`,
+  `June`,
+  `July`,
+  `August`,
+  `September`,
+  `October`,
+  `November`,
+  `December`,
 ]
 
 export default ({ event }) => {
   let meetupName, description, url
 
-  switch(event.organizer.displayName) {
+  switch (event.organizer.displayName) {
   case `NodeSchool Toronto`:
     meetupName = `NodeSchool`
     description = event.description
@@ -53,14 +53,14 @@ export default ({ event }) => {
   let minutes = startDate.getMinutes()
   let AMPM = startDate.getHours() < 12 ? `AM` : `PM`
 
-  if(minutes <= 10) {
+  if (minutes <= 10) {
     minutes = `0${minutes}`
   }
 
   let displayStartDate = `${day}, ${month} ${date} at ${hours}:${minutes}${AMPM}`
 
   return (
-    <div className="event">
+    <div>
       <h4>{meetupName} - {event.summary}</h4>
       <p>{displayStartDate}</p>
       <p>{event.location}</p>

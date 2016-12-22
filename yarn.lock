@@ -1140,6 +1140,10 @@ clap@^1.0.9:
   dependencies:
     chalk "^1.1.3"
 
+classnames@^2.1.2:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
+
 clean-css@3.4.x:
   version "3.4.23"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-3.4.23.tgz#604fbbca24c12feb59b02f00b84f1fb7ded6d001"
@@ -1800,9 +1804,9 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-minimal@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/eslint-config-minimal/-/eslint-config-minimal-0.3.2.tgz#4ba61cb47c0e68030f98fca544b41f0e46b30340"
+eslint-config-minimal@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-minimal/-/eslint-config-minimal-0.4.0.tgz#35f9c4e2d393e5fb4d013b96934d714a99d9ae35"
 
 eslint-config-react-app@^0.5.0:
   version "0.5.0"
@@ -4361,6 +4365,12 @@ react-dom@^15.4.1:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
 
+react-rotating-text@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/react-rotating-text/-/react-rotating-text-1.1.2.tgz#0136cabc753345ba33cfdb9c43043a9171a1e069"
+  dependencies:
+    classnames "^2.1.2"
+
 react-router@next:
   version "4.0.0-alpha.6"
   resolved "https://registry.yarnpkg.com/react-router/-/react-router-4.0.0-alpha.6.tgz#239fcf9a6ba7997021022c9b51d72d370f7b6bf4"
@@ -4498,14 +4508,14 @@ rechoir@^0.6.2:
   dependencies:
     resolve "^1.1.6"
 
-recompose@^0.21.0:
-  version "0.21.0"
-  resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.21.0.tgz#91d50059a04439bba4c3a7b9cd4aef4755a9af19"
+recompose@^0.21.1:
+  version "0.21.1"
+  resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.21.1.tgz#d46cc2ccc8966f438982289fdbc0a870b32233af"
   dependencies:
     change-emitter "^0.1.2"
     fbjs "^0.8.1"
     hoist-non-react-statics "^1.0.0"
-    symbol-observable "^0.2.4"
+    symbol-observable "^1.0.4"
 
 recursive-readdir@2.1.0:
   version "2.1.0"
@@ -5016,9 +5026,9 @@ svgo@^0.7.0:
     sax "~1.2.1"
     whet.extend "~0.9.9"
 
-symbol-observable@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-0.2.4.tgz#95a83db26186d6af7e7a18dbd9760a2f86d08f40"
+symbol-observable@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.4.tgz#29bf615d4aa7121bdd898b22d4b3f9bc4e2aa03d"
 
 "symbol-tree@>= 3.1.0 < 4.0.0":
   version "3.2.1"

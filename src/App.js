@@ -1,7 +1,8 @@
 import React from 'react'
 import Splash from './components/Splash'
 import Events from './components/Events'
-import { BrowserRouter, Match, Miss, Link } from 'react-router'
+import { BrowserRouter, Match, Miss } from 'react-router'
+import theme from './theme'
 
 let App = () =>
   <BrowserRouter>
@@ -19,10 +20,13 @@ let App = () =>
         exactly pattern="/workshop"
         component={() =>
           <div>
-            <Splash backgroundColor="secondary"/>
+            <Splash backgroundColor={theme.secondary} />
             <Events />
           </div>
         }
+      />
+      <Miss
+        component={() => <div>heyo 404</div>}
       />
     </div>
   </BrowserRouter>

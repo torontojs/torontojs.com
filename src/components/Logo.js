@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default props =>
+export default ({ fill, ...props }) =>
   <svg x="0px" y="0px" viewBox="0 0 199 199.333328" enableBackground="new 0 0 199 199.333328" {...props}>
-    <rect x="-0.125" y="-0.000008" fill="#EE3124" width="199.125" height="199.333328"/>
+    <rect x="-0.125" y="-0.000008" fill={fill} width="199.125" height="199.333328"/>
     <g>
       <g>
         <circle fill="#9B9BA9" cx="40.112305" cy="64.434082" r="16.5625"/>

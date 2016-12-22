@@ -5,7 +5,7 @@ import ReactRotatingText from './RotatingText'
 import Logo from './Logo'
 import SlackIcon from './SlackIcon'
 
-export default ({ backgroundColor }) =>
+export default ({ backgroundColor = theme.primary }) =>
   <div className={container(backgroundColor)}>
     <a className={slackLink} href="http://slack.torontojs.com/" target="_blank">
       <SlackIcon style={{ width: `30px`, marginRight: `10px` }} />
@@ -19,7 +19,7 @@ export default ({ backgroundColor }) =>
           items={[`MEETUPS`, `TECH TALKS`, `WORKSHOPS`, `SOCIAL EVENTS`]}
         />
       </div>
-      <Logo className={logo} />
+      <Logo className={logo} fill={backgroundColor} />
     </div>
   </div>
 
@@ -33,7 +33,7 @@ let slackLink = css({
 
 let container = backgroundColor => css({
   height: `80vh`,
-  backgroundColor: theme[backgroundColor || `primary`],
+  backgroundColor: backgroundColor || theme.primary,
   position: `relative`,
 })
 
