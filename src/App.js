@@ -20,8 +20,10 @@ let App = () =>
         exactly pattern="/workshop"
         component={() =>
           <div>
-            <Splash backgroundColor={theme.secondary} />
-            <Events />
+            <Splash
+              backgroundColor={theme.secondary}
+              page="WORKSHOP"
+            />
           </div>
         }
       />
