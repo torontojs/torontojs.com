@@ -9,7 +9,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-react": "^6.8.0",
     "gh-pages": "^0.12.0",
-    "react-scripts": "0.8.4"
+    "react-scripts": "^0.8.5"
   },
   "dependencies": {
     "color": "^1.0.3",
@@ -20,7 +20,7 @@
     "react-router": "next",
     "recompose": "^0.21.1"
   },
-  "homepage": "https://torontojs.github.io/torontojs.com",
+  "homepage": "http://torontojs.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
