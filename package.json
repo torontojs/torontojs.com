@@ -20,7 +20,7 @@
     "react-router": "next",
     "recompose": "^0.21.1"
   },
-  "homepage": "http://torontojs.com",
+  "homepage": "https://torontojs.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
