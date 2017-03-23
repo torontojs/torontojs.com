@@ -4,13 +4,20 @@ import theme from '../theme'
 import ReactRotatingText from './RotatingText'
 import Logo from './Logo'
 import SlackIcon from './SlackIcon'
+import Octocat from './Octocat'
 
 export default ({ backgroundColor = theme.primary, page = `TORONTO` }) =>
   <div className={container(backgroundColor)}>
-    <a className={slackLink} href="http://slack.torontojs.com/" target="_blank">
-      <SlackIcon style={{ width: `30px`, marginRight: `10px` }} />
-      <b>Join us on Slack</b>
-    </a>
+    <div className={row}>
+      <a className={slackLink} href="http://slack.torontojs.com/" target="_blank">
+        <SlackIcon style={{ width: `30px`, marginRight: `10px` }} />
+        <b>Join us on Slack</b>
+      </a>
+      <a className={githubLink} href="https://github.com/torontojs/torontojs.com" target="_blank">
+        <b>Contribute to this site</b>
+        <Octocat width="30px" style={{ marginLeft: `10px` }} />
+      </a>
+    </div>
     <div className={innerContainer}>
       <div className={titleContainer}>
         <div className={title}>{page}<b style={{ color: `#fdd8d6` }}>JS</b></div>
@@ -23,7 +30,20 @@ export default ({ backgroundColor = theme.primary, page = `TORONTO` }) =>
     </div>
   </div>
 
+let row = css({
+  display: `flex`,
+})
+
 let slackLink = css({
+  color: `white`,
+  padding: `10px`,
+  display: `flex`,
+  alignItems: `center`,
+  textDecoration: `none`,
+})
+
+let githubLink = css({
+  marginLeft: `auto`,
   color: `white`,
   padding: `10px`,
   display: `flex`,
