@@ -20,7 +20,7 @@ export default ({ backgroundColor = theme.primary, page = `TORONTO` }) =>
     </div>
     <div className={innerContainer}>
       <div className={titleContainer}>
-        <div className={title}>{page}<b style={{ color: `#fdd8d6` }}>JS</b></div>
+        <div className={title}>{page}&nbsp;<b style={{ color: `#ffffff` }}>JS</b></div>
         <ReactRotatingText
           className={rotator}
           items={[`MEETUPS`, `TECH TALKS`, `WORKSHOPS`, `SOCIAL EVENTS`]}
