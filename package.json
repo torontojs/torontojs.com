@@ -3,23 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "babel-eslint": "^7.1.1",
-    "eslint": "^3.12.2",
-    "eslint-config-minimal": "^0.4.0",
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "eslint-config-minimal": "^0.4.2",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-react": "^6.8.0",
+    "eslint-plugin-react": "^6.10.3",
     "gh-pages": "^0.12.0",
-    "react-scripts": "^0.8.5"
+    "react-scripts": "^0.9.5"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
     "color": "^1.0.3",
     "glamor": "^2.20.12",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "react-rotating-text": "^1.1.2",
-    "react-router": "next",
-    "recompose": "^0.21.1"
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-rotating-text": "^1.2.0",
+    "react-router-dom": "^4.1.1",
+    "recompose": "^0.23.1"
   },
   "homepage": "https://torontojs.github.io",
   "scripts": {
