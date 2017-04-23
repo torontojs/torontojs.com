@@ -1,42 +1,37 @@
 import React from 'react'
 import Splash from './components/Splash'
 import Events from './components/Events'
-import { BrowserRouter, Match, Miss } from 'react-router'
+import ErrorPage from './components/ErrorPage'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import theme from './theme'
-//
-// let App = () =>
-//   <BrowserRouter>
-//     <div>
-//       <Match
-//         exactly pattern="/"
-//         component={() =>
-//           <div>
-//             <Splash />
-//             <Events />
-//           </div>
-//         }
-//       />
-//       <Match
-//         exactly pattern="/workshop"
-//         component={() =>
-//           <div>
-//             <Splash
-//               backgroundColor={theme.secondary}
-//               page="WORKSHOP"
-//             />
-//           </div>
-//         }
-//       />
-//       <Miss
-//         component={() => <div>heyo 404</div>}
-//       />
-//     </div>
-//   </BrowserRouter>
 
 let App = () =>
-  <div>
-    <Splash />
-    <Events />
-  </div>
+  <BrowserRouter>
+    <div>
+      <Switch>
+        <Route
+          exact path="/"
+          component={() =>
+            <div>
+              <Splash />
+              <Events />
+            </div>
+          }
+        />
+        <Route
+          exact path="/workshop"
+          component={() =>
+            <div>
+              <Splash
+                backgroundColor={theme.secondary}
+                page="WORKSHOP"
+              />
+            </div>
+          }
+        />
+        <Route component={ErrorPage} />
+      </Switch>
+    </div>
+  </BrowserRouter>
 
 export default App
