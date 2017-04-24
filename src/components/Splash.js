@@ -14,10 +14,11 @@ export default ({ backgroundColor = theme.primary, page = `TORONTO` }) =>
         <b>Join us on Slack</b>
       </a>
       <a className={githubLink} href="https://github.com/torontojs/torontojs.com" target="_blank">
+        <Octocat width="30px" style={{ marginRight: `10px` }} />
         <b>Contribute to this site</b>
-        <Octocat width="30px" style={{ marginLeft: `10px` }} />
       </a>
     </div>
+    
     <div className={innerContainer}>
       <div className={titleContainer}>
         <div className={title}>{page}&nbsp;<b style={{ color: `#ffffff` }}>JS</b></div>
@@ -31,11 +32,13 @@ export default ({ backgroundColor = theme.primary, page = `TORONTO` }) =>
   </div>
 
 let row = css({
-  display: `flex`,
+  width: '50%',
+  display: `block`,
 })
 
 let slackLink = css({
-  color: `white`,
+  fontSize: '1.2em',
+  color: `white !important`,
   padding: `10px`,
   display: `flex`,
   alignItems: `center`,
@@ -43,8 +46,8 @@ let slackLink = css({
 })
 
 let githubLink = css({
-  marginLeft: `auto`,
-  color: `white`,
+  fontSize: '1.2em',
+  color: `white !important`,
   padding: `10px`,
   display: `flex`,
   alignItems: `center`,
