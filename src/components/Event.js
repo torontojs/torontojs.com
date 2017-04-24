@@ -38,10 +38,10 @@ export default ({ event }) => {
     url = `http://nodeschool.io/toronto/`
     break
   case `One-Off JavaScript Events in Toronto`:
-    [,url,meetupName,...description] = event.description.split(`\n`)
+    [, url, meetupName, ...description] = event.description.split(`\n`)
     break
   default:
-    [meetupName,,,description,,url] = event.description.split(`\n`)
+    [meetupName,,, description,, url] = event.description.split(`\n`)
   }
 
   let startDate = new Date(event.start.dateTime)

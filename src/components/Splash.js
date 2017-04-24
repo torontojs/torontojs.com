@@ -2,9 +2,9 @@ import React from 'react'
 import { css } from 'glamor'
 import theme from '../theme'
 import ReactRotatingText from './RotatingText'
-import Logo from './Logo'
-import SlackIcon from './SlackIcon'
-import Octocat from './Octocat'
+import Logo from './svg/Logo'
+import SlackIcon from './svg/SlackIcon'
+import Octocat from './svg/Octocat'
 
 export default ({ backgroundColor = theme.primary, page = `TORONTO` }) =>
   <div className={container(backgroundColor)}>
