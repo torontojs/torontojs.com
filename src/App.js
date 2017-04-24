@@ -2,6 +2,7 @@ import React from 'react'
 import Splash from './components/Splash'
 import Events from './components/Events'
 import ErrorPage from './components/ErrorPage'
+import Burger from './components/Burger'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import theme from './theme'
 
@@ -13,6 +14,7 @@ let App = () =>
           exact path="/"
           component={() =>
             <div>
+              <Burger />
               <Splash />
               <Events />
             </div>
