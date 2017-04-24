@@ -14,12 +14,12 @@
   "dependencies": {
     "babel-polyfill": "^6.23.0",
     "color": "^1.0.3",
-    "glamor": "^2.20.12",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-rotating-text": "^1.2.0",
     "react-router-dom": "^4.1.1",
-    "recompose": "^0.23.1"
+    "recompose": "^0.23.1",
+    "styled-components": "2.0.0-15"
   },
   "homepage": "https://torontojs.github.io",
   "scripts": {
