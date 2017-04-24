@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react'
 import styled from 'styled-components'
 import theme from '../theme'
@@ -72,7 +74,12 @@ let Rotator = styled(ReactRotatingText)`
   font-size: 26px;
 `
 
-export default ({ backgroundColor = theme.primary, page = `TORONTO` }) => (
+type Props = {
+  backgroundColor?: string,
+  page?: string,
+}
+
+export default ({ backgroundColor = theme.primary, page = `TORONTO` }: Props) => (
   <Container backgroundColor={backgroundColor}>
     <Header>
       <SlackLink href="http://slack.torontojs.com/" target="_blank">
