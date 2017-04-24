@@ -33,9 +33,17 @@
       html {
         font-family: 'Roboto', sans-serif;
       }
+
       body {
         margin: 0;
       }
+
+      /* Overriding Chrome "feature" */
+      a:-webkit-any-link{
+        text-decoration: none !important;
+        color: inherit;
+      }
+
       .react-rotating-text-cursor {
         animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
       }
