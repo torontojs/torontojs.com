@@ -67,7 +67,8 @@ export default class Burger extends React.Component {
             <Menu right styles={ menu_styles } >
                 <a id="burger_home" className="menu-item" href="/">Home</a>
                 <a id="burger_jobs" className="menu-item" href="http://jobs.torontojs.com">Job Postings</a>
-                <a onClick={this.showSettings} className="menu-item" href="">Settings</a>
+                <a id="burger_twitter" className="menu-item" href="http://twitter.com/TorontoJS">Twitter</a>
+                <a id="burger_youtube" className="menu-item" href="https://www.youtube.com/channel/UC1samyyfqiKmOT6fq3uVO1A">YouTube</a>
             </Menu>
         )
     }
