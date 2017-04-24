@@ -38,12 +38,6 @@
         margin: 0;
       }
 
-      /* Overriding Chrome "feature" */
-      a:-webkit-any-link{
-        text-decoration: none !important;
-        color: inherit;
-      }
-
       .react-rotating-text-cursor {
         animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
       }
@@ -59,6 +53,17 @@
           opacity: 0;
         }
       }
+
+      /* Overriding Chrome "feature" */
+      a:-webkit-any-link{
+        text-decoration: none !important;
+        color: inherit;
+      }
+
+      /* Wouldn't work in Burger component file */
+      .menu-item { font-size: 1.3em; margin-bottom: 17%; }
+      .menu-item:hover { color: #FFFFCC }
+
     </style>
 
     <!-- Start Single Page Apps for GitHub Pages -->
