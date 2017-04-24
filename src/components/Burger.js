@@ -31,7 +31,6 @@ const menu_styles = {
 
   bmMenu: {
     background: '#770000',
-    // color: '#FFFFCC',
     color: '#FFFFFF',
     padding: '2.5em 1.5em 0',
     fontSize: '1.15em',
