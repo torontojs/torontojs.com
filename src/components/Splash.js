@@ -8,7 +8,7 @@ import Octocat from './Octocat'
 
 export default ({ backgroundColor = theme.primary, page = `TORONTO` }) =>
   <div className={container(backgroundColor)}>
-    <div className={row}>
+    <div className={`${row} ${header}`}>
       <a className={slackLink} href="http://slack.torontojs.com/" target="_blank">
         <SlackIcon style={{ width: `30px`, marginRight: `10px` }} />
         <b>Join us on Slack</b>
@@ -34,6 +34,11 @@ export default ({ backgroundColor = theme.primary, page = `TORONTO` }) =>
 let row = css({
   width: '50%',
   display: `block`,
+})
+
+let header = css({
+  position: `relative`,
+  zIndex: 1,
 })
 
 let slackLink = css({
