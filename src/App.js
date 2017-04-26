@@ -5,7 +5,7 @@ import ErrorPage from './components/ErrorPage'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import theme from './theme'
 
-let App = () =>
+let App = () => (
   <BrowserRouter>
     <div>
       <Switch>
@@ -33,5 +33,6 @@ let App = () =>
       </Switch>
     </div>
   </BrowserRouter>
+)
 
 export default App

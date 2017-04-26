@@ -1,5 +1,5 @@
 import React from "react"
-import { css } from 'glamor'
+import styled from 'styled-components'
 import Color from 'color'
 import theme from '../theme'
 
@@ -27,6 +27,14 @@ const MONTHS = [
   `November`,
   `December`,
 ]
+
+let Link = styled.a`
+  text-decoration: none;
+  color: ${theme.link};
+  &:hover {
+    color: ${Color(theme.link).darken(0.5).rgb().string()};
+  }
+`
 
 export default ({ event }) => {
   let meetupName, description, url
@@ -66,18 +74,10 @@ export default ({ event }) => {
       <p>{event.location}</p>
       <p>{description}</p>
       <p>
-        <a className={link} href={url} target="_blank">
+        <Link href={url} target="_blank">
           Event Details
-        </a>
+        </Link>
       </p>
     </div>
   )
 }
-
-let link = css({
-  textDecoration: `none`,
-  color: theme.link,
-  ':hover': {
-    color: Color(theme.link).darken(0.5).rgb().string(),
-  },
-})
