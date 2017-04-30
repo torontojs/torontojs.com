@@ -1,25 +1,21 @@
 import React from 'react'
+import styled from 'styled-components'
 import Splash from './Splash'
-import { css } from 'glamor'
-import theme from '../theme'
 
-let ErrorPage = () =>
+const Page = styled.section`
+  padding: 20px;
+  max-width: 750px;
+  margin: 0 auto;
+`
+
+let ErrorPage = () => (
   <div>
     <Splash />
-    <div className={sectionTitle}>
-      Uh oh! Something went wrong.
-    </div>
-    <div>
-      [Insert witty gif here]
-    </div>
+    <Page>
+      <p>Uh oh! Something went wrong.</p>
+      <p>[Insert witty gif here]</p>
+    </Page>
   </div>
-
-let sectionTitle = css({
-  fontFamily: theme.fancyFont,
-  letterSpacing: `2px`,
-  display: `flex`,
-  justifyContent: `center`,
-  paddingTop: `35px`,
-})
+)
 
 export default ErrorPage

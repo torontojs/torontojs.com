@@ -1,9 +1,23 @@
 import React from 'react'
 import { lifecycle, withState, compose } from 'recompose'
-import { css } from 'glamor'
+import styled from 'styled-components'
 import theme from '../theme'
 import eventUrls from '../data/events'
 import Event from './Event'
+
+let SectionTitle = styled.div`
+  font-family: ${theme.fancyFont};
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  padding-top: 35px;
+`
+
+let Card = styled.div`
+  padding: 20px;
+  max-width: 750px;
+  margin: 0 auto;
+`
 
 export default
 compose(
@@ -23,32 +37,18 @@ compose(
     },
   })
 )
-(({ events }) =>
+(({ events }) => (
   <div>
-    <div className={sectionTitle}>
+    <SectionTitle>
       UPCOMING EVENTS
-    </div>
-    <div className={card}>
+    </SectionTitle>
+    <Card>
       {events.map((e, i) =>
         <div key={e.id}>
           <Event event={e} />
           {i < events.length - 1 && <hr />}
         </div>
       )}
-    </div>
+    </Card>
   </div>
-)
-
-let sectionTitle = css({
-  fontFamily: theme.fancyFont,
-  letterSpacing: `2px`,
-  display: `flex`,
-  justifyContent: `center`,
-  paddingTop: `35px`,
-})
-
-let card = css({
-  padding: `20px`,
-  maxWidth: `750px`,
-  margin: `0 auto`,
-})
+))
