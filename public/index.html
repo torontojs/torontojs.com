@@ -70,8 +70,12 @@
 
       /* Wouldn't work in Burger component file */
       .menu-item { font-size: 1.3em; margin-bottom: 17%; }
-      .menu-item:hover { color: #FFFFCC }
+      .menu-item:hover { color: #FFFFCC; }
+      .bm-burger-button { visibility: hidden; }
 
+      @media (max-width: 600px) {
+        .bm-burger-button { visibility: visible; }
+      }
     </style>
 
     <!-- Start Single Page Apps for GitHub Pages -->
