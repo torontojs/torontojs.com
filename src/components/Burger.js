@@ -30,7 +30,7 @@ const menu_styles = {
   },
 
   bmMenu: {
-    background: '#770000',
+    background: 'rgb(60, 60, 60)',
     color: '#FFFFFF',
     padding: '2.5em 1.5em 0',
     fontSize: '1.15em',
@@ -64,7 +64,7 @@ export default class Burger extends React.Component {
     
     render = () => {
         return(
-            <Menu right styles={ menu_styles } >
+            <Menu right styles={ menu_styles } width={ 280 }>
                 <a id="burger_home" className="menu-item" href="/">Home</a>
                 <a id="burger_jobs" className="menu-item" href="http://jobs.torontojs.com">Job Postings</a>
                 <a id="burger_twitter" className="menu-item" href="http://twitter.com/TorontoJS">Twitter</a>
