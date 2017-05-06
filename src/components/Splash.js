@@ -81,6 +81,7 @@ type Props = {
 
 export default ({ backgroundColor = theme.primary, page = `TORONTO` }: Props) => (
   <Container backgroundColor={backgroundColor}>
+    <div id="linkContainer">
       <SlackLink href="http://slack.torontojs.com/" target="_blank">
         <SlackIcon style={{ width: `30px`, marginRight: `10px` }} />
         <b>Join us on Slack</b>
@@ -89,6 +90,7 @@ export default ({ backgroundColor = theme.primary, page = `TORONTO` }: Props) =>
         <Octocat width="30px" style={{ marginRight: `10px` }} />
         <b>Contribute to this site</b>
       </GithubLink>
+    </div>
     <InnerContainer>
       <TitleContainer>
         <Title>{page}&nbsp;<b style={{ color: `#ffffff` }}>JS</b></Title>
