@@ -11,6 +11,7 @@
     "flow-bin": "^0.44.2",
     "gh-pages": "^0.12.0",
     "gitmoji-cli": "^1.5.2",
+    "husky": "^0.13.3",
     "react-scripts": "^0.9.5"
   },
   "dependencies": {
@@ -30,6 +31,7 @@
     "commit": "gitmoji -c",
     "deploy": "npm run build&&gh-pages -d build",
     "eject": "react-scripts eject",
+    "precommit": "eslint src --fix",
     "start": "react-scripts start",
     "test": "eslint src && flow"
   }
