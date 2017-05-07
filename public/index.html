@@ -41,9 +41,11 @@
       html {
         font-family: 'Roboto', sans-serif;
       }
+
       body {
         margin: 0;
       }
+
       .react-rotating-text-cursor {
         animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
       }
@@ -58,6 +60,25 @@
         100% {
           opacity: 0;
         }
+      }
+
+      /* Overriding Chrome "feature" */
+      a:-webkit-any-link{
+        text-decoration: none !important;
+        color: inherit;
+      }
+
+      /* Wouldn't work in Burger component file */
+      .menu-item { font-size: 1.3em; margin-bottom: 17%; }
+      .menu-item:hover { color: #FFFFCC; }
+      .bm-burger-button { visibility: hidden; }
+
+      @media (max-width: 600px) {
+        .bm-burger-button { visibility: visible; }
+      }
+
+      #linkContainer {
+        width: 30%;
       }
     </style>
 
