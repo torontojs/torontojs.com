@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -30,7 +31,6 @@
       Notice the use of %PUBLIC_URL% in the tag above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
-
       Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
@@ -47,7 +47,6 @@
       .react-rotating-text-cursor {
         animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
       }
-
       @keyframes blinking-cursor {
         0% {
           opacity: 0;
@@ -58,6 +57,21 @@
         100% {
           opacity: 0;
         }
+      }
+      /* Overriding Chrome "feature" */
+      a:-webkit-any-link{
+        text-decoration: none !important;
+        color: inherit;
+      }
+      /* Wouldn't work in Burger component file */
+      .menu-item { font-size: 1.3em; margin-bottom: 17%; }
+      .menu-item:hover { color: #FFFFCC; }
+      .bm-burger-button { visibility: hidden; }
+      @media (max-width: 600px) {
+        .bm-burger-button { visibility: visible; }
+      }
+      #linkContainer {
+        width: 30%;
       }
     </style>
 
@@ -99,10 +113,8 @@
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
-
       You can add webfonts, meta tags, or analytics to this file.
       The build step will place the bundled scripts into the <body> tag.
-
       To begin the development, run `npm start`.
       To create a production bundle, use `npm run build`.
     -->

@@ -18,7 +18,7 @@ let Header = styled(Row)`
 `
 
 let SlackLink = styled.a`
-  color: white;
+  color: white !important;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -27,7 +27,7 @@ let SlackLink = styled.a`
 
 let GithubLink = styled.a`
   margin-left: auto;
-  color: white;
+  color: white !important;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -81,16 +81,16 @@ type Props = {
 
 export default ({ backgroundColor = theme.primary, page = `TORONTO` }: Props) => (
   <Container backgroundColor={backgroundColor}>
-    <Header>
+    <div id="linkContainer">
       <SlackLink href="http://slack.torontojs.com/" target="_blank">
         <SlackIcon style={{ width: `30px`, marginRight: `10px` }} />
         <b>Join us on Slack</b>
       </SlackLink>
       <GithubLink href="https://github.com/torontojs/torontojs.com" target="_blank">
+        <Octocat width="30px" style={{ marginRight: `10px` }} />
         <b>Contribute to this site</b>
-        <Octocat width="30px" style={{ marginLeft: `10px` }} />
       </GithubLink>
-    </Header>
+    </div>
     <InnerContainer>
       <TitleContainer>
         <Title>{page}&nbsp;<b style={{ color: `#ffffff` }}>JS</b></Title>
