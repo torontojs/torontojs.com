@@ -8,25 +8,31 @@
     "eslint-config-minimal": "^0.4.2",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-react": "^6.10.3",
+    "flow-bin": "^0.44.2",
     "gh-pages": "^0.12.0",
+    "gitmoji-cli": "^1.5.2",
+    "husky": "^0.13.3",
     "react-scripts": "^0.9.5"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
     "color": "^1.0.3",
-    "glamor": "^2.20.12",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-markdown": "^2.5.0",
     "react-rotating-text": "^1.2.0",
     "react-router-dom": "^4.1.1",
-    "recompose": "^0.23.1"
+    "recompose": "^0.23.1",
+    "styled-components": "2.0.0-15"
   },
   "homepage": "https://torontojs.github.io",
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
+    "commit": "gitmoji -c",
     "deploy": "npm run build&&gh-pages -d build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "precommit": "eslint src --fix",
+    "start": "react-scripts start",
+    "test": "eslint src && flow"
   }
 }

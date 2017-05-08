@@ -1,22 +1,24 @@
+// @flow
+
 import React from 'react'
-import Splash from './components/Splash'
-import Events from './components/Events'
-import ErrorPage from './components/ErrorPage'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import EventsPage from './components/EventsPage'
+import StaticPage from './components/StaticPage'
+import ErrorPage from './components/ErrorPage'
+import Splash from './components/Splash'
 import theme from './theme'
 
-let App = () =>
+let App = () => (
   <BrowserRouter>
     <div>
       <Switch>
         <Route
           exact path="/"
-          component={() =>
-            <div>
-              <Splash />
-              <Events />
-            </div>
-          }
+          component={EventsPage}
+        />
+        <Route
+          exact path="/p(age)?/:page"
+          component={StaticPage}
         />
         <Route
           exact path="/workshop"
@@ -33,5 +35,6 @@ let App = () =>
       </Switch>
     </div>
   </BrowserRouter>
+)
 
 export default App
