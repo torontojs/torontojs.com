@@ -31,7 +31,7 @@
     "commit": "gitmoji -c",
     "deploy": "npm run build&&gh-pages -d build",
     "eject": "react-scripts eject",
-    "precommit": "eslint src --fix",
+    "precommit": "eslint src --fix && git add -A",
     "start": "react-scripts start",
     "test": "eslint src && flow"
   }
