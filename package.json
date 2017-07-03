@@ -16,6 +16,7 @@
   "dependencies": {
     "babel-polyfill": "^6.23.0",
     "color": "^1.0.3",
+    "eslint-config-minimal": "^0.4.2",
     "react": "^15.5.4",
     "react-burger-menu": "^2.0.0",
     "react-dom": "^15.5.4",
@@ -29,6 +30,7 @@
   "scripts": {
     "build": "react-scripts build",
     "commit": "gitmoji -c",
+    "husky": "^0.13.3",
     "deploy": "npm run build&&gh-pages -d build",
     "eject": "react-scripts eject",
     "precommit": "eslint src --fix",
