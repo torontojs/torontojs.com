@@ -6,11 +6,13 @@ import EventsPage from './components/EventsPage'
 import StaticPage from './components/StaticPage'
 import ErrorPage from './components/ErrorPage'
 import Splash from './components/Splash'
+import Burger from './components/Burger'
 import theme from './theme'
 
 let App = () => (
   <BrowserRouter>
     <div>
+      <Burger/>
       <Switch>
         <Route
           exact path="/"
