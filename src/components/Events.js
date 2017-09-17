@@ -36,8 +36,7 @@ compose(
       })
     },
   })
-)
-(({ events }) => (
+)(({ events }) => (
   <div>
     <SectionTitle>
       UPCOMING EVENTS
