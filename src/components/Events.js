@@ -19,36 +19,37 @@ let Card = styled.div`
   margin: 0 auto;
 `
 
-export default
-compose(
+export default compose(
   withState(`events`, `addEvent`, []),
   lifecycle({
     componentDidMount() {
       Object.values(eventUrls).map(async val => {
         let r = await fetch(val, { mode: `cors` })
         let { items } = await r.json()
-        this.props.addEvent(s => [
-          ...s,
-          ...(items || []).filter(event =>
-            event.organizer && +Date.now() < +new Date(event.end.dateTime)
-          ),
-        ].sort((a, b) => +new Date(a.start.dateTime) - +new Date(b.start.dateTime)))
+        this.props.addEvent(s =>
+          [
+            ...s,
+            ...(items || []).filter(
+              event =>
+                event.organizer && +Date.now() < +new Date(event.end.dateTime)
+            )
+          ].sort(
+            (a, b) => +new Date(a.start.dateTime) - +new Date(b.start.dateTime)
+          )
+        )
       })
-    },
+    }
   })
-)
-(({ events }) => (
+)(({ events }) => (
   <div>
-    <SectionTitle>
-      UPCOMING EVENTS
-    </SectionTitle>
+    <SectionTitle>UPCOMING EVENTS</SectionTitle>
     <Card>
-      {events.map((e, i) =>
+      {events.map((e, i) => (
         <div key={e.id}>
           <Event event={e} />
           {i < events.length - 1 && <hr />}
         </div>
-      )}
+      ))}
     </Card>
   </div>
 ))

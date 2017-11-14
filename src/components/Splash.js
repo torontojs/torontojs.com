@@ -26,7 +26,6 @@ let SlackLink = styled.a`
 `
 
 let GithubLink = styled.a`
-  margin-left: auto;
   color: white;
   padding: 10px;
   display: flex;
@@ -34,8 +33,19 @@ let GithubLink = styled.a`
   text-decoration: none;
 `
 
+let LinkText = styled.span`
+  font-weight: bold;
+  padding-left: 10px;
+  transition: color 0.2s ease;
+  &:hover {
+    color: rgb(255, 248, 84);
+  }
+  @media (max-width: 700px) {
+    display: none;
+  }
+`
+
 let InnerContainer = styled.div`
-  height: 100vh;
   margin: 0 auto;
   max-width: 1000px;
 `
@@ -76,24 +86,39 @@ let Rotator = styled(ReactRotatingText)`
 
 type Props = {
   backgroundColor?: string,
-  page?: string,
+  page?: string
 }
 
-export default ({ backgroundColor = theme.primary, page = `TORONTO` }: Props) => (
+export default ({
+  backgroundColor = theme.primary,
+  page = `TORONTO`
+}: Props) => (
   <Container backgroundColor={backgroundColor}>
     <Header>
       <SlackLink href="http://slack.torontojs.com/" target="_blank">
-        <SlackIcon style={{ width: `30px`, marginRight: `10px` }} />
-        <b>Join us on Slack</b>
+        <SlackIcon style={{ width: `30px` }} />
+        <LinkText>Join us on Slack</LinkText>
       </SlackLink>
-      <GithubLink href="https://github.com/torontojs/torontojs.com" target="_blank">
-        <b>Contribute to this site</b>
-        <Octocat width="30px" style={{ marginLeft: `10px` }} />
+      <GithubLink
+        href="https://github.com/torontojs/torontojs.com"
+        target="_blank"
+      >
+        <Octocat width="30px" />
+        <LinkText>Contribute to this site</LinkText>
+      </GithubLink>
+      <GithubLink
+        href="https://www.youtube.com/channel/UC1samyyfqiKmOT6fq3uVO1A"
+        target="_blank"
+      >
+        <i className="fa fa-youtube-play" style={{ fontSize: `32px` }} />
+        <LinkText>Tech Talks</LinkText>
       </GithubLink>
     </Header>
     <InnerContainer>
       <TitleContainer>
-        <Title>{page}&nbsp;<b style={{ color: `#ffffff` }}>JS</b></Title>
+        <Title>
+          {page}&nbsp;<b style={{ color: `#ffffff` }}>JS</b>
+        </Title>
         <Rotator
           items={[`MEETUPS`, `TECH TALKS`, `WORKSHOPS`, `SOCIAL EVENTS`]}
         />
