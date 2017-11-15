@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 import styled from 'styled-components'
 import Color from 'color'
 import theme from '../theme'
@@ -32,7 +32,10 @@ let Link = styled.a`
   text-decoration: none;
   color: ${theme.link};
   &:hover {
-    color: ${Color(theme.link).darken(0.5).rgb().string()};
+    color: ${Color(theme.link)
+      .darken(0.5)
+      .rgb()
+      .string()};
   }
 `
 
@@ -40,16 +43,16 @@ export default ({ event }) => {
   let meetupName, description, url
 
   switch (event.organizer.displayName) {
-  case `NodeSchool Toronto`:
-    meetupName = `NodeSchool`
-    description = event.description
-    url = `http://nodeschool.io/toronto/`
-    break
-  case `One-Off JavaScript Events in Toronto`:
-    [, url, meetupName, ...description] = event.description.split(`\n`)
-    break
-  default:
-    [meetupName,,, description,, url] = event.description.split(`\n`)
+    case `NodeSchool Toronto`:
+      meetupName = `NodeSchool`
+      description = event.description
+      url = `http://nodeschool.io/toronto/`
+      break
+    case `One-Off JavaScript Events in Toronto`:
+      ;[, url, meetupName, ...description] = event.description.split(`\n`)
+      break
+    default:
+      ;[meetupName, , , description, , url] = event.description.split(`\n`)
   }
 
   let startDate = new Date(event.start.dateTime)
@@ -65,11 +68,15 @@ export default ({ event }) => {
     minutes = `0${minutes}`
   }
 
-  let displayStartDate = `${day}, ${month} ${date} at ${hours}:${minutes}${AMPM}`
+  let displayStartDate = `${day}, ${month} ${date} at ${hours}:${minutes}${
+    AMPM
+  }`
 
   return (
     <div>
-      <h4>{meetupName} - {event.summary}</h4>
+      <h4>
+        {meetupName} - {event.summary}
+      </h4>
       <p>{displayStartDate}</p>
       <p>{event.location}</p>
       <p>{description}</p>

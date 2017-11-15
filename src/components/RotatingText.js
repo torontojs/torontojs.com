@@ -9,11 +9,11 @@ class ReactRotatingText extends React.Component {
   timeouts = []
 
   componentDidMount() {
-    this._animate.bind(this)()   // begin the animation loop
+    this._animate.bind(this)() // begin the animation loop
   }
 
   componentWillUnmount() {
-    this.timeouts.map(x => clearTimeout(x))  // stop all the loops
+    this.timeouts.map(x => clearTimeout(x)) // stop all the loops
   }
 
   _loop(loopingFunc, pause) {
@@ -59,7 +59,7 @@ class ReactRotatingText extends React.Component {
     } else {
       callback()
     }
-  };
+  }
 
   _animate() {
     const { index } = this.state
@@ -78,14 +78,14 @@ class ReactRotatingText extends React.Component {
     type.bind(this)(items[index], () => {
       this._loop(erase.bind(this, nextWord), pause)
     })
-  };
+  }
 
   render() {
     const { color, cursor, className } = this.props
     return (
       <span className={className} style={{ color }}>
-        { this.state.output }
-        { cursor && <span className="react-rotating-text-cursor">|</span> }
+        {this.state.output}
+        {cursor && <span className="react-rotating-text-cursor">|</span>}
       </span>
     )
   }

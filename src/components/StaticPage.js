@@ -4,8 +4,10 @@ import { Link as L } from 'react-router-dom'
 import styled from 'styled-components'
 import logo from './png/logo_circle.png'
 
-const basePath = process.env.NODE_ENV === `development` ? ``
-  : `https://raw.githubusercontent.com/torontojs/torontojs.com/gh-pages`
+const basePath =
+  process.env.NODE_ENV === `development`
+    ? ``
+    : `https://raw.githubusercontent.com/torontojs/torontojs.com/gh-pages`
 
 const Page = styled.section`
   padding: 20px;
@@ -38,9 +40,10 @@ const Link = styled(L)`
 class StaticPage extends Component {
   state = { content: `` }
 
-  async componentDidMount () {
-    let data = await fetch(`${basePath}/pages/${this.props.match.params.page}.md`)
-      .then((response) => response.text())
+  async componentDidMount() {
+    let data = await fetch(
+      `${basePath}/pages/${this.props.match.params.page}.md`
+    ).then(response => response.text())
 
     if (data.match(/<head>/g)) {
       this.props.history.replace({ pathname: `/404` })
@@ -49,7 +52,7 @@ class StaticPage extends Component {
     }
   }
 
-  render () {
+  render() {
     const { content } = this.state
 
     return (

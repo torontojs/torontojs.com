@@ -89,25 +89,36 @@ type Props = {
   page?: string,
 }
 
-export default ({ backgroundColor = theme.primary, page = `TORONTO` }: Props) => (
+export default ({
+  backgroundColor = theme.primary,
+  page = `TORONTO`,
+}: Props) => (
   <Container backgroundColor={backgroundColor}>
     <Header>
       <SlackLink href="http://slack.torontojs.com/" target="_blank">
         <SlackIcon style={{ width: `30px` }} />
         <LinkText>Join us on Slack</LinkText>
       </SlackLink>
-      <GithubLink href="https://github.com/torontojs/torontojs.com" target="_blank">
+      <GithubLink
+        href="https://github.com/torontojs/torontojs.com"
+        target="_blank"
+      >
         <Octocat width="30px" />
         <LinkText>Contribute to this site</LinkText>
       </GithubLink>
-      <GithubLink href="https://www.youtube.com/channel/UC1samyyfqiKmOT6fq3uVO1A" target="_blank">
+      <GithubLink
+        href="https://www.youtube.com/channel/UC1samyyfqiKmOT6fq3uVO1A"
+        target="_blank"
+      >
         <i className="fa fa-youtube-play" style={{ fontSize: `32px` }} />
         <LinkText>Tech Talks</LinkText>
       </GithubLink>
     </Header>
     <InnerContainer>
       <TitleContainer>
-        <Title>{page}&nbsp;<b style={{ color: `#ffffff` }}>JS</b></Title>
+        <Title>
+          {page}&nbsp;<b style={{ color: `#ffffff` }}>JS</b>
+        </Title>
         <Rotator
           items={[`MEETUPS`, `TECH TALKS`, `WORKSHOPS`, `SOCIAL EVENTS`]}
         />
