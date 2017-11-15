@@ -1,3 +1,8 @@
 {
-  "extends": "minimal"
+  "extends": "minimal",
+  "rules": {
+    "indent": [
+      2, "tab", {"SwitchCase": 1}
+  ]
+  }
 }
