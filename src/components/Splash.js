@@ -86,12 +86,12 @@ let Rotator = styled(ReactRotatingText)`
 
 type Props = {
   backgroundColor?: string,
-  page?: string
+  page?: string,
 }
 
 export default ({
   backgroundColor = theme.primary,
-  page = `TORONTO`
+  page = `TORONTO`,
 }: Props) => (
   <Container backgroundColor={backgroundColor}>
     <Header>

@@ -32,13 +32,13 @@ export default compose(
             ...(items || []).filter(
               event =>
                 event.organizer && +Date.now() < +new Date(event.end.dateTime)
-            )
+            ),
           ].sort(
             (a, b) => +new Date(a.start.dateTime) - +new Date(b.start.dateTime)
           )
         )
       })
-    }
+    },
   })
 )(({ events }) => (
   <div>
