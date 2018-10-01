@@ -18,4 +18,5 @@ export default {
   vue: makeGoogleCalendarURL(`32clmdbdnjukvbigjs6k174m44hhc7lu@import.calendar.google.com`),
   webgl: makeGoogleCalendarURL(`1sdm6dini4ii2rvgqcmincg48h34v82l@import.calendar.google.com`),
   webperf: makeGoogleCalendarURL(`h1tmhrt7ruckpk3ad20jaq55amvaiubu@import.calendar.google.com`),
+  polyhack: makeGoogleCalendarURL(`r9dg86fs6utf6gv2dage634dts30ha14@import.calendar.google.com`),
 }
