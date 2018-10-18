@@ -1,5 +1,5 @@
 import React from 'react'
-export default ({ width = `100%`, height = `100%`, fill = `white`, ...props }) => (
+export default ({ width = `100%`, height = `100%`, fill = `currentColor`, ...props }) => (
   <svg width={width} height={height} viewBox="0 0 136 133" version="1.1" {...props}>
     <g transform="matrix(4.16667,0,0,4.16667,-568,-1381.06)">
       <path
