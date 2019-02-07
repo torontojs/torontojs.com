@@ -96,6 +96,10 @@ export default ({ backgroundColor = theme.primary, page = `TORONTO` }: Props) =>
         <i className="fa fa-youtube-play" style={{ fontSize: `32px` }} />
         <LinkText>Tech Talks</LinkText>
       </Link>
+      <Link href="http://meetup.com/torontojs" target="_blank">
+        <i className="fa fa-meetup" style={{ fontSize: `32px` }} />
+        <LinkText>Meetup</LinkText>
+      </Link>
     </Header>
     <InnerContainer>
       <TitleContainer>
