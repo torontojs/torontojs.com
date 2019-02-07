@@ -91,6 +91,10 @@ export default ({ backgroundColor = theme.primary, page = `TORONTO` }: Props) =>
         <SlackIcon style={{ width: `30px` }} />
         <LinkText>Join us on Slack</LinkText>
       </Link>
+      <Link href="http://meetup.com/torontojs" target="_blank">
+        <i className="fa fa-meetup" style={{ fontSize: `32px` }} />
+        <LinkText>Join us on Meetup</LinkText>
+      </Link>
       <Link href="https://github.com/torontojs/torontojs.com" target="_blank">
         <Octocat width="30px" />
         <LinkText>Contribute to this site</LinkText>
