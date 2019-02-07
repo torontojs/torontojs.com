@@ -81,6 +81,9 @@ type Props = {
   page?: string,
 }
 
+const speakerFormId = `1FAIpQLSc_ZA0ElHLsMedjdQjZechw5H1RJNhG1DZxtFTsqhkdut3eFg`
+const speakerFormLink = `https://docs.google.com/forms/d/e/${speakerFormId}/viewform?usp=sf_link`
+
 export default ({ backgroundColor = theme.primary, page = `TORONTO` }: Props) => (
   <Container backgroundColor={backgroundColor}>
     <Header>
@@ -95,6 +98,10 @@ export default ({ backgroundColor = theme.primary, page = `TORONTO` }: Props) =>
       <Link href="https://www.youtube.com/channel/UC1samyyfqiKmOT6fq3uVO1A" target="_blank">
         <i className="fa fa-youtube-play" style={{ fontSize: `32px` }} />
         <LinkText>Tech Talks</LinkText>
+      </Link>
+      <Link href={speakerFormLink} target="_blank">
+        <i className="fa fa-comment" style={{ fontSize: `32px` }} />
+        <LinkText>Give a Talk</LinkText>
       </Link>
     </Header>
     <InnerContainer>
