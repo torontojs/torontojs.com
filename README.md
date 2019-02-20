@@ -1,8 +1,8 @@
 ![img](public/images/apple-icon-180x180.png)
 
-# **[BeagáJS.com](http://beagajs.github.io/)**
+# **[BeagáJS](http://beagajs.github.io/)**
 
-Special thanks to [TorontoJS(http://torontojs.com/)
+Special thanks to [TorontoJS](http://torontojs.com/)
 
 ### Add your meetup to our events feed
 
