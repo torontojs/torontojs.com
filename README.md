@@ -1,6 +1,6 @@
 ![img](public/images/apple-icon-180x180.png)
 
-# **[BeagáJS](http://beagajs.github.io/)**
+# **[BeagáJS](http://beagajs.github.io/beagajs)**
 
 Special thanks to [TorontoJS](http://torontojs.com/)
 
@@ -15,7 +15,7 @@ If you use meetup.com to host your events, then you can create a public Google C
 5. Paste the URL in the dialog box that pops up at step 2 and also check the option to make it publically accessible. 
 6. You should now see the calendar in the sidebar. Click the arrow icon and choose the Calendar settings option.
 7. The section Calendar Address shows the unqie ID of the calendar. 
-8. Submit a PR to the [events.js](beagajs.github.io/blob/master/src/data/events.js) file with the ID
+8. Submit a PR to the [events.js](beagajs/blob/master/src/data/events.js) file with the ID
 
 
 Built with [create-react-app](https://github.com/facebookincubator/create-react-app).

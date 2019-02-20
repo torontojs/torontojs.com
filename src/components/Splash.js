@@ -94,7 +94,7 @@ export default ({ backgroundColor = theme.primary, page = `BEAGÁ` }: Props) => 
         <i className="fa fa-meetup" style={{ fontSize: `32px` }} />
         <LinkText>Join us on Meetup</LinkText>
       </Link>
-      <Link href="https://github.com/beagajs/beagajs.github.io" target="_blank">
+      <Link href="https://github.com/beagajs/beagajs" target="_blank">
         <Octocat width="30px" />
         <LinkText>Contribute to this site</LinkText>
       </Link>

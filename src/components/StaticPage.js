@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import logo from './png/logo_circle.png'
 
 const basePath = process.env.NODE_ENV === `development` ? ``
-  : `https://raw.githubusercontent.com/beagajs/beagajs.github.io/gh-pages`
+  : `https://raw.githubusercontent.com/beagajs/beagajs/gh-pages`
 
 const Page = styled.section`
   padding: 20px;
