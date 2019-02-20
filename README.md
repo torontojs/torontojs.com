@@ -1,6 +1,6 @@
 ![img](public/images/apple-icon-180x180.png)
 
-# **[BeagáJS](http://beagajs.github.io/beagajs)**
+# **[BeagáJS](http://beaga.js.org)**
 
 Special thanks to [TorontoJS](http://torontojs.com/)
 
