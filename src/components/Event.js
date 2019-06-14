@@ -75,7 +75,7 @@ export default ({ event }) => {
       <p>{description}</p>
       <p>
         <Link href={url} target="_blank">
-          Event Details
+          Ver detalhes do evento 
         </Link>
       </p>
     </div>

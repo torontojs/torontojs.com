@@ -39,7 +39,7 @@ compose(
 )(({ events }) => (
   <div>
     <SectionTitle>
-      UPCOMING EVENTS
+      PRÓXIMOS ENCONTROS
     </SectionTitle>
     <Card>
       {events.map((e, i) =>
