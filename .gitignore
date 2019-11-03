@@ -8,6 +8,7 @@ coverage
 
 # production
 build
+dist
 
 # misc
 .DS_Store
@@ -17,3 +18,6 @@ npm-debug.log
 # vim
 *.swp
 *.swo
+
+# parcel
+.cache

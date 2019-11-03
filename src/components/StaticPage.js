@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Link as L } from 'react-router-dom'
 import styled from 'styled-components'
@@ -35,37 +35,37 @@ const Link = styled(L)`
   align-items: center;
 `
 
-class StaticPage extends Component {
-  state = { content: `` }
+const StaticPage = props => {
+  const [content, setContent] = useState(``)
 
-  async componentDidMount () {
-    let data = await fetch(`${basePath}/pages/${this.props.match.params.page}.md`)
-      .then((response) => response.text())
+  useEffect(() => {
+    async function fetchPage() {
+      let data = await fetch(`${basePath}/pages/${props.match.params.page}.md`)
+        .then((response) => response.text())
 
-    if (data.match(/<head>/g)) {
-      this.props.history.replace({ pathname: `/404` })
-    } else {
-      this.setState({ content: data })
+      if (data.match(/<head>/g)) {
+        this.props.history.replace({ pathname: `/404` })
+      } else {
+        setContent(data)
+      }
     }
-  }
 
-  render () {
-    const { content } = this.state
+    fetchPage()
+  })
 
-    return (
+  return (
+    <div>
       <div>
-        <div>
-          <Link to="/">
-            <Logo src={logo} />
-            <span>BACK</span>
-          </Link>
-        </div>
-        <Page>
-          <ReactMarkdown source={content} />
-        </Page>
+        <Link to="/">
+          <Logo src={logo} />
+          <span>BACK</span>
+        </Link>
       </div>
-    )
-  }
+      <Page>
+        <ReactMarkdown source={content} />
+      </Page>
+    </div>
+  )
 }
 
 export default StaticPage
