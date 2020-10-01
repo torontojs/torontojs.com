@@ -18,6 +18,7 @@
     "babel-polyfill": "^6.23.0",
     "color": "^1.0.3",
     "react": "^15.5.4",
+    "react-add-to-calendar": "^0.1.5",
     "react-dom": "^15.5.4",
     "react-markdown": "^2.5.0",
     "react-rotating-text": "^1.2.0",
