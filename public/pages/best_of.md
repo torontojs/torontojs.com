@@ -1,5 +1,9 @@
 ## Best of TorontoJS
 
-#### 1. Dusty
+#### 1. dusty
 
-![dusty](https://i.imgur.com/vX1FOhm.png)
+![bdsm-ai](https://i.imgur.com/vX1FOhm.png)
+
+#### 2. jonlim (with the layup from Jen Saxena)
+
+![pooetry](https://i.imgur.com/wVrKOdj.png)
