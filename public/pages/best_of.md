@@ -11,3 +11,7 @@
 #### 3. haegin
 
 ![squirm my fingers inside](https://i.imgur.com/rVy1zQO.png)
+
+#### 4. jonlim
+
+![ruby on braille](https://i.imgur.com/qoUdh8r.png)
