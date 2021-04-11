@@ -108,7 +108,7 @@ export default ({ event }) => {
       <p>{description}</p>
       <EventButtonsWrap>
         <Link href={url} target="_blank">
-          Event Details
+          Ver detalhes do evento 
         </Link>
         <AddToCalendar event={addToCalendarEvent} buttonTemplate={{ textOnly: true }} />
       </EventButtonsWrap>

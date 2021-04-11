@@ -1,5 +1,5 @@
 {
-  "name": "tjs",
+  "name": "beagajs",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -26,7 +26,7 @@
     "recompose": "^0.23.1",
     "styled-components": "2.0.0-15"
   },
-  "homepage": "https://torontojs.github.io",
+  "homepage": "https://beaga.js.org",
   "scripts": {
     "build": "react-scripts build",
     "commit": "gitmoji -c",
