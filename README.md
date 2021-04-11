@@ -1,7 +1,7 @@
 ![img](public/images/apple-icon-180x180.png)
 
 # **[TorontoJS.com](http://torontojs.com/)**
-
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 ### Add your meetup to our events feed
 
 If you use meetup.com to host your events, then you can create a public Google Calendar Feed with the following steps:
