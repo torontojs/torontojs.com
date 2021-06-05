@@ -6,7 +6,7 @@ programming, especially Javascript!
 
 We value the participation of each member of the community and want
 everyone to have an enjoyable and fulfilling experience. 
-All participants of our online and social gatherings are expected to show respect
+All participants of our online and in-person gatherings are expected to show respect
 and courtesy to other attendees during any Toronto JS event, online discussion, meetup, 
 or conference, whether officially sponsored by Toronto JS or not.
 
@@ -38,6 +38,16 @@ Thank you for helping us create a welcoming space for all.
 <br />
 
 ## THE LONGER VERSION
+### Welcoming behavior
+Examples of behavior that contributes to creating a positive environment include:
+
+- Using welcoming and inclusive language
+- Calling people by preferred pronouns
+- Being respectful of differing viewpoints and experiences
+- Gracefully accepting constructive criticism
+- [Disagreeing productively](https://medium.com/thinking-is-hard/guidelines-for-fruitful-dialogue-9d7d0b46da89)
+- Focusing on what is best for the community
+- Showing empathy towards other community members
 
 ### Unacceptable behavior
 The following types of behavior are unacceptable at Toronto JS, both online and in-person, and constitute code of conduct violations.
@@ -54,19 +64,20 @@ derisive comments regarding technical background, and unwelcome sexual or romant
 
 ### Unwelcoming behavior
 
-Blatant -isms—saying things that are explicitly racist, sexist, homophobic, etc. For example, arguing that some people are less intelligent because of their gender, race or religion. Subtle -isms and small mistakes made in conversation are not code of conduct violations. However, repeating something after it has been pointed out to you that you broke a social rule, or antagonizing or arguing with someone who has pointed out your subtle -ism is considered unwelcoming behavior, and is not allowed at Toronto JS.
+- Blatant -isms –saying things that are explicitly racist, sexist, homophobic, etc. For example, arguing that some people are less intelligent because of their gender, race or religion. Subtle -isms and small mistakes made in conversation are not code of conduct violations. However, repeating something after it has been pointed out to you that you broke a social rule, or antagonizing or arguing with someone who has pointed out your subtle -ism is considered unwelcoming behavior, and is not allowed at Toronto JS.
 
-Maliciousness towards other community members—deliberately attempting to make others feel bad, name-calling, singling out others for derision or exclusion. For example, telling someone they’re not a real programmer or that they don’t belong at Toronto JS.
+- Maliciousness towards other community members—deliberately attempting to make others feel bad, name-calling, singling out others for derision or exclusion. For example, telling someone they’re not a real programmer or that they don’t belong at Toronto JS.
 
-Being especially unpleasant—for example, if we’ve received reports from multiple members or organizer of annoying, rude, or especially distracting behavior.
+- Being especially unpleasant or elitist—for example, if we’ve received reports from multiple members or organizer of annoying, rude, or especially distracting behavior.
 
-Participants asked to stop any harassing or malicious behavior are expected to
-comply immediately.
+Participants asked to stop any harassing or malicious behavior are expected to comply immediately.
 
 Be careful in the words that you choose. Excessive swearing, trolling or the incessant posting of inflammatory comments, sexist, homophobic, transphobic, racist, ableist or otherwise exclusionary jokes can be offensive and hostile towards those around you. 
 
 If a participant engages in behavior that violates our anti-harassment policy or code of conduct, Toronto JS organizers may take any action they deem appropriate, including warning the offender or expulsion from the
 event, gathering or Toronto JS online community.
+
+Moderators have the right and responsibility to remove comments or other contributions that are not aligned to this Code of Conduct, or to suspend temporarily or permanently any members for other behaviors that they deem inappropriate, threatening, offensive, or harmful.
 
 <br />
 
@@ -97,7 +108,14 @@ Subtle -isms are small things that make others feel unwelcome, things that we al
 
 If you see a subtle -ism happen at Toronto JS, you can point it out to the relevant person, either publicly or privately, or you can ask one of organizers to say something. After this, we ask that all further discussion move off of public channels. If you are a third party, and you don't see what could be biased about the comment that was made, feel free to talk to the organizers. Please don't say, "Comment X wasn't homophobic!" Similarly, please don't pile on to someone who made a mistake. The "subtle" in "subtle -isms" means that it's probably not obvious to everyone right away what was wrong with the comment.
 
-We want Toronto JS to be a space with as little bigotry or oppression as possible. Therefore, if you see sexism, racism, or outrage at such things outside Toronto JS and do not experience such issues directly yourself, please don't bring it in for discussion. For example, don't start a discussion of the latest offensive comment from Random Tech Person Y. For many people, especially those who may have spent time in unpleasant work environments, these conversations can be very distracting and disheartening. At Toronto JS, we want to remove as many distractions as possible for marginalized people so they can focus on enjoying programming. There are many places in the world to discuss and debate these issues, but there are few where they can avoid them. We want Toronto JS to be one of those places.
+Moderators will not act on complaints regarding:
+
+- ‘Reverse’ -isms, including ‘reverse racism,’ ‘reverse sexism,’ and ‘cisphobia’
+- Reasonable communication of boundaries, such as 'leave me alone,' 'go away,' or 'I’m not discussing this with you.'
+- Someone’s refusal to explain or debate social justice concepts
+- Criticisms of racist, sexist, cissexist, or otherwise oppressive behavior or assumptions
+
+We want Toronto JS to be a space with as little bigotry or oppression as possible. Therefore, if you see sexism, racism, or outrage at such things outside Toronto JS and also do not experience such issues directly yourself, please don't bring it in for discussion. For example, don't start a discussion of the latest offensive comment from Random Tech Person Y. For many people, especially those who may have spent time in unpleasant work environments, these conversations can turn into long threads that become distracting and disheartening. At Toronto JS, we want to remove as many distractions as possible for marginalized people so they can focus on enjoying programming. There are many places in the world to discuss and debate these issues, but there are few where they can avoid them. We want Toronto JS to be one of those places.
 
 ### Why have social rules?
 The goal isn't to burden everyone with a bunch of annoying rules, or to give us a stick to bludgeon people with for "being bad." Rather, these rules are designed to help all of us build a pleasant, productive, and fearless community.
@@ -139,6 +157,7 @@ experiencing harassment to feel safe during events and at all times in our onlin
 
 The Toronto JS Code of Conduct is under a
 [Creative Commons Zero](http://creativecommons.org/about/cc0) license.
+Our Code of Conduct was adapted from the [Dev.to Code Of Conduct](https://dev.to/code-of-conduct)
 It was forked from the
 [!!Con Code of Conduct](http://bangbangcon.com/conduct.html),
 which is also licensed under a
