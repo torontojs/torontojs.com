@@ -1,7 +1,9 @@
 import React from "react"
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Color from 'color'
 import theme from '../theme'
+import AddToCalendar from 'react-add-to-calendar'
+import 'react-add-to-calendar/dist/react-add-to-calendar.css'
 
 const DAYS_OF_WEEK = [
   `Sunday`,
@@ -28,11 +30,34 @@ const MONTHS = [
   `December`,
 ]
 
-let Link = styled.a`
-  text-decoration: none;
+let linkStyles = css`
   color: ${theme.link};
   &:hover {
     color: ${Color(theme.link).darken(0.5).rgb().string()};
+  }
+`
+
+let Link = styled.a`
+  text-decoration: none;
+  ${linkStyles}
+`
+let EventButtonsWrap = styled.div`
+  display: flex;
+
+  /* style overrides for react-add-to-calendar */
+  .react-add-to-calendar {
+    margin-left: 10px;
+  }
+  .react-add-to-calendar__dropdown ul {
+    padding-left: 0;
+    li {
+      padding: 4px;
+    }
+  }
+  .react-add-to-calendar__button {
+    border: none;
+    background-color: transparent;
+    ${linkStyles}
   }
 `
 
@@ -67,17 +92,26 @@ export default ({ event }) => {
 
   let displayStartDate = `${day}, ${month} ${date} at ${hours}:${minutes}${AMPM}`
 
+  let addToCalendarEvent = {
+    title: event.summary,
+    description: event.description,
+    location: event.location,
+    startTime: startDate,
+    endTime: new Date(event.end.datetime),
+  }
+
   return (
     <div>
       <h4>{meetupName} - {event.summary}</h4>
       <p>{displayStartDate}</p>
       <p>{event.location}</p>
       <p>{description}</p>
-      <p>
+      <EventButtonsWrap>
         <Link href={url} target="_blank">
           Event Details
         </Link>
-      </p>
+        <AddToCalendar event={addToCalendarEvent} buttonTemplate={{ textOnly: true }} />
+      </EventButtonsWrap>
     </div>
   )
 }
