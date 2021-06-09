@@ -17,25 +17,27 @@ let Header = styled(Row)`
   z-index: 1;
 `
 
-let SlackLink = styled.a`
+let Link = styled.a`
   color: white;
   padding: 10px;
   display: flex;
   align-items: center;
   text-decoration: none;
+  &:hover {
+    color: rgb(255, 248, 84);
+  }
 `
 
-let GithubLink = styled.a`
-  margin-left: auto;
-  color: white;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
+let LinkText = styled.span`
+  font-weight: bold;
+  padding-left: 10px;
+  transition: color 0.2s ease;
+  @media (max-width: 700px) {
+    display: none;
+  }
 `
 
 let InnerContainer = styled.div`
-  height: 100vh;
   margin: 0 auto;
   max-width: 1000px;
 `
@@ -79,17 +81,32 @@ type Props = {
   page?: string,
 }
 
+const speakerFormId = `1FAIpQLSc_ZA0ElHLsMedjdQjZechw5H1RJNhG1DZxtFTsqhkdut3eFg`
+const speakerFormLink = `https://docs.google.com/forms/d/e/${speakerFormId}/viewform?usp=sf_link`
+
 export default ({ backgroundColor = theme.primary, page = `TORONTO` }: Props) => (
   <Container backgroundColor={backgroundColor}>
     <Header>
-      <SlackLink href="http://slack.torontojs.com/" target="_blank">
-        <SlackIcon style={{ width: `30px`, marginRight: `10px` }} />
-        <b>Join us on Slack</b>
-      </SlackLink>
-      <GithubLink href="https://github.com/torontojs/torontojs.com" target="_blank">
-        <b>Contribute to this site</b>
-        <Octocat width="30px" style={{ marginLeft: `10px` }} />
-      </GithubLink>
+      <Link href="http://slack.torontojs.com/" target="_blank">
+        <SlackIcon style={{ width: `30px` }} />
+        <LinkText>Join us on Slack</LinkText>
+      </Link>
+      <Link href="http://meetup.com/torontojs" target="_blank">
+        <i className="fa fa-meetup" style={{ fontSize: `32px` }} />
+        <LinkText>Join us on Meetup</LinkText>
+      </Link>
+      <Link href="https://github.com/torontojs/torontojs.com" target="_blank">
+        <Octocat width="30px" />
+        <LinkText>Contribute to this site</LinkText>
+      </Link>
+      <Link href="https://www.youtube.com/channel/UC1samyyfqiKmOT6fq3uVO1A" target="_blank">
+        <i className="fa fa-youtube-play" style={{ fontSize: `32px` }} />
+        <LinkText>Tech Talks</LinkText>
+      </Link>
+      <Link href={speakerFormLink} target="_blank">
+        <i className="fa fa-comment" style={{ fontSize: `32px` }} />
+        <LinkText>Give a Talk</LinkText>
+      </Link>
     </Header>
     <InnerContainer>
       <TitleContainer>

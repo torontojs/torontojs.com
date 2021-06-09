@@ -15,6 +15,8 @@ export default {
 ),
   reactjs: makeGoogleCalendarURL(`59s1qmiqr7bo98uqkek5ba7er2eduk3t@import.calendar.google.com`),
   torontojs: makeGoogleCalendarURL(`k6l8oiu416ftcjpjetn0r7a79me8pq4r@import.calendar.google.com`),
+  vue: makeGoogleCalendarURL(`32clmdbdnjukvbigjs6k174m44hhc7lu@import.calendar.google.com`),
   webgl: makeGoogleCalendarURL(`1sdm6dini4ii2rvgqcmincg48h34v82l@import.calendar.google.com`),
   webperf: makeGoogleCalendarURL(`h1tmhrt7ruckpk3ad20jaq55amvaiubu@import.calendar.google.com`),
+  polyhack: makeGoogleCalendarURL(`r9dg86fs6utf6gv2dage634dts30ha14@import.calendar.google.com`),
 }

@@ -1,4 +1,4 @@
-![img](public/apple-icon-180x180.png)
+![img](public/images/apple-icon-180x180.png)
 
 # **[TorontoJS.com](http://torontojs.com/)**
 
