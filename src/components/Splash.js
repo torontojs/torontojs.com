@@ -114,6 +114,11 @@ export default ({ backgroundColor = theme.primary, page = `TORONTO` }: Props) =>
         <i className='fa fa-sticky-note' style={{ fontSize: `32px` }} />
         <LinkText>Code of Conduct</LinkText>
       </Link>
+      <Link href='https://pzf47fgronb.typeform.com/to/mXvf7ZJy' target='_blank'>
+        <i className="fa fa-users" style={{ fontSize: `32px` }} />
+        <LinkText>Volunteer</LinkText>
+      </Link>
+  
     </Header>
     <InnerContainer>
       <TitleContainer>
