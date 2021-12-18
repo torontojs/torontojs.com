@@ -87,7 +87,7 @@ const speakerFormLink = `https://docs.google.com/forms/d/e/${speakerFormId}/view
 export default ({ backgroundColor = theme.primary, page = `TORONTO` }: Props) => (
   <Container backgroundColor={backgroundColor}>
     <Header>
-      <Link href='http://slack.torontojs.com/' target='_blank'>
+      <Link href='https://join.slack.com/t/torontojs/shared_invite/zt-zgi31snl-omO3tXSZ0Q7zqN9WBQSf8Q' target='_blank'>
         <SlackIcon style={{ width: `30px` }} />
         <LinkText>Join us on Slack</LinkText>
       </Link>
