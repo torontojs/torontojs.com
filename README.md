@@ -2,6 +2,23 @@
 
 # **[TorontoJS.com](http://torontojs.com/)**
 
+### Overview of the Repo
+
+|-- build // deployable contents that are gitignored but will show up locally.
+|-- flow-typed
+|-- public
+  |-- images
+  |-- pages // contains markdown content that appears after `torontojs.com/p/`
+|-- src
+  |-- components // `Splash.js` contains navigation links
+  |-- data
+  |-- theme
+  ...
+  App.js // top level app entry point
+  index.js
+  .travis.yml
+  package.json
+  README.md -- You are here.
 ### Add your meetup to our events feed
 
 If you use meetup.com to host your events, then you can create a public Google Calendar Feed with the following steps:
