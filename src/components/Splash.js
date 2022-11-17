@@ -107,6 +107,7 @@ export default ({
         <Link
           href="https://beta.guild.host/torontojs"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <GuildLogo src={guildLogo} />
           <LinkText>Join us on Guild</LinkText>
