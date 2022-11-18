@@ -7,6 +7,7 @@ import ReactRotatingText from "./RotatingText"
 import Logo from "./svg/Logo"
 import SlackIcon from "./svg/SlackIcon"
 import Octocat from "./svg/Octocat"
+import guildLogo from './png/guild_logo.png'
 
 let Row = styled.div`
   display: flex;
@@ -76,6 +77,11 @@ let Rotator = styled(ReactRotatingText)`
   font-size: 26px;
 `
 
+const GuildLogo = styled.img`
+  width: 30px;
+  height: 30px;
+`
+
 type Props = {
   backgroundColor?: string,
   page?: string,
@@ -98,6 +104,14 @@ export default ({
         >
           <SlackIcon style={{ width: `30px` }} />
           <LinkText>Join us on Slack</LinkText>
+        </Link>
+        <Link
+          href="https://beta.guild.host/torontojs"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <GuildLogo src={guildLogo} />
+          <LinkText>Join us on Guild</LinkText>
         </Link>
         <Link
           href="http://meetup.com/torontojs"
