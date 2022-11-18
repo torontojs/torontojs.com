@@ -100,6 +100,7 @@ export default ({
         <Link
           href="https://join.slack.com/t/torontojs/shared_invite/zt-zgi31snl-omO3tXSZ0Q7zqN9WBQSf8Q"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <SlackIcon style={{ width: `30px` }} />
           <LinkText>Join us on Slack</LinkText>
@@ -112,22 +113,35 @@ export default ({
           <GuildLogo src={guildLogo} />
           <LinkText>Join us on Guild</LinkText>
         </Link>
-        <Link href="http://meetup.com/torontojs" target="_blank">
+        <Link
+          href="http://meetup.com/torontojs"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className="fa fa-meetup" style={{ fontSize: `32px` }} />
           <LinkText>Join us on Meetup</LinkText>
         </Link>
-        <Link href="https://github.com/torontojs/torontojs.com" target="_blank">
+        <Link
+          href="https://github.com/torontojs/torontojs.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Octocat width="30px" />
           <LinkText>Contribute to this site</LinkText>
         </Link>
         <Link
           href="https://www.youtube.com/channel/UC1samyyfqiKmOT6fq3uVO1A"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <i className="fa fa-youtube-play" style={{ fontSize: `32px` }} />
           <LinkText>Tech Talks</LinkText>
         </Link>
-        <Link href={speakerFormLink} target="_blank">
+        <Link
+          href={speakerFormLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className="fa fa-comment" style={{ fontSize: `32px` }} />
           <LinkText>Give a Talk</LinkText>
         </Link>
@@ -138,6 +152,7 @@ export default ({
         <Link
           href="https://pzf47fgronb.typeform.com/to/mXvf7ZJy"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <i className="fa fa-users" style={{ fontSize: `32px` }} />
           <LinkText>Volunteer</LinkText>
