@@ -9,7 +9,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-react": "^6.10.3",
     "flow-bin": "^0.44.2",
-    "gh-pages": "^0.12.0",
+    "gh-pages": "^4.0.0",
     "gitmoji-cli": "^1.5.2",
     "husky": "^0.13.3",
     "react-scripts": "^0.9.5"
