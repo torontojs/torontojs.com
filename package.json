@@ -12,7 +12,7 @@
     "gh-pages": "^0.12.0",
     "gitmoji-cli": "^1.5.2",
     "husky": "^0.13.3",
-    "react-scripts": "^0.9.5"
+    "react-scripts": "^5.0.1"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
