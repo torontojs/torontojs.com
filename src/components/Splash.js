@@ -16,16 +16,24 @@ let Row = styled.div`
 let Header = styled(Row)`
   position: relative;
   z-index: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  transition: background-color 350ms ease-in-out;
+  &:hover {
+    background-color: rgb(215, 43, 31);
+  }
 `
 
 let Link = styled.a`
   color: white;
-  padding: 10px;
+  padding: 10px 15px;
   display: flex;
   align-items: center;
   text-decoration: none;
+  transition: background-color 350ms ease-in-out;
   &:hover {
     color: rgb(255, 248, 84);
+    background-color: rgb(238, 49, 36);
   }
 `
 
@@ -33,7 +41,7 @@ let LinkText = styled.span`
   font-weight: bold;
   padding-left: 10px;
   transition: color 0.2s ease;
-  @media (max-width: 700px) {
+  @media (max-width: 767px) {
     display: none;
   }
 `
