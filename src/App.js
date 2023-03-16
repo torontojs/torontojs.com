@@ -1,13 +1,13 @@
 // @flow
 
-import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import EventsPage from './components/EventsPage'
-import StaticPage from './components/StaticPage'
-import ErrorPage from './components/ErrorPage'
-import Splash from './components/Splash'
-import theme from './theme'
-import MentorshipPage from './components/MentorshipPage'
+import React from "react"
+import { BrowserRouter, Switch, Route } from "react-router-dom"
+import EventsPage from "./components/EventsPage"
+import StaticPage from "./components/StaticPage"
+import ErrorPage from "./components/ErrorPage"
+import Splash from "./components/Splash"
+import theme from "./theme"
+import MentorshipPage from "./components/MentorshipPage"
 
 let App = () => (
   <BrowserRouter>

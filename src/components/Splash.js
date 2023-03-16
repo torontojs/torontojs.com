@@ -1,13 +1,13 @@
 // @flow
 
-import React from 'react'
-import styled from 'styled-components'
-import theme from '../theme'
-import ReactRotatingText from './RotatingText'
-import Logo from './svg/Logo'
-import SlackIcon from './svg/SlackIcon'
-import Octocat from './svg/Octocat'
-import guildLogo from './png/guild_logo.png'
+import React from "react"
+import styled from "styled-components"
+import theme from "../theme"
+import ReactRotatingText from "./RotatingText"
+import Logo from "./svg/Logo"
+import SlackIcon from "./svg/SlackIcon"
+import Octocat from "./svg/Octocat"
+import guildLogo from "./png/guild_logo.png"
 
 let Row = styled.div`
 	display: flex;

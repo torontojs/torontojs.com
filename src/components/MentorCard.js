@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import Logo from './png/logo_circle.png'
-import github from './png/github_logo.png'
-import linkedin from './png/linkedin_logo.png'
-import calendly from './png/calendly.png'
+import React from "react"
+import styled from "styled-components"
+import Logo from "./png/logo_circle.png"
+import github from "./png/github_logo.png"
+import linkedin from "./png/linkedin_logo.png"
+import calendly from "./png/calendly.png"
 
 const Card = styled.div`
 	width: 20%;

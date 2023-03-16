@@ -5,7 +5,7 @@ const mentors = [
     background: `a non traditional software engineer`,
     linkedin: `https://www.linkedin.com/in/sammy-lam-front-end-dev-electrician/`,
     github: `https://github.com/SamLamElectrician`,
-    calendly: `https://calendly.com/sammylam505/30min?month=2023-03`,
+    calendly: `https://calendly.com/sammylam505/30min`,
   },
   {
     key: 2,
@@ -13,7 +13,7 @@ const mentors = [
     background: `a traditonal software engineer`,
     linkedin: `https://www.linkedin.com/in/sammy-lam-front-end-dev-electrician/`,
     github: `https://github.com/SamLamElectrician`,
-    calendly: `https://calendly.com/sammylam505/30min?month=2023-03`,
+    calendly: `https://calendly.com/sammylam505/30min`,
   },
   {
     key: 3,
@@ -21,7 +21,7 @@ const mentors = [
     background: `a lonely boy in a lonely world`,
     linkedin: `https://www.linkedin.com/in/sammy-lam-front-end-dev-electrician/`,
     github: `https://github.com/SamLamElectrician`,
-    calendly: `https://calendly.com/sammylam505/30min?month=2023-03`,
+    calendly: `https://calendly.com/sammylam505/30min`,
   },
   {
     key: 4,
@@ -29,7 +29,7 @@ const mentors = [
     background: `testing`,
     linkedin: `https://www.linkedin.com/in/sammy-lam-front-end-dev-electrician/`,
     github: `https://github.com/SamLamElectrician`,
-    calendly: `https://calendly.com/sammylam505/30min?month=2023-03`,
+    calendly: `https://calendly.com/sammylam505/30min`,
   },
   {
     key: 5,
@@ -37,7 +37,7 @@ const mentors = [
     background: `testing`,
     linkedin: `https://www.linkedin.com/in/sammy-lam-front-end-dev-electrician/`,
     github: `https://github.com/SamLamElectrician`,
-    calendly: `https://calendly.com/sammylam505/30min?month=2023-03`,
+    calendly: `https://calendly.com/sammylam505/30min`,
   },
   {
     key: 6,
@@ -45,7 +45,7 @@ const mentors = [
     background: `testing`,
     linkedin: `https://www.linkedin.com/in/sammy-lam-front-end-dev-electrician/`,
     github: `https://github.com/SamLamElectrician`,
-    calendly: `https://calendly.com/sammylam505/30min?month=2023-03`,
+    calendly: `https://calendly.com/sammylam505/30min`,
   },
   {
     key: 7,
