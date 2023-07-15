@@ -1,11 +1,9 @@
 import React from 'react'
 import Splash from './Splash'
-import Events from './Events'
 
-let EventPage = () =>
+let EventsPage = () =>
   <div>
     <Splash />
-    <Events />
   </div>
 
-export default EventPage
+export default EventsPage
