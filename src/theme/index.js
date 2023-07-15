@@ -5,5 +5,5 @@ export default {
   link: `#00aeef`,
 
   // fonts
-  fancyFont: `'Montserrat', sans-serif`,
+  fancyFont: `'Inter', sans-serif`,
 }

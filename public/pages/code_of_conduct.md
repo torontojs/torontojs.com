@@ -15,6 +15,7 @@ Toronto JS event are expected to observe the following Code of
 Conduct. Organizers will enforce this code through the community and throughout events.
 
 **Why have a code of conduct?**
+
 Not because we feel like we're expected to have one, not because someone told us to, and not because we
 heard somewhere that it was important for some reason -- but **as part
 of an intentional effort to define the culture of Toronto JS**.
