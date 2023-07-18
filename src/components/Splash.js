@@ -22,15 +22,17 @@ let Box = styled.div`
 `
 
 let Header = styled(Box)`
-  position: absolute;
+  position: relative;
   z-index: 1;
   flex-wrap: wrap;
   justify-content: center;
   transition: background-color 350ms ease-in-out;
+  flex-order:0;
+  
   &:hover {
     background-color: rgb(215, 43, 31);
   }
-  flex-order:0;
+
   a {
     color: white;
     &:hover {
@@ -76,6 +78,9 @@ let InnerContainer = styled.div`
   margin: 0 auto;
   max-width: 996px;
   padding: 1rem 2rem;
+  @media (max-width: 768px) {
+    flex-flow: column nowrap;
+  }
 `
 
 let TitleContainer = styled.div`
@@ -121,6 +126,7 @@ bottom: 0;
 width: 100%;
 flex-flow: row wrap;
 justify-content: center;
+margin-bottom: 1rem;
 @media (max-width: 768px) {
   flex-flow: column nowrap;
 }
@@ -203,29 +209,50 @@ export default ({
           <Tower fill={backgroundColor} />
         </InnerContainer>
       </Container>
+
+
       {/* Main Content Section */}
 
-      <Container style={{ backgroundColor: `white`, lineHeight: 1.5 }}>
+      <Container style={{ backgroundColor: `white`, lineHeight: 1.5, padding: `2rem 0` }}>
 
-        <InnerContainer style={{ fontSize: `2.2rem` }}>
-          We are a volunteer-run community that supports all in their learning and passion for sharing knowledge on JavaScript
-          <br />- and by extension, software development in Toronto and the GTA.
-          <br />
+        <InnerContainer style={{ display: `flex` }}>
+          <div style={{ width: `auto`, fontSize: `2rem` }}>
+            We are a volunteer-run community that supports all in their learning and passion for sharing knowledge on JavaScript- and by extension, software development in Toronto and the GTA.
+
+            <ul style={{ listStyle: `none`, fontSize: `1.25rem`, lineHeight: 1.4, marginTop: `1rem` }}>
+              <li>📅 Over 30+ events a year</li>
+              <li>🚀 Community-led online and in-person events</li>
+              <li>🦋 5555 on Slack</li>
+              <li>🚀 Over 400 on Guild</li>
+              <li>👯🏻 30+ <a href="./p/volunteers">volunteers 🧑🏻‍🤝‍🧑🏾</a></li>
+              <li>🎲 ~4 organizers</li>
+            </ul>
+          </div>
+
+          <iframe src="https://guild.host/embeds/guild/torontojs/card"
+            loading="lazy"
+            style={{ width: `450px`, height: `360px`, border: `none`, overflow: `hidden` }}
+          />
+
+        </InnerContainer>
+        <InnerContainer style={{ display: `flex`, justifyContent: `space-evenly` }}>
+          <div>
+            <Title>Upcoming Events</Title>
+            <iframe src="https://guild.host/embeds/guild/torontojs/events/upcoming"
+              loading="lazy"
+              style={{ minWidth: `400px`, width: `400px`, minHeight: `300px`, height: `100vh`, border: `none` }}
+            />
+          </div>
+          <div>
+            <Title>Past Events</Title>
+            <iframe src="https://guild.host/embeds/guild/torontojs/events/past"
+              loading="lazy"
+              style={{ minWidth: `400px`, width: `100%`, minHeight: `300px`, height: `100vh`, border: `none` }}
+            />
+          </div>
         </InnerContainer>
 
-        <InnerContainer style={{ fontSize: `1.5rem` }}>
-          <ul style={{ listStyle: `none` }}>
-            <li>Over 30+ events a year</li>
-            <li>Community-led online and in-person events</li>
-            <li>11k members on Meetup</li>
-            <li>5555 on Slack</li>
-            <li>400 on Guild</li>
-            <li>~30 volunteers</li>
-            <li>~4 organizers</li>
-          </ul>
-          <br />
 
-        </InnerContainer>
       </Container>
       <Footer>
         <Link
@@ -236,7 +263,7 @@ export default ({
           <i className="fa fa-youtube-play" style={{ fontSize: `1.2rem` }} />
           <LinkText>YouTube</LinkText>
         </Link>
-        <Link href="https://tldr.torontojs.com/" target="_blank">
+        <Link href="https://tldr.torontojs.com/" target="_blank" rel="noopener noreferrer">
           <i className="fa fa-briefcase" style={{ fontSize: `1.2rem` }} />
           <LinkText>LinkedIn</LinkText>
         </Link>

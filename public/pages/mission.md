@@ -4,4 +4,4 @@ TorontoJS is a not-for-profit corporation with a mandate to support all in their
 
 # Mission
 
-To facilitate events, connect people, share knowledge and shepard projects in order to build an open and accessible ecosystem.
+To facilitate events, connect people, share knowledge and shepard projects in order to build an open and accessible ecosystem. 
