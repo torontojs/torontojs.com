@@ -17,14 +17,14 @@
   "dependencies": {
     "babel-polyfill": "^6.23.0",
     "color": "^1.0.3",
-    "react": "^15.5.4",
+    "react": "^16.0.0",
     "react-add-to-calendar": "^0.1.5",
-    "react-dom": "^15.5.4",
+    "react-dom": "^16.0.0",
     "react-markdown": "^2.5.0",
     "react-rotating-text": "^1.2.0",
     "react-router-dom": "^4.1.1",
     "recompose": "^0.23.1",
-    "styled-components": "2.0.0-15"
+    "styled-components": "^6.0.4"
   },
   "homepage": "https://torontojs.github.io",
   "scripts": {

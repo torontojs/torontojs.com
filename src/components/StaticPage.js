@@ -11,6 +11,7 @@ const Page = styled.section`
   padding: 20px;
   max-width: 750px;
   margin: 0 auto;
+  line-height: 1.3;
 
   & h2 {
     font-family: 'Montserrat', sans-serif;
@@ -38,7 +39,7 @@ const Link = styled(L)`
 class StaticPage extends Component {
   state = { content: `` }
 
-  async componentDidMount () {
+  async componentDidMount() {
     let data = await fetch(`${basePath}/pages/${this.props.match.params.page}.md`)
       .then((response) => response.text())
 
@@ -49,7 +50,7 @@ class StaticPage extends Component {
     }
   }
 
-  render () {
+  render() {
     const { content } = this.state
 
     return (
