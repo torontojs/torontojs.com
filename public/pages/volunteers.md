@@ -20,11 +20,20 @@ localost8080
 
 [Erik Derohanian](https://www.linkedin.com/in/erikjd/)
 
-## Former Accomplices
+
+## Educational Accomplices
 
 [Nicole Chung](https://twitter.com/redconservatory)
 
 [Btara Truhandarien](https://btruhand.github.io/blog/)
+
+[Connor Wilson](https://cwlsn.com/)
+
+[Ankur Kaushal](https://www.linkedin.com/in/ankur-kaushal/)
+
+[David Wolever](https://twitter.com/wolever)
+
+[Niya Panamdanam](https://www.linkedin.com/in/niya-panamdanam/)
 
 ### Organizers
 
