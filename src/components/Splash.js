@@ -22,10 +22,7 @@ let Box = styled.div`
 `
 
 let Header = styled(Box)`
-  display: flex;
-  flex-order: 0;
-  justify-content: space-evenly;
-  position: relative;
+  position: absolute;
   z-index: 1;
   flex-wrap: wrap;
   justify-content: center;
@@ -33,16 +30,17 @@ let Header = styled(Box)`
   &:hover {
     background-color: rgb(215, 43, 31);
   }
+  flex-order:0;
   a {
     color: white;
     &:hover {
-      color: rgb(255, 248, 84);
+      color: rgb(255, 248, 254);
     }
   
   @media (max-width: 768px) {
     position: relative;
-    flex-order:2;
-    flex-direction: column;
+    flex-order: 1;
+    flex-direction: column-reverse;
     align-items: center;
   }
 `
@@ -68,6 +66,10 @@ let LinkText = styled.span`
   @media (max-width: 767px) {
     display: none;
   }
+  &:hover {
+    text-decoration-style: wavy;
+    animation: wavy 0.5s ease-in-out infinite;
+  }
 `
 
 let InnerContainer = styled.div`
@@ -77,12 +79,6 @@ let InnerContainer = styled.div`
 `
 
 let TitleContainer = styled.div`
-  @media (max-width: 768px) {
-    flex-order: 0;
-    align-items: flex-end;
-    flex-direction: column-reverse;
-  }
-  flex-order: 1;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -93,13 +89,15 @@ let TitleContainer = styled.div`
   z-index: 1;
   position: relative;
   letter-spacing: .25rem;
-  
 `
 
 let Tower = styled(Logo)`
   position: absolute;
   bottom: 0;
   max-width: 600px;
+  @media (max-width: 768px) {
+    max-height: 250px;
+  }
 `
 
 let Title = styled.div`
@@ -217,20 +215,18 @@ export default ({
 
         <InnerContainer style={{ fontSize: `1.5rem` }}>
           <ul style={{ listStyle: `none` }}>
-            <li>Over 24+ events a year</li>
-            <li>Community led online and in-person events</li>
+            <li>Over 30+ events a year</li>
+            <li>Community-led online and in-person events</li>
             <li>11k members on Meetup</li>
             <li>5555 on Slack</li>
-            <li>300+ on Guild</li>
+            <li>400 on Guild</li>
             <li>~30 volunteers</li>
             <li>~4 organizers</li>
-            <li>1 Infrequent Newsletter</li>
           </ul>
           <br />
 
         </InnerContainer>
       </Container>
-
       <Footer>
         <Link
           href="https://www.youtube.com/channel/UC1samyyfqiKmOT6fq3uVO1A"
