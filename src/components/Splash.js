@@ -240,14 +240,18 @@ export default ({
             <Title>Upcoming Events</Title>
             <iframe src="https://guild.host/embeds/guild/torontojs/events/upcoming"
               loading="lazy"
-              style={{ minWidth: `400px`, width: `400px`, minHeight: `300px`, height: `100vh`, border: `none` }}
+              scrolling="no"
+              frameBorder="0"
+              style={{ maxWidth: `350px`, minWidth: `300px`, minHeight: `360px`, border: `none`, overflow: `hidden` }}
             />
           </div>
           <div>
             <Title>Past Events</Title>
             <iframe src="https://guild.host/embeds/guild/torontojs/events/past"
               loading="lazy"
-              style={{ minWidth: `400px`, width: `100%`, minHeight: `300px`, height: `100vh`, border: `none` }}
+              scrolling="no"
+              frameBorder="0"
+              style={{ maxWidth: `350px`, minWidth: `300px`, minHeight: `360px`, border: `none`, overflow: `hidden` }}
             />
           </div>
         </InnerContainer>
@@ -276,7 +280,6 @@ export default ({
           <i className="fa fa-twitter" style={{ fontSize: `1.2rem` }} />
           <LinkText>Twitter</LinkText>
         </Link>
-
       </Footer>
     </div >
   )

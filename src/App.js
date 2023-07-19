@@ -3,7 +3,6 @@
 import React from "react"
 import { BrowserRouter, Switch, Route } from "react-router-dom"
 import StaticPage from "./components/StaticPage"
-import ErrorPage from "./components/ErrorPage"
 import Splash from "./components/Splash"
 import theme from "./theme"
 
@@ -12,7 +11,8 @@ let App = () => (
   <BrowserRouter>
     <div>
       <Switch>
-        <Route exact path="/p(age)?/:page" component={StaticPage} />
+        <Route exact path="/" component={Splash} />
+        <Route path="/p(age)?/:page" component={StaticPage} />
         <Route
           exact
           path="/workshop"
@@ -22,8 +22,8 @@ let App = () => (
             </div>
           )}
         />
-        <Route component={ErrorPage} />
       </Switch>
+
     </div>
   </BrowserRouter>
 )

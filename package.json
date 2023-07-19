@@ -30,7 +30,7 @@
   "scripts": {
     "build": "react-scripts build",
     "commit": "gitmoji -c",
-    "deploy": "npm run build&&gh-pages -d build",
+    "deploy": "npm run build && gh-pages -d build",
     "eject": "react-scripts eject",
     "precommit": "eslint src --fix && git add -A",
     "start": "react-scripts start",
