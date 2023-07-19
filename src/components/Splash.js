@@ -242,7 +242,7 @@ export default ({
               loading="lazy"
               scrolling="no"
               frameBorder="0"
-              style={{ maxWidth: `350px`, minWidth: `300px`, minHeight: `360px`, border: `none`, overflow: `hidden` }}
+              style={{ width: `400px`, minHeight: `400px`, height: '100vh', border: `none`, overflow: `hidden` }}
             />
           </div>
           <div>
