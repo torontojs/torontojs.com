@@ -167,7 +167,7 @@ export default ({
         `torontojs`
       )      
     }
-  }, [guildCard])
+  }, [guildCardRef])
 
   useEffect(() => {
     if (upcomingEventsRef.current) {

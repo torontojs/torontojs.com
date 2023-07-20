@@ -35,5 +35,8 @@
     "precommit": "eslint src --fix && git add -A",
     "start": "react-scripts start",
     "test": "eslint src && flow"
+  },
+  "resolutions": {
+    "fsevents": "^1.2.13"
   }
 }
