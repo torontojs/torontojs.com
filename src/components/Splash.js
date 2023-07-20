@@ -1,6 +1,6 @@
 // @flow
 
-import React, { useEffect } from "react"
+import React, { useEffect, useRef } from "react"
 import styled from "styled-components"
 import theme from "../theme"
 import ReactRotatingText from "./RotatingText"
@@ -156,35 +156,36 @@ export default ({
   backgroundColor = theme.primary,
   page = `TORONTO`,
 }: Props) => {
+  const guildCardRef = useRef()
+  const upcomingEventsRef = useRef()
+  const pastEventsRef = useRef()
 
   useEffect(() => {
-    const guildCardRoot = document.getElementById(`guild-card-root`)
-    const guildCardUpcoming = document.getElementById(`guild-card-upcoming`)
-    const guildCardPast = document.getElementById(`guild-card-past`)
+    if (guildCardRef.current) {
+      return window.$guild.renderGuildCard(
+        guildCardRoot,
+        `torontojs`
+      )      
+    }
+  }, [guildCard])
 
-    const unmountGuildCard = window.$guild.renderGuildCard(
-      guildCardRoot,
-      `torontojs`
-    )
+  useEffect(() => {
+    if (upcomingEventsRef.current) {
+      return window.$guild.renderGuildEventList(
+        guildCardUpcoming,
+        `torontojs`,
+        `UPCOMING`
+      )
+    }
+  }, [upcomingEventsRef])
 
-    const unmountUpcomingEventList = window.$guild.renderGuildEventList(
-      guildCardUpcoming,
-      `torontojs`,
-      `UPCOMING`
-    )
-
-    const unmountPastEventList = window.$guild.renderGuildEventList(
+  useEffect(() => {
+    return window.$guild.renderGuildEventList(
       guildCardPast,
       `torontojs`,
       `PAST`
     )
-    
-    return () => {
-      unmountGuildCard()
-      unmountUpcomingEventList()
-      unmountPastEventList()
-    }
-  }, [])
+  }, [pastEventsRef])
 
   return (
     <div>
@@ -272,18 +273,18 @@ export default ({
           </div>
 
           <GuildCardRoot>
-            <div id="guild-card-root" />
+            <div id="guild-card-root" ref={guildCardRef} />
           </GuildCardRoot>
 
         </InnerContainer>
         <InnerContainer style={{ display: `flex`, justifyContent: `space-between`, overflow: `hidden` }}>
           <EventColumn>
             <Title>Upcoming Events</Title>
-            <div id="guild-card-upcoming" />
+            <div id="guild-card-upcoming" ref={upcomingEventsRef} />
           </EventColumn>
           <EventColumn>
             <Title>Past Events</Title>
-            <div id="guild-card-past" />
+            <div id="guild-card-past" ref={pastEventsRef} />
           </EventColumn>
         </InnerContainer>
 
