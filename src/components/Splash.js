@@ -1,7 +1,7 @@
 // @flow
 
 import React, { useEffect } from "react"
-import styled, { createGlobalStyle } from "styled-components"
+import styled from "styled-components"
 import theme from "../theme"
 import ReactRotatingText from "./RotatingText"
 import Logo from "./svg/Logo"
@@ -133,17 +133,14 @@ margin-bottom: 1rem;
 }
 `
 
-const GuildCardRootStyle = {
-  minWidth: `256px`,
-}
+const GuildCardRoot = styled.div`
+  min-width: 256px
+`
 
-const GuildColumnStyle = createGlobalStyle`
-  .container-column {
-    width: 100%;
-    
-    @media (min-width: 769px) {
-      width: calc((100% / 2) - 1rem); /* 100% - (gap / 2) */
-    }
+const EventColumn = styled.div`
+  width: 100%;
+  @media (min-width: 769px) {
+    width: calc((100% / 2) - 1rem); /* 100% - (gap / 2) */
   }
 `
 
@@ -191,7 +188,6 @@ export default ({
 
   return (
     <div>
-      <GuildColumnStyle />
       <Container backgroundColor={backgroundColor} style={{ height: `80vh` }}>
 
         {/* Top Nav Bar */}
@@ -275,18 +271,20 @@ export default ({
             </ul>
           </div>
 
-          <div id="guild-card-root" style={GuildCardRootStyle} />
+          <GuildCardRoot>
+            <div id="guild-card-root" />
+          </GuildCardRoot>
 
         </InnerContainer>
         <InnerContainer style={{ display: `flex`, justifyContent: `space-between`, overflow: `hidden` }}>
-          <div className="container-column">
+          <EventColumn>
             <Title>Upcoming Events</Title>
             <div id="guild-card-upcoming" />
-          </div>
-          <div className="container-column">
+          </EventColumn>
+          <EventColumn>
             <Title>Past Events</Title>
             <div id="guild-card-past" />
-          </div>
+          </EventColumn>
         </InnerContainer>
 
       </Container>
