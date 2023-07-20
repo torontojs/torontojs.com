@@ -163,7 +163,7 @@ export default ({
   useEffect(() => {
     if (guildCardRef.current) {
       return window.$guild.renderGuildCard(
-        guildCardRoot,
+        guildCardRef.current,
         `torontojs`
       )      
     }
@@ -172,7 +172,7 @@ export default ({
   useEffect(() => {
     if (upcomingEventsRef.current) {
       return window.$guild.renderGuildEventList(
-        guildCardUpcoming,
+        upcomingEventsRef.current,
         `torontojs`,
         `UPCOMING`
       )
@@ -180,11 +180,13 @@ export default ({
   }, [upcomingEventsRef])
 
   useEffect(() => {
-    return window.$guild.renderGuildEventList(
-      guildCardPast,
-      `torontojs`,
-      `PAST`
-    )
+    if (pastEventsRef.current) {
+      return window.$guild.renderGuildEventList(
+        pastEventsRef.current,
+        `torontojs`,
+        `PAST`
+      )
+    }
   }, [pastEventsRef])
 
   return (
