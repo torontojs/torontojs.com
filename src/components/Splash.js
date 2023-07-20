@@ -181,7 +181,7 @@ export default ({
       `torontojs`,
       `PAST`
     )
-  })
+  }, [])
 
   return (
     <div>
