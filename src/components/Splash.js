@@ -165,22 +165,28 @@ export default ({
     const guildCardUpcoming = document.getElementById(`guild-card-upcoming`)
     const guildCardPast = document.getElementById(`guild-card-past`)
 
-    window.$guild.renderGuildCard(
+    const unmountGuildCard = window.$guild.renderGuildCard(
       guildCardRoot,
       `torontojs`
     )
 
-    window.$guild.renderGuildEventList(
+    const unmountUpcomingEventList = window.$guild.renderGuildEventList(
       guildCardUpcoming,
       `torontojs`,
       `UPCOMING`
     )
 
-    window.$guild.renderGuildEventList(
+    const unmountPastEventList = window.$guild.renderGuildEventList(
       guildCardPast,
       `torontojs`,
       `PAST`
     )
+    
+    return () => {
+      unmountGuildCard()
+      unmountUpcomingEventList()
+      unmountPastEventList()
+    }
   }, [])
 
   return (
