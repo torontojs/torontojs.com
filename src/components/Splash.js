@@ -1,7 +1,7 @@
 // @flow
 
-import React from "react"
-import styled from "styled-components"
+import React, { useEffect } from "react"
+import styled, { createGlobalStyle } from "styled-components"
 import theme from "../theme"
 import ReactRotatingText from "./RotatingText"
 import Logo from "./svg/Logo"
@@ -78,6 +78,7 @@ let InnerContainer = styled.div`
   margin: 0 auto;
   max-width: 996px;
   padding: 1rem 2rem;
+  gap: 2rem;
   @media (max-width: 768px) {
     flex-flow: column nowrap;
   }
@@ -132,6 +133,20 @@ margin-bottom: 1rem;
 }
 `
 
+const GuildCardRootStyle = {
+  minWidth: `256px`,
+}
+
+const GuildColumnStyle = createGlobalStyle`
+  .container-column {
+    width: 100%;
+    
+    @media (min-width: 769px) {
+      width: calc((100% / 2) - 1rem); /* 100% - (gap / 2) */
+    }
+  }
+`
+
 type Props = {
   backgroundColor?: string,
   page?: string,
@@ -144,8 +159,33 @@ export default ({
   backgroundColor = theme.primary,
   page = `TORONTO`,
 }: Props) => {
+
+  useEffect(() => {
+    const guildCardRoot = document.getElementById(`guild-card-root`)
+    const guildCardUpcoming = document.getElementById(`guild-card-upcoming`)
+    const guildCardPast = document.getElementById(`guild-card-past`)
+
+    window.$guild.renderGuildCard(
+      guildCardRoot,
+      `torontojs`
+    )
+
+    window.$guild.renderGuildEventList(
+      guildCardUpcoming,
+      `torontojs`,
+      `UPCOMING`
+    )
+
+    window.$guild.renderGuildEventList(
+      guildCardPast,
+      `torontojs`,
+      `PAST`
+    )
+  })
+
   return (
     <div>
+      <GuildColumnStyle />
       <Container backgroundColor={backgroundColor} style={{ height: `80vh` }}>
 
         {/* Top Nav Bar */}
@@ -229,33 +269,19 @@ export default ({
             </ul>
           </div>
 
-          <iframe src="https://guild.host/embeds/guild/torontojs/card"
-            loading="lazy"
-            style={{ width: `450px`, height: `360px`, border: `none`, overflow: `hidden` }}
-          />
+          <div id="guild-card-root" style={GuildCardRootStyle} />
 
         </InnerContainer>
-        <InnerContainer style={{ display: `flex`, justifyContent: `space-evenly` }}>
-          <div>
+        <InnerContainer style={{ display: `flex`, justifyContent: `space-between`, overflow: `hidden` }}>
+          <div className="container-column">
             <Title>Upcoming Events</Title>
-            <iframe src="https://guild.host/embeds/guild/torontojs/events/upcoming"
-              loading="lazy"
-              scrolling="no"
-              frameBorder="0"
-              style={{ width: `400px`, minHeight: `400px`, height: '100vh', border: `none`, overflow: `hidden` }}
-            />
+            <div id="guild-card-upcoming" />
           </div>
-          <div>
+          <div className="container-column">
             <Title>Past Events</Title>
-            <iframe src="https://guild.host/embeds/guild/torontojs/events/past"
-              loading="lazy"
-              scrolling="no"
-              frameBorder="0"
-              style={{ width: `400px`, minHeight: `400px`, height: '100vh', border: `none`, overflow: `hidden` }}
-            />
+            <div id="guild-card-past" />
           </div>
         </InnerContainer>
-
 
       </Container>
       <Footer>
