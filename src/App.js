@@ -12,7 +12,7 @@ let App = () => (
     <div>
       <Switch>
         <Route exact path="/" component={Splash} />
-        <Route path="/p(age)?/:page" component={StaticPage} />
+        <Route path="/p/:page" component={StaticPage} />
         <Route
           exact
           path="/workshop"
