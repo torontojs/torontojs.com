@@ -53,12 +53,11 @@ let Link = styled.a`
   display: flex;
   align-items: center;
   text-decoration: none;
-  transition: background-color 350ms ease-in-out;
+  transition: background-color 350ms ease-in-out, color 0.2s ease;
   &:hover {
     color: rgb(255, 248, 84);
     background-color: rgb(238, 49, 36);
   }
-  transition: color 0.2s ease;
 `
 
 let LinkText = styled.span`
@@ -120,16 +119,33 @@ const GuildLogo = styled.img`
   height:  1.25rem;
 `
 const Footer = styled(Box)`
+background-color: rgb(155, 155, 169);
 display: flex;
 position: relative;
 z-index: 1;
-bottom: 0;
 width: 100%;
 flex-flow: row wrap;
 justify-content: center;
-margin-bottom: 1rem;
-@media (max-width: 768px) {
-  flex-flow: column nowrap;
+
+a {
+  padding: 15px 20px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
+    background-color: transparent;
+    transition: background-color 350ms ease-in-out, translate 350ms ease-in-out;
+  }
+
+  &:hover {
+    &::before {
+      translate: 0 -4px;
+      background-color: rgb(238, 49, 36);
+    }
+  }
 }
 `
 
