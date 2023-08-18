@@ -13,7 +13,8 @@ Everyone supports events by offering their unpaid time, connections and expertis
 We are grateful for the time and effort they put into making this community a welcoming place for all in tech.
 
 <br/>
-All volunteers agree to model and uphold the Code of Conduct. 
+All volunteers agree to model and uphold the [Code Of Conduct](https://torontojs.com/p/code_of_conduct)
+
 <br/>
 <br/>
 
@@ -88,6 +89,8 @@ localost8080
 ## Contributors
 
 This website was created and maintained, on and off by:
+
+[Michael Svatos](https://github.com/michalsvatos)
 
 [Alex Wilmer](https://twitter.com/benevolentNinja)
 
