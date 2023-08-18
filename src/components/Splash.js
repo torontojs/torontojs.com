@@ -28,7 +28,7 @@ let Header = styled(Box)`
   justify-content: center;
   transition: background-color 350ms ease-in-out;
   flex-order:0;
-  
+
   &:hover {
     background-color: rgb(215, 43, 31);
   }
@@ -58,6 +58,10 @@ let Link = styled.a`
     color: rgb(255, 248, 84);
     background-color: rgb(238, 49, 36);
   }
+`
+
+let InlineLink = styled.a`
+color: inherit;
 `
 
 let LinkText = styled.span`
@@ -291,9 +295,10 @@ export default ({
             >
               <li>📅 Over 30+ events a year</li>
               <li>🚀 Community-led online and in-person events</li>
+              <li>11k+ Members on Meetup</li>
               <li>🦋 5555 on Slack</li>
               <li>🚀 Over 400 on Guild</li>
-              <li>👯🏻 30+ <a href="./p/volunteers">volunteers 🧑🏻‍🤝‍🧑🏾</a></li>
+              <li>👯🏻 30+ <InlineLink href="./p/volunteers">volunteers 🧑🏻‍🤝‍🧑🏾</InlineLink></li>
               <li>🎲 ~4 organizers</li>
             </ul>
           </div>
