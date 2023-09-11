@@ -134,7 +134,6 @@ a {
   &::before {
     content: '';
     position: absolute;
-    inset: 0 0 auto 0;
     height: 4px;
     background-color: transparent;
     transition: background-color 350ms ease-in-out, translate 350ms ease-in-out;
