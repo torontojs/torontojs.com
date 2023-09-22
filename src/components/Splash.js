@@ -211,6 +211,7 @@ export default ({
 
         {/* Top Nav Bar */}
         <Header role="navigation">
+          {/* eslint-disable max-len */}
           <Link
             href="https://join.slack.com/t/torontojs/shared_invite/zt-zgi31snl-omO3tXSZ0Q7zqN9WBQSf8Q"
             target="_blank"
@@ -219,12 +220,13 @@ export default ({
             <SlackIcon style={{ width: `1.2rem` }} />
             <LinkText>Join Slack</LinkText>
           </Link>
+          {/* eslint-enable max-len */}
           <Link
             href="https://guild.host/torontojs"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <GuildLogo src={guildLogo} />
+            <GuildLogo src={guildLogo} alt="Guild Logo" />
             <LinkText>Join us on Guild</LinkText>
           </Link>
           <Link
@@ -278,9 +280,15 @@ export default ({
 
         <InnerContainer style={{ display: `flex` }}>
           <div style={{ width: `auto`, fontSize: `2rem` }}>
-            We are a volunteer-run community that supports all in their learning and passion for sharing knowledge on JavaScript- and by extension, software development in Toronto and the GTA.
+            We are a volunteer-run community that supports all in their learning and passion for 
+            sharing knowledge on JavaScript- and by extension, software development in Toronto and 
+            the GTA.
 
-            <ul style={{ listStyle: `none`, fontSize: `1.25rem`, lineHeight: 1.4, marginTop: `1rem` }}>
+            <ul style={{ listStyle: `none`, 
+              fontSize: `1.25rem`, 
+              lineHeight: 1.4, 
+              marginTop: `1rem` }}
+            >
               <li>📅 Over 30+ events a year</li>
               <li>🚀 Community-led online and in-person events</li>
               <li>🦋 5555 on Slack</li>
@@ -295,7 +303,10 @@ export default ({
           </GuildCardRoot>
 
         </InnerContainer>
-        <InnerContainer style={{ display: `flex`, justifyContent: `space-between`, overflow: `hidden` }}>
+        <InnerContainer style={{ display: `flex`, 
+          justifyContent: `space-between`, 
+          overflow: `hidden` }}
+        >
           <EventColumn>
             <Title>Upcoming Events</Title>
             <div id="guild-card-upcoming" ref={upcomingEventsRef} />
