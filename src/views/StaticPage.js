@@ -1,13 +1,14 @@
+
 import React, { Component } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Link as L } from 'react-router-dom'
 import styled from 'styled-components'
-import logo from './png/logo_circle.png'
+import logo from '../components/png/logo_circle.png'
 
 const basePath = process.env.NODE_ENV === `development` ? ``
   : `https://raw.githubusercontent.com/torontojs/torontojs.com/gh-pages`
 
-const Page = styled.section`
+const Content = styled.section`
   padding: 20px;
   max-width: 750px;
   margin: 0 auto;
@@ -21,13 +22,11 @@ const Page = styled.section`
     padding-bottom: 40px;
   }
 `
-
 const Logo = styled.img`
   width: 55px;
   height: 55px;
   padding: 20px;
 `
-
 const Link = styled(L)`
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
@@ -49,7 +48,6 @@ class StaticPage extends Component {
       this.setState({ content: data })
     }
   }
-
   render() {
     const { content } = this.state
 
@@ -61,12 +59,11 @@ class StaticPage extends Component {
             <span>BACK</span>
           </Link>
         </div>
-        <Page>
+        <Content>
           <ReactMarkdown source={content} />
-        </Page>
+        </Content>
       </div>
     )
   }
 }
-
 export default StaticPage

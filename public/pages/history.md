@@ -14,6 +14,7 @@ Paul Dowman's JS Code Club joins TorontoJS, and Paul joins the Organizers. Paul 
 Taz shuts down the TorontoJS Inc. Corporation and Paul, Dann, Mihok recreate it as a non-profit corporation, with each listed as a Director officially.
 
 2016 - Taz, Dann, Paul, Mihok are Organizers and Directors.
+
 Paul joins Shopify and leaves TorontoJS as an Organizer, is removed from the corporations Director role.
 
 2019 - Mihok takes over majority of planning and execution of events and has been running TorontoJS alone for 2 years, with Dann acting as an advisor.
@@ -40,8 +41,13 @@ Covid happens; all gatherings move online. More scams and grifts flood the Slack
 
 The volunteer program has since scaled 3 times.
 
-2023 - Chris Naismith joins (and departs) as Organizer, [Yuri Yang](https://yuriyang.com) and [Danny Kim](https://www.linkedin.com/in/0916dhkim/) join as event organizers!
+2023 - Chris Naismith joins (and departs) as Organizer. [Yuri Yang](https://yuriyang.com) hosts JS Social in-person because she wants to eat Korean Fried Chicken and hang out with people.
+[Danny Kim](https://www.linkedin.com/in/0916dhkim/) starts running ad-hoc mob programming events in the `#events` channel!
+
+Sherry Yang departs.
 
 Evert starts TL;DR an [infrequent newsletter](https://tldr.torontojs.com/). [Ken Beaudin](https://www.biodrop.io/kbventures) starts coordinating promotion.
 
-[Marco Campos](https://madcampos.dev/) and [Dale Karp](https://dale.io/) join to run JS Code Club.
+Jen becomes starts fundraising and courting venues. [Marco Campos](https://madcampos.dev/) and [Dale Karp](https://dale.io/) join to run JS Code Club.
+
+[Sami Xie](https://www.linkedin.com/in/sami-xie-91bb4814a) and [Aman Aalam](https://www.linkedin.com/in/amanaalam/) join as in-person event organizers.
