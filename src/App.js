@@ -1,17 +1,18 @@
 // @flow
-
 import React from "react"
 import { BrowserRouter, Switch, Route } from "react-router-dom"
-import StaticPage from "./components/StaticPage"
-import Splash from "./components/Splash"
+import StaticPage from "./views/StaticPage"
+import Landing from "./views/Landing"
+import Splash from "./views/Splash"
 import theme from "./theme"
+
 
 let App = () => (
 
   <BrowserRouter>
     <div>
       <Switch>
-        <Route exact path="/" component={Splash} />
+        <Route exact path="/" component={Landing} />
         <Route path="/p(age)?/:page" component={StaticPage} />
         <Route
           exact
@@ -23,9 +24,8 @@ let App = () => (
           )}
         />
       </Switch>
-
     </div>
-  </BrowserRouter>
+  </BrowserRouter >
 )
 
 export default App

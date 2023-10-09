@@ -1,6 +1,5 @@
-let React = require(`react`)
-
-class ReactRotatingText extends React.Component {
+import React, { Component } from "react"
+class ReactRotatingText extends Component {
   state = {
     index: 0,
     output: ``,
@@ -84,8 +83,8 @@ class ReactRotatingText extends React.Component {
     const { color, cursor, className } = this.props
     return (
       <span className={className} style={{ color }}>
-        { this.state.output }
-        { cursor && <span className="react-rotating-text-cursor">|</span> }
+        {this.state.output}
+        {cursor && <span className="react-rotating-text-cursor">|</span>}
       </span>
     )
   }

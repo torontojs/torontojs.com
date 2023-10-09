@@ -2,6 +2,8 @@
 
 # **[TorontoJS.com](http://torontojs.com/)**
 
+Wanna discuss the website? Tell `#orgmode` on our Slack channel
+
 ### Overview of the Repo
 
 ```
@@ -11,8 +13,9 @@
   |-- images
   |-- pages // contains markdown content that appears after `torontojs.com/p/`
 |-- src
-  |-- _old       // Deprecated views 
-  |-- components // `Splash.js` contains navigation links
+  |-- _old       // Deprecated views
+  |-- components
+  |-- views      // Contains all pages
   |-- theme
   ...
   App.js // top level app entry point
@@ -21,7 +24,19 @@
 |-- README.md -- You are here.
 ```
 
+### Tech Stack
+
+Due to this org being around for 10+ years with many different organizers, friends, and maintainers, this site has many problems a legacy project does. We're happy for anyone to come help improve this!
+
 Built with [create-react-app](https://github.com/facebookincubator/create-react-app).
+
+- React 16 with vanilla JS
+- styled-components
+- [recompose](https://github.com/acdlite/recompose) helpers
+- [glamor](https://github.com/threepointone/glamor) for css
+- [color](https://github.com/Qix-/color) utility
+- [eslint-config-minimal](https://github.com/alex-wilmer/eslint-config-minimal)
+- [gitmoji](https://gitmoji.carloscuesta.me/)
 
 ### Clone / Install
 
@@ -45,10 +60,10 @@ This command should choose a port and open your default browser with the page op
 yarn deploy
 ```
 
-### Technologies
+### Troubleshooting
 
-- [recompose](https://github.com/acdlite/recompose) helpers
-- [glamor](https://github.com/threepointone/glamor) for css
-- [color](https://github.com/Qix-/color) utility
-- [eslint-config-minimal](https://github.com/alex-wilmer/eslint-config-minimal)
-- [gitmoji](https://gitmoji.carloscuesta.me/)
+#### Inability to commit due to lint error
+
+```
+git commit -m 'my commit message' --no-verify
+```
