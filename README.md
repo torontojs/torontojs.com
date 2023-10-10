@@ -17,7 +17,6 @@
   ...
   App.js // top level app entry point
   index.js
-|--.travis.yml
 |-- package.json
 |-- README.md -- You are here.
 ```
