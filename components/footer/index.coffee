@@ -2,6 +2,7 @@ import React from 'react'
 
 import {
   FaYoutube
+  FaInstagram
   FaBriefcase
   FaUsers
   FaTwitter
@@ -15,6 +16,12 @@ export default Footer = ->
       <FaYoutube/>
       <span className="label">
         YouTube
+      </span>
+    </a>
+    <a href="https://www.instagram.com/toronto.js">
+      <FaInstagram/>
+      <span className="label">
+        Instagram
       </span>
     </a>
     <a href="https://tldr.torontojs.com">
