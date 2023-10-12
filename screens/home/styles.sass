@@ -4,8 +4,6 @@
   min-height: 100dvh
   display: flex
   flex-direction: column
-  a
-    +fancy-link
   main
     flex: 1
     .hero
@@ -60,6 +58,8 @@
         &.top
           gap: 2rem
           .description
+            a
+              +fancy-link
             +tablet
               margin-bottom: 2rem
             flex: auto
