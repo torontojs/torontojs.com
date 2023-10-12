@@ -1,0 +1,86 @@
+@import '/styles/mixins.sass'
+
+.Home
+  min-height: 100dvh
+  display: flex
+  flex-direction: column
+  main
+    flex: 1
+    .hero
+      color: white
+      background: var(--color-red)
+      display: flex
+      align-items: stretch
+      .container
+        +container
+        padding-top: 7rem
+        height: 74dvh
+        display: flex
+        flex: 1
+        flex-direction: column
+        background-image: url('./logo.svg')
+        background-position: bottom left
+        background-repeat: no-repeat
+        background-size: 60dvh
+        +tablet
+          background-size: 50dvh
+        +phone
+          background-size: 40dvh
+        .title
+          line-height: 1.66
+          align-self: center
+          text-align: center
+          font-family: Inter, sans-serif
+          font-size: 36px
+          letter-spacing: 0.25rem
+          text-transform: uppercase
+          h1
+            font-size: 2.25rem
+            font-weight: normal
+            .JS
+              font-weight: bold
+              margin-left: 0.33em
+          .typing
+            display: block
+            font-size: 1.25rem
+
+    .content
+      max-width: 62rem
+      margin: 2rem auto
+      display: flex
+      flex-direction: column
+      .container
+        +container
+        display: flex
+        flex-direction: row
+        +tablet
+          flex-direction: column
+        &.top
+          gap: 2rem
+          .description
+            +tablet
+              margin-bottom: 2rem
+            flex: auto
+            h2
+              color: var(--color-grey-dark)
+              font-size: 2rem
+              font-weight: 300
+              line-height: 48px
+            ul
+              list-style: none
+              font-size: 1.25rem
+              line-height: 1.4
+              margin-top: 1rem
+
+          .GuildCard
+            min-width: 265px
+      .events
+        gap: 2rem
+        .future, .past
+          flex: 1 1
+        h2
+          padding: 1rem 0 .5rem .5rem
+          color: var(--color-grey-dark)
+          font-size: 2rem
+          font-weight: 300
+          line-height: 48px
