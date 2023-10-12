@@ -21,7 +21,7 @@ Please provide the following information:
   <label>
     Description
     <br/>
-    <textarea name="message" rows="5" cols="80" ></textarea>
+    <textarea name="message" rows="5"></textarea>
   </label>
   <br/>
   <button type="submit">Send</button>
