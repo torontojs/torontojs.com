@@ -10,8 +10,9 @@ class Page extends React.Component
   render: ->
     <div className="Page">
       <Navbar />
-      <div className="content">
-        {@props.children}
-      </div>
+      <div
+        className="content"
+        dangerouslySetInnerHTML={{__html: @props.content}}
+      />
       <Footer />
     </div>

@@ -10,14 +10,16 @@ import {
 import '/styles/index.sass'
 
 import screens from './screens/*/index.coffee'
-import pages from './pages/*.mdx'
+import pages from './pages/*.md'
 import Page from '/components/page'
+
+console.log pages
 
 App = ->
   <BrowserRouter>
     <Routes>
       {<Route key={name} path={Screen.path or name} element={<Screen/>} /> for name, {default: Screen} of screens}}
-      {<Route key={name} path={name} element={<Page>{<Content/>}</Page>} /> for name, {default: Content} of pages}}
+      {<Route key={name} path={name} element={<Page content={content}/>} /> for name, {default: content} of pages}}
     </Routes>
   </BrowserRouter>
 

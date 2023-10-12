@@ -10,10 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@mdx-js/mdx": "^1.6.22",
-    "@mdx-js/react": "^1.6.22",
     "@parcel/resolver-glob": "^2.9.3",
-    "@parcel/transformer-mdx": "^2.9.3",
     "@parcel/transformer-sass": "^2.9.3",
     "@parcel/transformer-svg-react": "^2.9.3",
     "parcel": "^2.9.3",
@@ -28,6 +25,7 @@
     "@parcel/packager-raw-url": "^2.9.3",
     "@parcel/transformer-coffeescript": "^2.9.3",
     "@parcel/transformer-webmanifest": "^2.9.3",
+    "parcel-transformer-markdown": "^3.0.0",
     "process": "^0.11.10"
   }
 }
