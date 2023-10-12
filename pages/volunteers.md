@@ -91,7 +91,13 @@ localost8080
 
 [Yuri Yang](https://www.linkedin.com/in/07yuri/)
 
-[Jen Chan](https://jenchan.biz)
+[Aman Aalam](https://www.linkedin.com/in/amanaalam/)
+
+[Marco Campos](https://madcampos.dev/) 
+
+[Sami Xie](https://www.linkedin.com/in/sami-xie-91bb4814a)
+
+[Dale Karp](https://dale.io/)
 
 ## Contributors
 
