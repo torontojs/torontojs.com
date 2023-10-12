@@ -24,7 +24,7 @@ export default Footer = ->
         Instagram
       </span>
     </a>
-    <a href="https://tldr.torontojs.com">
+    <a href="https://www.linkedin.com/company/torontojs">
       <FaBriefcase/>
       <span className="label">
         LinkedIn
