@@ -7,6 +7,8 @@
      "sanitize": false,
      "smartLists": true,
      "smartypants": false,
-     "xhtml": false
+     "xhtml": false,
+     "headerIds": false,
+     "mangle": false
    }
  }
