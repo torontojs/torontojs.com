@@ -13,8 +13,6 @@ import screens from './screens/*/index.coffee'
 import pages from './pages/*.md'
 import Page from '/components/page'
 
-console.log pages
-
 App = ->
   <BrowserRouter>
     <Routes>
