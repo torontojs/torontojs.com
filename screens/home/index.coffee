@@ -48,7 +48,8 @@ class Home extends React.Component
                 <li>🚀 Community-led online and in-person events</li>
                 <li>🦋 5800 on Slack</li>
                 <li>🚀 Over 400 on Guild</li>
-                <li>👯🏻 30+ volunteers 🧑🏻‍🤝‍🧑🏾</li>
+                <li>👯🏻 40+ <a href="./volunteers">volunteers</a> 🧑🏻‍🤝‍🧑🏾</li>
+                <li> <a href="./mission">13 years of community</a> and still going! </li>
                 <li>🎲 ~4 organizers</li>
               </ul>
             </div>
