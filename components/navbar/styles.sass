@@ -1,0 +1,33 @@
+@import '/styles/mixins.sass'
+
+nav.Navbar
+  color: white
+  font-weight: bold
+  background: var(--color-red)
+  min-height: 40px
+  display: flex
+  justify-content: center
+  transition: all 350ms ease-in-out
+  &:hover
+    background: var(--color-red-dark)
+  a
+    display: block
+    cursor: pointer
+    line-height: 40px
+    margin: 0
+    padding: 0 1em
+    color: inherit
+    text-decoration: none
+    transition: all 350ms ease-in-out
+    &:hover
+      background: var(--color-red)
+
+    svg, img
+      height: 1em
+      font-size: 1.2rem
+      vertical-align: sub
+      margin-right: 0.33rem
+
+    +tablet
+      span.label
+        display: none

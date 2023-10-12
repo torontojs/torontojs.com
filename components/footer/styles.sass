@@ -1,0 +1,33 @@
+@import '/styles/mixins.sass'
+
+footer.Footer
+  color: white
+  font-weight: bold
+  background: var(--color-grey)
+  min-height: 50px
+  display: flex
+  justify-content: center
+  a
+    display: block
+    cursor: pointer
+    line-height: 50px
+    margin: 0
+    padding: 0 1em
+    color: inherit
+    text-decoration: none
+    transition: all 350ms ease-in-out
+    &:hover
+      translate: 0 -4px
+      color: var(--color-yellow)
+      background: var(--color-red)
+      // line-height: 56px
+      // margin-top: -3px
+
+    svg
+      font-size: 1.2rem
+      vertical-align: sub
+      margin-right: 0.33rem
+
+    +tablet
+      span.label
+        display: none

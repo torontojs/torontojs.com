@@ -17,3 +17,6 @@ npm-debug.log
 # vim
 *.swp
 *.swo
+
+dist/
+.parcel-cache

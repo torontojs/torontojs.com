@@ -1,0 +1,14 @@
+ {
+   "marked": {
+     "breaks": true,
+     "pedantic": false,
+     "gfm": true,
+     "tables": true,
+     "sanitize": false,
+     "smartLists": true,
+     "smartypants": false,
+     "xhtml": false,
+     "headerIds": false,
+     "mangle": false
+   }
+ }

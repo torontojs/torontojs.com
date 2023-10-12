@@ -1,5 +1,0 @@
-[libs]
-flow-typed
-
-[ignore]
-.*/node_modules/styled-components/.*

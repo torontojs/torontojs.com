@@ -1,39 +1,31 @@
 {
-  "name": "tjs",
-  "version": "0.1.0",
-  "private": true,
-  "devDependencies": {
-    "babel-eslint": "^7.2.3",
-    "eslint": "^3.19.0",
-    "eslint-config-minimal": "^0.4.2",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-react": "^6.10.3",
-    "flow-bin": "^0.44.2",
-    "gh-pages": "^0.12.0",
-    "gitmoji-cli": "^8.5.0",
-    "husky": "^0.13.3",
-    "react-scripts": "^5.0.1"
-  },
-  "dependencies": {
-    "babel-polyfill": "^6.23.0",
-    "color": "^1.0.3",
-    "react": "^16.0.0",
-    "react-add-to-calendar": "^0.1.5",
-    "react-dom": "^16.0.0",
-    "react-markdown": "^2.5.0",
-    "react-rotating-text": "^1.2.0",
-    "react-router-dom": "^4.1.1",
-    "recompose": "^0.23.1",
-    "styled-components": "^6.0.4"
-  },
-  "homepage": "https://torontojs.github.io",
+  "name": "torontojs.com",
+  "version": "1.0.0",
+  "description": "",
   "scripts": {
-    "build": "react-scripts build",
-    "commit": "gitmoji -c",
-    "deploy": "npm run build && gh-pages -d build",
-    "eject": "react-scripts eject",
-    "precommit": "eslint src --fix && git add -A",
-    "start": "react-scripts start",
-    "test": "eslint src && flow"
+    "start": "npx parcel serve index.html",
+    "build": "npx parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@parcel/resolver-glob": "^2.9.3",
+    "@parcel/transformer-sass": "^2.9.3",
+    "@parcel/transformer-svg-react": "^2.9.3",
+    "parcel": "^2.9.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "react-router-dom": "^6.16.0",
+    "react-typing-effect": "^2.0.5",
+    "sass": "^1.69.2"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.9.3",
+    "@parcel/transformer-coffeescript": "^2.9.3",
+    "@parcel/transformer-webmanifest": "^2.9.3",
+    "parcel-transformer-markdown": "^3.0.0",
+    "process": "^0.11.10"
   }
 }
