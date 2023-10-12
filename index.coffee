@@ -18,8 +18,20 @@ console.log pages
 App = ->
   <BrowserRouter>
     <Routes>
-      {<Route key={name} path={Screen.path or name} element={<Screen/>} /> for name, {default: Screen} of screens}}
-      {<Route key={name} path={name} element={<Page content={content}/>} /> for name, {default: content} of pages}}
+      {for name, {default: Screen} of screens
+        <Route
+          key={name}
+          path={Screen.path or name}
+          element={<Screen/>}
+        />
+      }
+      {for name, {default: content} of pages
+        <Route
+          key={name}
+          path={name}
+          element={<Page content={content}/>}
+        />
+      }
     </Routes>
   </BrowserRouter>
 
