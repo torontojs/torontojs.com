@@ -58,7 +58,15 @@ localost8080
 [Chris Naismith](https://www.linkedin.com/in/chris-naismith/)
 
 [Liz McReady](https://gingerkiwi.blog/)
+[Divish Ram](https://www.linkedin.com/in/divish-ram-694b55230)
 
+[Jack Li](https://www.linkedin.com/in/jackli0707/)
+
+[Brandon Cha](https://www.linkedin.com/in/brandoncha/)
+
+[Lamisa Saadat](https://www.linkedin.com/in/lamisaadat/)
+
+[Chris West](https://www.linkedin.com/in/chris-west-code-wrangler/)
 ## Educational Accomplices
 
 [Nicole Chung](https://twitter.com/redconservatory)
