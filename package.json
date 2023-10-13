@@ -24,6 +24,7 @@
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.9.3",
     "@parcel/transformer-coffeescript": "^2.9.3",
+    "@parcel/transformer-inline-string": "^2.10.0",
     "@parcel/transformer-webmanifest": "^2.9.3",
     "parcel-transformer-markdown": "^3.0.0",
     "process": "^0.11.10"
