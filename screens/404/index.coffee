@@ -4,6 +4,7 @@ import ReactTypingEffect from 'react-typing-effect'
 
 import Navbar from '/components/navbar'
 import Footer from '/components/footer'
+import Glitch from '/components/glitch'
 
 import './styles.sass'
 
@@ -14,6 +15,7 @@ class FourOhFour extends React.Component
   @path = '*'
   render: ->
     <div className="FourOhFour">
+      <Glitch initialDelay={10000} throttle={300} />
       <Navbar />
       <main>
         <div className="container">
