@@ -1,0 +1,51 @@
+@import '/styles/mixins.sass'
+
+.FourOhFour
+  background: var(--color-red)
+  color: white
+  display: flex
+  flex-direction: column
+  min-height: 100dvh
+  main
+    display: flex
+    flex: 1
+    .container
+      +container
+      flex: 1
+      position: relative
+      .title
+        padding-top: 7rem
+        line-height: 1.66
+        align-self: center
+        text-align: center
+        font-family: Inter, sans-serif
+        font-size: 36px
+        letter-spacing: 0.25rem
+        text-transform: uppercase
+        h1
+          font-size: 2.25rem
+          font-weight: normal
+          .JS
+            font-weight: bold
+            margin-left: 0.33em
+        .typing
+          display: block
+          font-size: 1.25rem
+      .logo
+        width: 100%
+        height: 100%
+        position: absolute
+        display: flex
+        align-items: flex-end
+        svg
+          height: 60dvh
+          +tablet
+            max-height: 50dvh
+          +phone
+            max-height: 40dvh
+          path, g, polygon, circle
+            fill: none
+            stroke: currentColor
+            stroke-width: 0.5px
+            stroke-dasharray: 2,2
+            stroke-linejoin: round
