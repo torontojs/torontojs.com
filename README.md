@@ -6,10 +6,11 @@ The Website for TorontoJS
 
 This website is built with:
 - yarn
-- Coffeescript
+- [Coffeescript 2](https://coffeescript.org/)
 - Sass
 - React 18
-- Parcel
+- parcel
+- Deployed on Netlify, account owned by [`@kieran`](https://github.com/kieran)
 
 # Getting Started
 
