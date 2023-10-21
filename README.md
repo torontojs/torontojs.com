@@ -21,7 +21,7 @@ check out the repo, then
 ```
 nvm use    # make sure you're on the correct version of node (v20.8.0) 
 
-npm i      # install node mudules
+npm i      # install node modules
 
 npm start  # run the app! (this runs parcel in live reload mode)
 ```
