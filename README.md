@@ -1,6 +1,6 @@
 # torontojs.com
 
-The Website for TorontoJS
+The Website for TorontoJS. The best community EVER
 
 ![image](https://github.com/torontojs/torontojs.com/assets/3444/6721d2e7-07c0-4245-813d-bd16e2a3a790)
 
