@@ -14,7 +14,7 @@ All volunteers agree to model and uphold the Code of Conduct.
 
 localost8080
 
-[Ken Beaudin](https://twitter.com/kenbeaudin)
+[Ken Beaudin](https://www.biodrop.io/kbventures)
 
 [Evert Pot](https://evertpot.com/)
 
