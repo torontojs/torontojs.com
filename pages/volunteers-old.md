@@ -1,4 +1,4 @@
-## Volunteers 
+## Profile Photos 
 
 Volunteers and their contributions are what has kept this going, making Toronto JS the welcoming and expansive place it is today. 
 

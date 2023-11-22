@@ -9,6 +9,11 @@
   },
   "author": "",
   "license": "ISC",
+  "source": [
+    "pages/index.html",
+    "pages/volunteers.md",
+    "pages/volunteer_data.coffee"
+  ],
   "dependencies": {
     "@parcel/resolver-glob": "^2.10.0",
     "@parcel/transformer-sass": "^2.10.0",
