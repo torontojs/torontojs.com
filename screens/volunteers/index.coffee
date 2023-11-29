@@ -2,21 +2,20 @@ import React from 'react'
 
 import Navbar from '/components/navbar'
 import Footer from '/components/footer'
-import assets from '../../assets/images/'
-
 import '/components/page/styles.sass'
+
 
 volunteer_data = {
     contributors: [
       {
         name: "Jen Chan",
         profileURL: "https://www.jenchan.biz/",
-        profileImageURL: "assets/jen",
+        profileImageURL: "/images/jen.jpg",
       },
       {
         name: "Kieran Huggins",
         profileURL: "https://kieran.ca/",
-        profileImageURL: "",
+        profileImageURL: "/images/kieran.png",
       },
       {
         name: "Alex Wilmer",
@@ -263,7 +262,7 @@ class Volunteers extends React.Component
             <h1>Promotion, Moderation, Community Engagement</h1>
             <ul>
                 {for volunteer, index in volunteer_data.contributors
-                    <li key={index}>{volunteer.name}<br /><a href={volunteer.profileURL}><img src={volunteer.profileImageURL} /></a></li>}
+                    <li key={index}>{volunteer.name}<br /><a href={volunteer.profileURL} target="_blank"><img src={volunteer.profileImageURL} /></a></li>}
             </ul>
         </div> 
         <Footer />
