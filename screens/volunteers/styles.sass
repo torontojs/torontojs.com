@@ -1,4 +1,11 @@
-.ProfileGrid
+.Volunteers
+ > p
+   line-height: 1.5
+ > h2
+   margin-top: 3rem
+.volunteerList
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr))
   display: grid
-  grid-template-columns: repeat(3, 1fr)
-  gap: 2rem
+  grid-gap: 1rem
+  &:last-child
+    margin-bottom: 5rem

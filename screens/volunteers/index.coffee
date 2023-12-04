@@ -13,23 +13,21 @@ class Volunteers extends React.Component
   render: ->
     <div className="Page">
         <Navbar />
-        <div className="Volunteers">
-            <h1>Profile Photos</h1>
-            <p>
-                Volunteers and their contributions are what has kept this going, making Toronto JS the welcoming and expansive place it is today. 
-                Many are self-taught, some are beginning their programming journey, others more experienced developers. We all believe there can be a space for people to practice, discuss and share knowledge about code as craft, and have honest discussions about engineering practice and career. 
-                Everyone supports events by offering their unpaid time, connections and expertise to empower and elevate others. Whether it is event support, promotion, event organizing, mediating conflicts and removing trolls. This community would not be possible without the participation of our volunteers.
-                We are grateful for the time and effort they put into making this community a welcoming place for all in tech.
-                All volunteers agree to model and uphold the Code of Conduct. 
-            </p>
+        <div className="Volunteers content">
+            <h1>Volunteers</h1>
+            <p>Volunteers and their contributions are what has kept this going, making Toronto JS the welcoming and expansive place it is today.</p>
+            <p>Many are self-taught, some are beginning their programming journey, others more experienced developers. We all believe there can be a space for people to practice, discuss and share knowledge about code as craft, and have honest discussions about engineering practice and career.</p>
+            <p>Everyone supports events by offering their unpaid time, connections and expertise to empower and elevate others. Whether it is event support, promotion, event organizing, mediating conflicts and removing trolls. This community would not be possible without the participation of our volunteers.</p>
+            <p><strong>We are grateful for the time and effort they put into making this community a welcoming place for all in tech.</strong></p>
+            <p>All volunteers agree to model and uphold the Code of Conduct.</p>
             {for section in VolunteerList
               <>
                   <h2>{section.sectionName}</h2>
-                  <div className="ProfileGrid">
+                  <div className="volunteerList">
                     {for member, index in section.members
                       <ProfileCard volunteer={member} />}
                   </div>
               </>}
-        </div> 
+        </div>
         <Footer />
     </div>

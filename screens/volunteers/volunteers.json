@@ -5,17 +5,20 @@
             {
                 "name": "Jen Chan",
                 "profileURL": "https://www.jenchan.biz/",
-                "profileImageURL": "/images/jen.jpg"
+                "profileURLText": "jenchan.biz",
+                "avatarName": "jen"
             },
             {
                 "name": "Kieran Huggins",
                 "profileURL": "https://kieran.ca/",
-                "profileImageURL": "/images/kieran.png"
+                "profileURLText": "kieran.ca",
+                "avatarName": "kieran"
             },
             {
                 "name": "Alex Wilmer",
                 "profileURL": "https://twitter.com/benevolentNinja",
-                "profileImageURL": "/images/torontojs.png"
+                "profileURLText": "twitter.com",
+                "avatarName": "torontojs"
             }
         ]
     },
@@ -25,12 +28,14 @@
             {
                 "name": "Sherry Yang",
                 "profileURL": "https://5hel2l2y.github.io/",
-                "profileImageURL": "/images/sherry.jpg"
+                "profileURLText": "5hel2l2y.github.io",
+                "avatarName": "sherry"
             },
             {
                 "name": "Erik Derohanian",
                 "profileURL": "https://www.linkedin.com/in/erikjd/",
-                "profileImageURL": "/images/torontojs.png"
+                "profileURLText": "linkedin.com",
+                "avatarName": "torontojs"
             }
         ]
     },
@@ -40,37 +45,44 @@
             {
                 "name": "Aman Aalam",
                 "profileURL": "https://www.linkedin.com/in/amanaalam/",
-                "profileImageURL": "/images/aman.jpg"
+                "profileURLText": "linkedin.com",
+                "avatarName": "aman"
             },
             {
                 "name": "Dale Karp",
                 "profileURL": "https://dale.io/",
-                "profileImageURL": "/images/daleee.jpg"
+                "profileURLText": "dale.io",
+                "avatarName": "daleee"
             },
             {
                 "name": "Evert Pot",
                 "profileURL": "https://evertpot.com/",
-                "profileImageURL": "/images/evert.jpg"
+                "profileURLText": "evertpot.com",
+                "avatarName": "evert"
             },
             {
                 "name": "Sami Xie",
                 "profileURL": "https://www.linkedin.com/in/sami-xie-91bb4814a",
-                "profileImageURL": "/images/sami.jpg"
+                "profileURLText": "linkedin.com",
+                "avatarName": "sami"
             },
             {
                 "name": "Yuri Yang",
                 "profileURL": "https://www.linkedin.com/in/07yuri/",
-                "profileImageURL": "/images/yuri.jpg"
+                "profileURLText": "linkedin.com",
+                "avatarName": "yuri"
             },
             {
                 "name": "Marco Campos",
                 "profileURL": "https://madcampos.dev/",
-                "profileImageURL": "/images/marco.jpg"
+                "profileURLText": "madcampos.dev",
+                "avatarName": "marco"
             },
             {
                 "name": "Ankur Kaushal",
                 "profileURL": "https://www.linkedin.com/in/ankur-kaushal/",
-                "profileImageURL": "/images/ankur.jpg"
+                "profileURLText": "linkedin.com",
+                "avatarName": "ankur"
             }
         ]
     },
@@ -80,17 +92,20 @@
             {
                 "name": "Dann Toliver",
                 "profileURL": "https://danntoliver.com",
-                "profileImageURL": "/images/dann.jpg"
+                "profileURLText": "danntoliver.com",
+                "avatarName": "dann"
             },
             {
                 "name": "Matthew Mihok",
                 "profileURL": "https://twitter.com/mihok",
-                "profileImageURL": "/images/mattMihok.png"
+                "profileURLText": "twitter.com",
+                "avatarName": "mattMihok"
             },
             {
                 "name": "Jen Chan",
                 "profileURL": "https://www.jenchan.biz/",
-                "profileImageURL": "/images/jen.jpg"
+                "profileURLText": "jenchan.biz",
+                "avatarName": "jen"
             }
         ]
     },
@@ -100,7 +115,8 @@
             {
                 "name": "Taz Singh",
                 "profileURL": "https://twitter.com/tazsingh",
-                "profileImageURL": "/images/taz.jpg"
+                "profileURLText": "twitter.com",
+                "avatarName": "taz"
             }
         ]
     },
@@ -110,107 +126,128 @@
             {
                 "name": "Alex Wilmer",
                 "profileURL": "https://twitter.com/benevolentNinja",
-                "profileImageURL": "/images/torontojs.png"
+                "profileURLText": "twitter.com",
+                "avatarName": "torontojs"
             },
             {
                 "name": "Andrew Matte",
                 "profileURL": "https://www.linkedin.com/in/andrew-matte",
-                "profileImageURL": "/images/andrew.jpg"
+                "profileURLText": "linkedin.com",
+                "avatarName": "andrew"
             },
             {
                 "name": "Brandon Cha",
                 "profileURL": "https://www.linkedin.com/in/brandoncha/",
-                "profileImageURL": "/images/brandon.png"
+                "profileURLText": "linkedin.com",
+                "avatarName": "brandon"
             },
             {
                 "name": "Cam Remesz",
                 "profileURL": "https://www.linkedin.com/in/cameron-remesz/",
-                "profileImageURL": "/images/cam.jpg"
+                "profileURLText": "linkedin.com",
+                "avatarName": "cam"
             },
             {
                 "name": "Chris West",
                 "profileURL": "https://www.linkedin.com/in/chris-west-code-wrangler/",
-                "profileImageURL": "/images/torontojs.png"
+                "profileURLText": "linkedin.com",
+                "avatarName": "torontojs"
             },
             {
                 "name": "Divish Ram",
                 "profileURL": "https://www.linkedin.com/in/divish-ram-694b55230/",
-                "profileImageURL": "/images/divish.jpg"
+                "profileURLText": "linkedin.com",
+                "avatarName": "divish"
             },
             {
                 "name": "Danny Kim",
                 "profileURL": "https://www.linkedin.com/in/0916dhkim/",
-                "profileImageURL": "/images/danny.jpg"
+                "profileURLText": "linkedin.com",
+                "avatarName": "danny"
             },
             {
                 "name": "Drey Moreau",
                 "profileURL": "https://www.linkedin.com/in/dreymoreau/",
-                "profileImageURL": "/images/drey.jpg"
+                "profileURLText": "linkedin.com",
+                "avatarName": "drey"
             },
             {
                 "name": "Jack Li",
-                "profileURL": "https.com/in/jackli0707/",
-                "profileImageURL": "/images/jack.png"
+                "profileURL": "https://www.linkedin.com/in/jackli0707/",
+                "profileURLText": "linkedin.com",
+                "avatarName": "jack"
             },
             {
                 "name": "Kaoru Tsumita",
                 "profileURL": "https://kaorut.com/",
-                "profileImageURL": "/images/kaoru.jpg"
+                "profileURLText": "kaorut.com",
+                "avatarName": "kaoru"
             },
             {
                 "name": "Ken Beaudin",
                 "profileURL": "https://www.linkedin.com/in/ken-beaudin-9a4061174/",
-                "profileImageURL": "/images/ken.jpg"
+                "profileURLText": "linkedin.com",
+                "avatarName": "ken"
             },
             {
                 "name": "Kieran Huggins",
                 "profileURL": "https://kieran.ca/",
-                "profileImageURL": "/images/kieran.png"
+                "profileURLText": "kieran.ca",
+                "avatarName": "kieran"
             },
             {
                 "name": "Lamisa Saadat",
                 "profileURL": "https://www.linkedin.com/in/lamisaadat/",
-                "profileImageURL": "/images/lamisa.jpg"
+                "profileURLText": "linkedin.com",
+                "avatarName": "lamisa"
             },
             {
                 "name": "Liz McCready",
                 "profileURL": "https://gingerkiwi.blog/",
-                "profileImageURL": "/images/liz.jpg"
+                "profileURLText": "gingerkiwi.blog",
+                "avatarName": "liz"
             },
             {
                 "name": "Matt J Jackson",
                 "profileURL": "https://www.linkedin.com/in/mattjacksondev/",
-                "profileImageURL": "/images/matt.jpg"
+                "profileURLText": "linkedin.com",
+                "avatarName": "matt"
             },
             {
                 "name": "Metkel Kebede",
                 "profileURL": "https://www.linkedin.com/in/metkel-kebede-50a79664/",
-                "profileImageURL": "/images/metkel.jpg"
+                "profileURLText": "linkedin.com",
+                "avatarName": "metkel"
             },
             {
                 "name": "Zeinab Farag",
                 "profileURL": "https://www.linkedin.com/in/zeinab454/",
-                "profileImageURL": "/images/zeinab.jpg"
+                "profileURLText": "linkedin.com",
+                "avatarName": "zeinab"
             },
             {
                 "name": "Rajat Bansal",
                 "profileURL": "https://www.linkedin.com/in/rjtbansal/",
-                "profileImageURL": "/images/rajat.jpg"
+                "profileURLText": "linkedin.com",
+                "avatarName": "rajat"
             },
             {
                 "name": "Sammy Lam",
                 "profileURL": "https://www.linkedin.com/in/sammy-lam-full-stack-dev-electrician-car-wrapper-it/",
-                "profileImageURL": "/images/torontojs.png"
+                "profileURLText": "linkedin.com",
+                "avatarName": "torontojs"
             },
             {
                 "name": "Tehseen Chaudry",
                 "profileURL": "https://matcha.so/tehseen",
-                "profileImageURL": "/images/tehseen.jpg"
+                "profileURLText": "matcha.so/tehseen",
+                "avatarName": "tehseen"
             },
             {
                 "name": "Christine Hsiao",
                 "profileURL": "https://www.linkedin.com/in/christine-hsiao-dev/",
-                "profileImageURL": "/images/christine.jpg"
+                "profileURLText": "linkedin.com",
+                "avatarName": "christine"
             }
         ]
     },
@@ -220,32 +257,38 @@
             {
                 "name": "Btara Truha",
                 "profileURL": "https://btruhand.github.io/blog/",
-                "profileImageURL": "/images/torontojs.png"
+                "profileURLText": "btruhand.github.io/blog",
+                "avatarName": "torontojs"
             },
             {
                 "name": "Connor Wils",
                 "profileURL": "https://cwlsn.com/",
-                "profileImageURL": "/images/connor.jpg"
+                "profileURLText": "cwlsn.com",
+                "avatarName": "connor"
             },
             {
                 "name": "David Wolever",
                 "profileURL": "https://twitter.com/wolever",
-                "profileImageURL": "/images/david.jpg"
+                "profileURLText": "twitter.com",
+                "avatarName": "david"
             },
             {
                 "name": "Nicole Chung",
                 "profileURL": "https://www.linkedin.com/in/nicole-chung-6b06b33/",
-                "profileImageURL": "/images/nicole.jpg"
+                "profileURLText": "linkedin.com",
+                "avatarName": "nicole"
             },
             {
                 "name": "Niya Panamdanam",
                 "profileURL": "https://www.linkedin.com/in/niya-panamdanam/",
-                "profileImageURL": "/images/niya.jpg"
+                "profileURLText": "linkedin.com",
+                "avatarName": "niya"
             },
             {
                 "name": "Rachael Concessio",
                 "profileURL": "https://www.linkedin.com/in/rachaelconcessio/",
-                "profileImageURL": "/images/rachael.jpg"
+                "profileURLText": "linkedin.com",
+                "avatarName": "rachael"
             }
         ]
     }
