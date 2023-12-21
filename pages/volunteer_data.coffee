@@ -14,6 +14,6 @@ generateMarkdown = (volunteer_data) ->
 generatedMarkdown = generateMarkdown(volunteer_data)
 
 # Write the generated content to a file
-fs.writeFileSync 'profile_photo.md', generatedMarkdown
+fs.writeFileSync 'volunteers.md', generatedMarkdown
 
 console.log 'Markdown file generated successfully'

@@ -1,132 +1,17 @@
 [
     {
-        "sectionName": "Contributors",
-        "members": [
-            {
-                "name": "Jen Chan",
-                "profileURL": "https://www.jenchan.biz/",
-                "profileURLText": "jenchan.biz",
-                "avatarName": "jen"
-            },
-            {
-                "name": "Kieran Huggins",
-                "profileURL": "https://kieran.ca/",
-                "profileURLText": "kieran.ca",
-                "avatarName": "kieran"
-            },
-            {
-                "name": "Alex Wilmer",
-                "profileURL": "https://twitter.com/benevolentNinja",
-                "profileURLText": "twitter.com",
-                "avatarName": "torontojs"
-            }
-        ]
-    },
-    {
-        "sectionName": "Honorary Members",
-        "members": [
-            {
-                "name": "Sherry Yang",
-                "profileURL": "https://5hel2l2y.github.io/",
-                "profileURLText": "5hel2l2y.github.io",
-                "avatarName": "sherry"
-            },
-            {
-                "name": "Erik Derohanian",
-                "profileURL": "https://www.linkedin.com/in/erikjd/",
-                "profileURLText": "linkedin.com",
-                "avatarName": "torontojs"
-            }
-        ]
-    },
-    {
-        "sectionName": "Organizers",
-        "members": [
-            {
-                "name": "Aman Aalam",
-                "profileURL": "https://www.linkedin.com/in/amanaalam/",
-                "profileURLText": "linkedin.com",
-                "avatarName": "aman"
-            },
-            {
-                "name": "Dale Karp",
-                "profileURL": "https://dale.io/",
-                "profileURLText": "dale.io",
-                "avatarName": "daleee"
-            },
-            {
-                "name": "Evert Pot",
-                "profileURL": "https://evertpot.com/",
-                "profileURLText": "evertpot.com",
-                "avatarName": "evert"
-            },
-            {
-                "name": "Sami Xie",
-                "profileURL": "https://www.linkedin.com/in/sami-xie-91bb4814a",
-                "profileURLText": "linkedin.com",
-                "avatarName": "sami"
-            },
-            {
-                "name": "Yuri Yang",
-                "profileURL": "https://www.linkedin.com/in/07yuri/",
-                "profileURLText": "linkedin.com",
-                "avatarName": "yuri"
-            },
-            {
-                "name": "Marco Campos",
-                "profileURL": "https://madcampos.dev/",
-                "profileURLText": "madcampos.dev",
-                "avatarName": "marco"
-            },
-            {
-                "name": "Ankur Kaushal",
-                "profileURL": "https://www.linkedin.com/in/ankur-kaushal/",
-                "profileURLText": "linkedin.com",
-                "avatarName": "ankur"
-            }
-        ]
-    },
-    {
-        "sectionName": "Directors",
-        "members": [
-            {
-                "name": "Dann Toliver",
-                "profileURL": "https://danntoliver.com",
-                "profileURLText": "danntoliver.com",
-                "avatarName": "dann"
-            },
-            {
-                "name": "Matthew Mihok",
-                "profileURL": "https://twitter.com/mihok",
-                "profileURLText": "twitter.com",
-                "avatarName": "mattMihok"
-            },
-            {
-                "name": "Jen Chan",
-                "profileURL": "https://www.jenchan.biz/",
-                "profileURLText": "jenchan.biz",
-                "avatarName": "jen"
-            }
-        ]
-    },
-    {
-        "sectionName": "Advisory",
-        "members": [
-            {
-                "name": "Taz Singh",
-                "profileURL": "https://twitter.com/tazsingh",
-                "profileURLText": "twitter.com",
-                "avatarName": "taz"
-            }
-        ]
-    },
-    {
         "sectionName": "Promotion, Moderation and Community Engagement",
         "members": [
             {
                 "name": "Alex Wilmer",
                 "profileURL": "https://twitter.com/benevolentNinja",
                 "profileURLText": "twitter.com",
+                "avatarName": "torontojs"
+            },
+            {
+                "name": "Erik Derohanian",
+                "profileURL": "https://www.linkedin.com/in/erikjd/",
+                "profileURLText": "linkedin.com",
                 "avatarName": "torontojs"
             },
             {
@@ -248,6 +133,12 @@
                 "profileURL": "https://www.linkedin.com/in/christine-hsiao-dev/",
                 "profileURLText": "linkedin.com",
                 "avatarName": "christine"
+            },
+            {
+                "name": "Michal Svatos",
+                "profileURL": "https://github.com/MichalSvatos",
+                "profileURLText": "github.com",
+                "avatarName": "torontojs"
             }
         ]
     },
@@ -289,6 +180,115 @@
                 "profileURL": "https://www.linkedin.com/in/rachaelconcessio/",
                 "profileURLText": "linkedin.com",
                 "avatarName": "rachael"
+            }
+        ]
+    },
+    {
+        "sectionName": "Organizers",
+        "members": [
+            {
+                "name": "Aman Aalam",
+                "profileURL": "https://www.linkedin.com/in/amanaalam/",
+                "profileURLText": "linkedin.com",
+                "avatarName": "aman"
+            },
+            {
+                "name": "Dale Karp",
+                "profileURL": "https://dale.io/",
+                "profileURLText": "dale.io",
+                "avatarName": "daleee"
+            },
+            {
+                "name": "Evert Pot",
+                "profileURL": "https://evertpot.com/",
+                "profileURLText": "evertpot.com",
+                "avatarName": "evert"
+            },
+            {
+                "name": "Sami Xie",
+                "profileURL": "https://www.linkedin.com/in/sami-xie-91bb4814a",
+                "profileURLText": "linkedin.com",
+                "avatarName": "sami"
+            },
+            {
+                "name": "Yuri Yang",
+                "profileURL": "https://www.linkedin.com/in/07yuri/",
+                "profileURLText": "linkedin.com",
+                "avatarName": "yuri"
+            },
+            {
+                "name": "Marco Campos",
+                "profileURL": "https://madcampos.dev/",
+                "profileURLText": "madcampos.dev",
+                "avatarName": "marco"
+            },
+            {
+                "name": "Ankur Kaushal",
+                "profileURL": "https://www.linkedin.com/in/ankur-kaushal/",
+                "profileURLText": "linkedin.com",
+                "avatarName": "ankur"
+            }
+        ]
+    },
+    {
+        "sectionName": "Contributors",
+        "members": [
+            {
+                "name": "Jen Chan",
+                "profileURL": "https://www.jenchan.biz/",
+                "profileURLText": "jenchan.biz",
+                "avatarName": "jen"
+            },
+            {
+                "name": "Kieran Huggins",
+                "profileURL": "https://kieran.ca/",
+                "profileURLText": "kieran.ca",
+                "avatarName": "kieran"
+            },
+            {
+                "name": "Alex Wilmer",
+                "profileURL": "https://twitter.com/benevolentNinja",
+                "profileURLText": "twitter.com",
+                "avatarName": "torontojs"
+            }
+        ]
+    },
+    {
+        "sectionName": "Honorary Members",
+        "members": [
+            {
+                "name": "Sherry Yang",
+                "profileURL": "https://5hel2l2y.github.io/",
+                "profileURLText": "5hel2l2y.github.io",
+                "avatarName": "sherry"
+            }
+        ]
+    },
+    {
+        "sectionName": "Directors",
+        "members": [
+            {
+                "name": "Dann Toliver",
+                "profileURL": "https://danntoliver.com",
+                "profileURLText": "danntoliver.com",
+                "avatarName": "dann"
+            },
+            {
+                "name": "Matthew Mihok",
+                "profileURL": "https://twitter.com/mihok",
+                "profileURLText": "twitter.com",
+                "avatarName": "mattMihok"
+            }
+        ]
+    },
+    {
+        "sectionName": "Advisory",
+        "members": [
+            {
+                "name": "Taz Singh",
+                "profileURL": "https://twitter.com/tazsingh",
+                "profileURLText": "twitter.com",
+                "avatarName": "taz"
             }
         ]
     }
