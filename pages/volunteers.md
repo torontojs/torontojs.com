@@ -26,7 +26,7 @@ const volunteer_data = require('./volunteer_data.coffee');
 ```js data-import="./volunteer_data.coffee"
 const volunteer_data = require('./volunteer_data.coffee');
 
-<!-- Render the data using Markdown -->
+// <!-- Render the data using Markdown -->
 <ul>
     {volunteer_data.contributors.map(contributor => (
         <li key={contributor.name}>
