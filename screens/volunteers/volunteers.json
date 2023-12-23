@@ -9,12 +9,6 @@
                 "avatarName": "torontojs"
             },
             {
-                "name": "Erik Derohanian",
-                "profileURL": "https://www.linkedin.com/in/erikjd/",
-                "profileURLText": "linkedin.com",
-                "avatarName": "torontojs"
-            },
-            {
                 "name": "Andrew Matte",
                 "profileURL": "https://www.linkedin.com/in/andrew-matte",
                 "profileURLText": "linkedin.com",
@@ -39,6 +33,12 @@
                 "avatarName": "torontojs"
             },
             {
+                "name": "Christine Hsiao",
+                "profileURL": "https://www.linkedin.com/in/christine-hsiao-dev/",
+                "profileURLText": "linkedin.com",
+                "avatarName": "christine"
+            },
+            {
                 "name": "Divish Ram",
                 "profileURL": "https://www.linkedin.com/in/divish-ram-694b55230/",
                 "profileURLText": "linkedin.com",
@@ -57,6 +57,18 @@
                 "avatarName": "drey"
             },
             {
+                "name": "Elizabeth Pinero",
+                "profileURL": "https://www.linkedin.com/in/elizabeth-pinero-984471177/",
+                "profileURLText": "linkedin.com",
+                "avatarName": "torontojs"
+            },
+            {
+                "name": "Erik Derohanian",
+                "profileURL": "https://www.linkedin.com/in/erikjd/",
+                "profileURLText": "linkedin.com",
+                "avatarName": "torontojs"
+            },
+            {
                 "name": "Jack Li",
                 "profileURL": "https://www.linkedin.com/in/jackli0707/",
                 "profileURLText": "linkedin.com",
@@ -67,12 +79,6 @@
                 "profileURL": "https://kaorut.com/",
                 "profileURLText": "kaorut.com",
                 "avatarName": "kaoru"
-            },
-            {
-                "name": "Elizabeth Pinero",
-                "profileURL": "https://www.linkedin.com/in/elizabeth-pinero-984471177/",
-                "profileURLText": "linkedin.com",
-                "avatarName": "torontojs"
             },
             {
                 "name": "Ken Beaudin",
@@ -111,10 +117,10 @@
                 "avatarName": "metkel"
             },
             {
-                "name": "Zeinab Farag",
-                "profileURL": "https://www.linkedin.com/in/zeinab454/",
-                "profileURLText": "linkedin.com",
-                "avatarName": "zeinab"
+                "name": "Michal Svatos",
+                "profileURL": "https://www.svatos.dev",
+                "profileURLText": "portfolio",
+                "avatarName": "torontojs"
             },
             {
                 "name": "Rajat Bansal",
@@ -135,16 +141,10 @@
                 "avatarName": "tehseen"
             },
             {
-                "name": "Christine Hsiao",
-                "profileURL": "https://www.linkedin.com/in/christine-hsiao-dev/",
+                "name": "Zeinab Farag",
+                "profileURL": "https://www.linkedin.com/in/zeinab454/",
                 "profileURLText": "linkedin.com",
-                "avatarName": "christine"
-            },
-            {
-                "name": "Michal Svatos",
-                "profileURL": "https://www.svatos.dev",
-                "profileURLText": "portfolio",
-                "avatarName": "torontojs"
+                "avatarName": "zeinab"
             }
         ]
     },
