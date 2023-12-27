@@ -8,7 +8,7 @@ Everyone supports events by offering their unpaid time, connections and expertis
 
 We are grateful for the time and effort they put into making this community a welcoming place for all in tech.
 
-All volunteers agree to model and uphold the Code of Conduct. 
+All volunteers agree to model and uphold the Code of Conduct.
 
 ### Promotion, Moderation, Community Engagement
 
@@ -50,7 +50,7 @@ localost8080
 
 [Chris Naismith](https://www.linkedin.com/in/chris-naismith/)
 
-[Liz McReady](https://gingerkiwi.blog/)
+[Elizabeth (Liz) McCready](https://gingerkiwi.dev)
 
 [Divish Ram](https://www.linkedin.com/in/divish-ram-694b55230)
 
