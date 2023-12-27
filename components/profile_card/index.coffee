@@ -1,18 +1,18 @@
 import React from 'react'
 import './styles.sass'
 
-DEFAULT_PROFILE_IMAGE = "/assets/avatars/torontojs.jpg"
+import defaultImage from './torontojs.jpg'
 
-ProfileCard = ({volunteer}) ->
+ProfileCard = ({volunteer, avatar}) ->
   <a href={volunteer.profileURL} target="_blank" rel="noopener" className="ProfileCard">
     <img
       className="ProfileCardAvatar"
-      src={if volunteer.avatarName then "/avatars/#{volunteer.avatarName}.jpg" else "/assets/avatars/torontojs.jpg"}
+      src={avatar or defaultImage}
       width="120"
       height="120"
       loading="lazy"
     />
-    <span class="ProfileCardDesc">
+    <span className="ProfileCardDesc">
       <span className="ProfileCardName">{volunteer.name}</span>
       <span className="ProfileCardUrl">{volunteer.profileURLText}</span>
     </span>

@@ -5,8 +5,7 @@
             {
                 "name": "Alex Wilmer",
                 "profileURL": "https://twitter.com/benevolentNinja",
-                "profileURLText": "twitter.com",
-                "avatarName": "torontojs"
+                "profileURLText": "twitter.com"
             },
             {
                 "name": "Andrew Matte",
@@ -29,8 +28,7 @@
             {
                 "name": "Chris West",
                 "profileURL": "https://www.linkedin.com/in/chris-west-code-wrangler/",
-                "profileURLText": "linkedin.com",
-                "avatarName": "torontojs"
+                "profileURLText": "linkedin.com"
             },
             {
                 "name": "Christine Hsiao",
@@ -65,8 +63,7 @@
             {
                 "name": "Erik Derohanian",
                 "profileURL": "https://www.linkedin.com/in/erikjd/",
-                "profileURLText": "linkedin.com",
-                "avatarName": "torontojs"
+                "profileURLText": "linkedin.com"
             },
             {
                 "name": "Jack Li",
@@ -119,8 +116,7 @@
             {
                 "name": "Michal Svatos",
                 "profileURL": "https://www.svatos.dev",
-                "profileURLText": "portfolio",
-                "avatarName": "torontojs"
+                "profileURLText": "portfolio"
             },
             {
                 "name": "Rajat Bansal",
@@ -131,8 +127,7 @@
             {
                 "name": "Sammy Lam",
                 "profileURL": "https://www.linkedin.com/in/sammy-lam-full-stack-dev-electrician-car-wrapper-it/",
-                "profileURLText": "linkedin.com",
-                "avatarName": "torontojs"
+                "profileURLText": "linkedin.com"
             },
             {
                 "name": "Tehseen Chaudry",
@@ -154,8 +149,7 @@
             {
                 "name": "Btara Truha",
                 "profileURL": "https://btruhand.github.io/blog/",
-                "profileURLText": "btruhand.github.io/blog",
-                "avatarName": "torontojs"
+                "profileURLText": "btruhand.github.io/blog"
             },
             {
                 "name": "Connor Wils",
@@ -254,8 +248,7 @@
             {
                 "name": "Alex Wilmer",
                 "profileURL": "https://twitter.com/benevolentNinja",
-                "profileURLText": "twitter.com",
-                "avatarName": "torontojs"
+                "profileURLText": "twitter.com"
             }
         ]
     },
