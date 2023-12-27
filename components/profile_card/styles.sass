@@ -8,7 +8,7 @@
   padding: 1.5rem 1.5rem
   border-radius: 1.5rem
   box-shadow: rgba(10, 37, 64, 0.08) 0 0 .75rem
-  transition: box-shadow 300ms ease-in-out, border 300ms ease-in-out, background-position 300ms ease-in-out, translate 300ms ease-in-out
+  transition: all 300ms ease-in-out
   color: #000
   position: relative
   background-image: linear-gradient(0deg, var(--color-yellow), white)
@@ -35,22 +35,22 @@
         width: 100%
   &::before
     display: none
-.ProfileCardAvatar
+.ProfileCard .ProfileCardAvatar
   width: 6rem
   height: 6rem
   border-radius: 50%
   flex-shrink: 0
   scale: 1
   transition: scale 300ms ease-in-out
-.ProfileCardDesc
+.ProfileCard .ProfileCardDesc
   display: flex
   flex-direction: column
   align-items: center
-.ProfileCardName
+.ProfileCard .ProfileCardName
   transition: color 400ms ease-in-out
   font-size: 1.2rem
   font-weight: bold
-.ProfileCardUrl
+.ProfileCard .ProfileCardUrl
   color: var(--color-grey)
   font-size: .85rem
   margin-top: .35rem

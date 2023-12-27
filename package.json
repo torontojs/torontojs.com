@@ -9,11 +9,7 @@
   },
   "author": "",
   "license": "ISC",
-  "source": [
-    "pages/index.html",
-    "pages/volunteers.md",
-    "pages/volunteer_data.coffee"
-  ],
+  "source": [],
   "dependencies": {
     "@parcel/resolver-glob": "^2.10.0",
     "@parcel/transformer-sass": "^2.10.0",
@@ -24,8 +20,7 @@
     "react-icons": "^4.11.0",
     "react-router-dom": "^6.16.0",
     "react-typing-effect": "^2.0.5",
-    "sass": "^1.69.2",
-    "serve-static": "^1.15.0"
+    "sass": "^1.69.2"
   },
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.10.0",
