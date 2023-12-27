@@ -24,7 +24,7 @@ export default Navbar = ->
     </a>
     <a href='https://guild.host/torontojs'
       aria-label="Join us on Guild">
-      <img src={GuildLogo} />
+      <img src={GuildLogo} alt="logo for Guild.host"/>
       <span className="label">
         Join us on Guild
       </span>

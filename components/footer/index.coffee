@@ -34,7 +34,7 @@ export default Footer = ->
       </span>
     </a>
     <a href="https://opencollective.com/torontojs"
-      aria-label="OpenCollective">
+      aria-label="Open Collective">
       <FaUsers/>
       <span className="label">
         Open Collective
