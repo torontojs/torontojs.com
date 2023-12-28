@@ -4,6 +4,7 @@ import Navbar from '/components/navbar'
 import Footer from '/components/footer'
 import ProfileCard from '/components/profile_card'
 import VolunteerList from './volunteers.json'
+import avatars from './avatars/*.jpg'
 import '/components/page/styles.sass'
 import './styles.sass'
 
@@ -21,13 +22,13 @@ class Volunteers extends React.Component
             <p><strong>We are grateful for the time and effort they put into making this community a welcoming place for all in tech.</strong></p>
             <p>All volunteers agree to model and uphold the Code of Conduct.</p>
             {for section in VolunteerList
-              <>
+              <div key={section.sectionName}>
                   <h2>{section.sectionName}</h2>
                   <div className="volunteerList">
                     {for member, index in section.members
-                      <ProfileCard volunteer={member} />}
+                      <ProfileCard key={index} volunteer={member} avatar={avatars[member.avatarName]}/>}
                   </div>
-              </>}
+              </div>}
         </div>
         <Footer />
     </div>
