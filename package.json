@@ -9,7 +9,6 @@
   },
   "author": "",
   "license": "ISC",
-  "source": [],
   "dependencies": {
     "@parcel/resolver-glob": "^2.10.0",
     "@parcel/transformer-sass": "^2.10.0",
