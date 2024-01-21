@@ -78,12 +78,6 @@
         "avatarName": "kaoru"
       },
       {
-        "name": "Ken Beaudin",
-        "profileURL": "https://www.biodrop.io/kbventures",
-        "profileURLText": "biodrop.com",
-        "avatarName": "ken"
-      },
-      {
         "name": "Kieran Huggins",
         "profileURL": "https://kieran.ca/",
         "profileURLText": "kieran.ca",
@@ -226,7 +220,13 @@
         "profileURL": "https://www.linkedin.com/in/ankur-kaushal/",
         "profileURLText": "linkedin.com",
         "avatarName": "ankur"
-      }
+      },
+      {
+        "name": "Ken Beaudin",
+        "profileURL": "https://www.linkedin.com/in/ken-beaudin-9a4061174/",
+        "profileURLText": "Linkedin",
+        "avatarName": "Ken"
+      },
     ]
   },
   {
