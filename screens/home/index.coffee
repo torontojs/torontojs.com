@@ -46,11 +46,11 @@ class Home extends React.Component
               <ul>
                 <li>📅 Over 30+ events a year</li>
                 <li>🚀 Community-led online and in-person events</li>
-                <li>🦋 5800 on Slack</li>
-                <li>🚀 Over 11000 on Meetup and 600 members on Guild</li>
+                <li>🦋 6158 on Slack</li>
+                <li>🚀 Over 12000 on Meetup and 1078 members on Guild</li>
                 <li>👯🏻 40+ <a href="/volunteers">volunteers</a></li>
                 <li>🧑🏻‍🤝‍🧑🏾 <a href="/mission">13 years of community</a> and still going! </li>
-                <li>🎲 ~4 organizers</li>
+                <li>🎲 ~7 organizers</li>
               </ul>
             </div>
             <GuildCard />
