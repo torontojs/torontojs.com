@@ -133,6 +133,60 @@
         "name": "Zeinab Farag",
         "profileURL": "https://www.linkedin.com/in/zeinab454/",
         "profileURLText": "linkedin.com"
+      },
+      {
+        "name": "Michael Ding",
+        "profileURL": "https://www.linkedin.com/in/mding5692/",
+        "profileURLText": "linkedin.com",
+        "avatarName": "michael"
+      },
+      {
+        "name": "Gabriel Poeta",
+        "profileURL": "https://www.linkedin.com/in/gabrielpoeta",
+        "profileURLText": "linkedin.com",
+        "avatarName": "gabriel"
+      },
+      {
+        "name": "Mike Vautour",
+        "profileURL": "https://www.linkedin.com/in/mikevautour/",
+        "profileURLText": "linkedin.com",
+        "avatarName": "mike"
+      },
+      {
+        "name": "Jack Zhou",
+        "profileURL": "https://www.linkedin.com/in/haopengzhou",
+        "profileURLText": "linkedin.com",
+        "avatarName": "jack_z"
+      },
+      {
+        "name": "Kareem Draz",
+        "profileURL": "https://www.linkedin.com/in/kareem-draz/",
+        "profileURLText": "linkedin.com",
+        "avatarName": "kareem"
+      },
+      {
+        "name": "Simon Chung",
+        "profileURL": "https://www.linkedin.com/in/simonmchung/",
+        "profileURLText": "linkedin.com",
+        "avatarName": "simon"
+      },
+      {
+        "name": "Akshat Sanan",
+        "profileURL": "https://www.linkedin.com/in/akshat-sanan/",
+        "profileURLText": "linkedin.com",
+        "avatarName": "akshat"
+      },
+      {
+        "name": "Jingru Xu",
+        "profileURL": "https://www.jingruxu-web.com/",
+        "profileURLText": "linkedin.com",
+        "avatarName": "jingru"
+      },
+      {
+        "name": "Ankur Kaushal",
+        "profileURL": "https://www.linkedin.com/in/ankur-kaushal/",
+        "profileURLText": "linkedin.com",
+        "avatarName": "ankur"
       }
     ]
   },
@@ -214,12 +268,6 @@
         "profileURL": "https://madcampos.dev/",
         "profileURLText": "madcampos.dev",
         "avatarName": "marco"
-      },
-      {
-        "name": "Ankur Kaushal",
-        "profileURL": "https://www.linkedin.com/in/ankur-kaushal/",
-        "profileURLText": "linkedin.com",
-        "avatarName": "ankur"
       },
       {
         "name": "Ken Beaudin",
