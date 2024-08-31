@@ -92,7 +92,7 @@ class JoinUs extends React.Component
 
   requestInvite: (evt)=>
     evt?.preventDefault?()
-    res = await fetch "/slack/request-invitation", method: "GET"
+    res = await fetch "/.netlify/functions/request-invitation", method: "GET"
     if res.ok
       Cookies.set "invitation_requested_at_#{@github()}", (new Date).toISOString(), expires: 7, path: '/'
       @setState requested: true
