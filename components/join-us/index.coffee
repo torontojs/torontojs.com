@@ -43,7 +43,7 @@ class JoinUs extends React.Component
         else
           <>
             <p>
-              To help combat bad actors, TorontoJS requires you to request an invitation using you GitHub account.
+              To help ensure authenticity, TorontoJS requires you request an invitation with your GitHub account.
             </p>
             <p>
               <a
