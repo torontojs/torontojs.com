@@ -46,13 +46,14 @@ class JoinUs extends React.Component
               To help ensure authenticity, TorontoJS requires you request an invitation with your GitHub account.
             </p>
             <p>
-              <a
-                className="button primary"
-                href="https://github.com/login/oauth/authorize?client_id=#{process.env.GITHUB_CLIENT_ID}&scope=read:user,user:email&state=join-slack">
-                <span className="label">
+              <div className="buttons">
+                <a
+                  className="button primary"
+                  href="https://github.com/login/oauth/authorize?client_id=#{process.env.GITHUB_CLIENT_ID}&scope=read:user,user:email&state=join-slack"
+                >
                   Sign In with GitHub
-                </span>
-              </a>
+                </a>
+              </div>
             </p>
           </>
         }
