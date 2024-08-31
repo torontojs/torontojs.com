@@ -100,6 +100,6 @@ const keyCheck = () => {
   )
 }
 
-export const config = {
-  path: "/github/callback"
-}
+// export const config = {
+//   path: "/github/callback"
+// }

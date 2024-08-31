@@ -63,6 +63,6 @@ const slack_payload = ({name, email, company, bio, github, website, avatar, crea
   }
 }
 
-export const config = {
-  path: "/slack/request-invitation"
-}
+// export const config = {
+//   path: "/slack/request-invitation"
+// }
