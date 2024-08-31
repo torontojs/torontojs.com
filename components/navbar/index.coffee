@@ -1,5 +1,7 @@
 import React from 'react'
 
+import JoinUs from '/components/join-us'
+
 import {
   FaSlackHash
   FaGithub
@@ -15,13 +17,18 @@ import './styles.sass'
 
 export default Navbar = ->
   <nav className='Navbar'>
-    <a href='https://join.slack.com/t/torontojs/shared_invite/zt-zgi31snl-omO3tXSZ0Q7zqN9WBQSf8Q'
-      aria-label="Join Slack">
-      <FaSlackHash/>
-      <span className="label">
-        Join Slack
-      </span>
-    </a>
+    <JoinUs
+      button={(toggle)->
+        <a href='#'
+          onClick={toggle}
+          aria-label="Join Slack">
+          <FaSlackHash/>
+          <span className="label">
+            Join Slack
+          </span>
+        </a>
+      }
+    />
     <a href='https://guild.host/torontojs'
       aria-label="Join us on Guild">
       <img src={GuildLogo} alt="logo for Guild.host"/>
