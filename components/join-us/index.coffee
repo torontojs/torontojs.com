@@ -24,6 +24,10 @@ class JoinUs extends React.Component
       requested: false
       request_response: null
 
+  signOut: =>
+    signOut()
+    @setState user: null
+
   render: =>
     <Modal
       open={@state.modal_open}
@@ -45,33 +49,35 @@ class JoinUs extends React.Component
             <p>
               To help ensure authenticity, TorontoJS requires you request an invitation with your GitHub account.
             </p>
-            <p>
-              <div className="buttons">
-                <a
-                  className="button primary"
-                  href="https://github.com/login/oauth/authorize?client_id=#{process.env.GITHUB_CLIENT_ID}&scope=read:user,user:email&state=join-slack"
-                >
-                  Sign In with GitHub
-                </a>
-              </div>
-            </p>
+            <div className="buttons">
+              <a
+                className="button primary"
+                href="https://github.com/login/oauth/authorize?client_id=#{process.env.GITHUB_CLIENT_ID}&scope=read:user,user:email&state=join-slack"
+              >
+                Sign In with GitHub
+              </a>
+            </div>
           </>
         }
       </div>
     </Modal>
 
   requestModal: =>
+    {avatar, name, github} = @state.user or {}
     <>
       <div className="user">
-        <img className="avatar" src={@state.user.avatar}/>
+        <img className="avatar" src={avatar}/>
         <div className="info">
-          <span className="name">{@state.user.name}</span>
-          <span className="github">@{@state.user.github}</span>
+          <span className="name">{name}</span>
+          <span className="github">@{github}</span>
         </div>
       </div>
       <div className="buttons">
         <a className="button primary" onClick={=> @requestInvite()}>
           Request Invitation
+        </a>
+        <a className="button" onClick={@signOut}>
+          Sign Out
         </a>
       </div>
     </>
@@ -84,18 +90,17 @@ class JoinUs extends React.Component
       You should receive an invitation within a day.
     </p>
 
-  github: =>
-    @props?.user?.github
-
   canRequestInvite: =>
-    return false if Cookies.get "invitation_requested_at_#{@github()}"
+    return false unless github = @state.user?.github
+    return false if Cookies.get "invitation_requested_at_#{github}"
     not @state.requested
 
   requestInvite: (evt)=>
     evt?.preventDefault?()
+    return false unless github = @state.user?.github
     res = await fetch "/.netlify/functions/request-invitation", method: "GET"
     if res.ok
-      Cookies.set "invitation_requested_at_#{@github()}", (new Date).toISOString(), expires: 7, path: '/'
+      Cookies.set "invitation_requested_at_#{github}", (new Date).toISOString(), expires: 7, path: '/'
       @setState requested: true
     else
       @setState requested: false, request_response: <p>There was a problem sending your request.<br/><br/>Please try again later.</p>

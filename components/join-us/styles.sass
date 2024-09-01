@@ -1,6 +1,13 @@
 .Modal
   &:focus-visible
     outline: none
+  .react-responsive-modal-closeButton
+    right: 1.5em
+    svg
+      width: 1.5em
+      fill: #aaa
+      &:hover
+        fill: #555
   .join
     margin: 1em 1.5em 2em
 
@@ -29,7 +36,9 @@
       margin-top: 1em
       margin-bottom: -1em
       display: flex
-      justify-content: flex-end
+      gap: 0.66em
+      justify-content: flex-start
+      flex-direction: row-reverse
 
     .button
       position: relative
