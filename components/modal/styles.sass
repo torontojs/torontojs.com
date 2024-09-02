@@ -1,0 +1,48 @@
+@keyframes backdrop-in
+  from
+    background: transparent
+  to
+    background: rgba(0, 0, 0, 0.33)
+
+@keyframes backdrop-out
+  from
+    background: rgba(0, 0, 0, 0.33)
+  to
+    background: transparent
+
+@keyframes modal-in
+  from
+    opacity: 0
+    translate: 0 3rem
+  to
+    opacity: 1
+    translate: 0 0
+
+@keyframes modal-out
+  from
+    opacity: 1
+    translate: 0 0
+  to
+    opacity: 0
+    translate: 0 3rem
+
+.Modal
+  opacity: 0
+  background: white
+  padding: 0
+  width: 400px
+  border-radius: 5px
+  border: 0
+  box-shadow: 0 22px 70px 4px rgba(0, 0, 0, 0.33)
+  pointer-events: inherit
+
+  .join
+    margin: 2rem
+    h2
+      font-family: Inter, sans-serif
+      font-weight: normal
+      font-size: 18px
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      padding-bottom: 1em
+

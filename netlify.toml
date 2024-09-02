@@ -18,3 +18,16 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[redirects]]
+  from = "/slack/request-invitation*"
+  to = "/.netlify/functions/request-invitation:splat"
+  status = 200
+
+[[redirects]]
+  from = "/github/callback*"
+  to = "/.netlify/functions/github-callback:splat"
+  status = 200
+
+[functions]
+  directory = "functions"
