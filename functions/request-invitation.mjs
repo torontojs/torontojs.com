@@ -1,7 +1,22 @@
+import * as Sentry from "@sentry/aws-serverless"
+import { nodeProfilingIntegration } from "@sentry/profiling-node"
+
+Sentry.init({
+  dsn: "https://dad25bea52bbb5cffbd7c49f357c0935@o289382.ingest.us.sentry.io/4507892554399744",
+  integrations: [
+    nodeProfilingIntegration(),
+  ],
+  // Tracing
+  tracesSampleRate: 1.0, //  Capture 100% of the transactions
+
+  // Set sampling rate for profiling - this is relative to tracesSampleRate
+  profilesSampleRate: 1.0,
+})
+
 import jwt from 'jsonwebtoken'
 import assert from 'node:assert'
 
-export default async (req, context) => {
+export default Sentry.wrapHandler(async (req, context) => {
   try {
     // verify JWT from cookie
     const token = context.cookies.get('token')
@@ -14,9 +29,10 @@ export default async (req, context) => {
     return new Response('gotcha', { status: 200 })
 
   } catch(e) {
+    Sentry.captureException(e)
     return new Response(e, { status: 500 })
   }
-}
+})
 
 const post_to_slack = async (payload) => {
   const response = await fetch(process.env.SLACK_WEBHOOK, {
@@ -62,7 +78,3 @@ const slack_payload = ({name, email, company, bio, github, website, avatar, crea
     ]
   }
 }
-
-// export const config = {
-//   path: "/slack/request-invitation"
-// }
