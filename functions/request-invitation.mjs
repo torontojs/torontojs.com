@@ -57,11 +57,11 @@ const slack_payload = ({name, email, company, bio, github, website, avatar, crea
   //   "created_at": "2008-03-19T21:02:08Z",
   //   "iat": 1724362049
   // }
-  const header = (text) => { return { type: "header", text: { type: "plain_text", text } } }
-  const para = (text) => { return { type: "section", text: { type: "mrkdwn", text } } }
-  const section = (obj) => { return { type: 'section', fields: Object.entries(obj).map( ([key, val]) => field(key, val) ) } }
-  const field = (name, value) => { return { type: 'mrkdwn', text: `*${name}*\n${value}` } }
-  const bio_with_avatar = (text, image_url) => { return { type: 'section', text: { type: "mrkdwn", text }, accessory: { type: "image", image_url, alt_text: 'Github Avatar' } } }
+  const header = (text='(undefined)') => { return { type: "header", text: { type: "plain_text", text } } }
+  const para = (text='(undefined)') => { return { type: "section", text: { type: "mrkdwn", text } } }
+  const section = (obj={}) => { return { type: 'section', fields: Object.entries(obj).map( ([key, val]) => field(key, val) ) } }
+  const field = (name, value='(undefined)') => { return { type: 'mrkdwn', text: `*${name}*\n${value}` } }
+  const bio_with_avatar = (text='(undefined)', image_url='https://www.gravatar.com/avatar/?d=identicon') => { return { type: 'section', text: { type: "mrkdwn", text }, accessory: { type: "image", image_url, alt_text: 'Github Avatar' } } }
   const divider = () => { return { type: "divider" } }
 
   return {
@@ -69,7 +69,7 @@ const slack_payload = ({name, email, company, bio, github, website, avatar, crea
     username: 'InviteBot™',
     blocks: [
       header(name),
-      para(`*Email*\n${email}`),
+      para(`*Email*\n${email || 'no email available'}`),
       divider(),
       bio_with_avatar(bio, avatar),
       divider(),
