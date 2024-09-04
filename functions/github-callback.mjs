@@ -25,6 +25,8 @@ export default Sentry.wrapHandler(async (req, context) => {
     const state = url.searchParams.get('state')
     const { access_token } = await exchange_code(code)
     const user = await user_from_access_token(access_token)
+    // if we failed to get the email as part of the user object, grab it from the emails endpoint
+    if (!user.email) user.email = await primary_email_from_access_token(access_token)
     const token = jwt_for_user(user)
 
     context.cookies.set({ name: 'token', value: token, path: '/' })
@@ -61,7 +63,7 @@ const exchange_code = async (code) => {
 }
 
 const user_from_access_token = async (access_token) => {
-  const response = await fetch(`https://api.github.com/user?access_token=${access_token}`, {
+  const response = await fetch("https://api.github.com/user", {
     method: "GET",
     headers: new Headers({
       "Content-Type": "application/json",
@@ -70,7 +72,7 @@ const user_from_access_token = async (access_token) => {
     }),
   })
 
-  if (!response.ok) throw new Error(`Response status: ${response.status}, access_token=${access_token}`)
+  if (!response.ok) throw new Error(`Response status: ${response.status}`)
 
   const {
     login,
@@ -92,6 +94,23 @@ const user_from_access_token = async (access_token) => {
     avatar: avatar_url,
     created_at,
   }
+}
+
+const primary_email_from_access_token = async (access_token) => {
+  const response = await fetch("https://api.github.com/user/emails", {
+    method: "GET",
+    headers: new Headers({
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+      "Authorization": `Bearer ${access_token}`,
+    }),
+  })
+
+  if (!response.ok) throw new Error(`Response status: ${response.status}`)
+
+  const emails = await response.json()
+
+  for (const { email, primary, verified } of emails) if (verified && primary) return email
 }
 
 const jwt_for_user = (user) => {
