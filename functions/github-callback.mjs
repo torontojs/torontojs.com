@@ -1,5 +1,5 @@
 import * as Sentry from "@sentry/aws-serverless"
-import nodeProfilingIntegration from "@sentry/profiling-node"
+import { nodeProfilingIntegration } from "@sentry/profiling-node"
 
 Sentry.init({
   dsn: "https://dad25bea52bbb5cffbd7c49f357c0935@o289382.ingest.us.sentry.io/4507892554399744",
@@ -36,6 +36,7 @@ export default Sentry.wrapHandler(async (req, context) => {
     })
 
   } catch(e) {
+    Sentry.captureException(e)
     return new Response(e, { status: 500 })
   }
 })
