@@ -4,8 +4,9 @@
   "description": "",
   "scripts": {
     "start": "npx parcel serve --no-cache index.html",
-    "build": "npx parcel build --no-cache index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx parcel build --no-cache index.html && npm run sentry:sourcemaps",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sentry:sourcemaps": "sentry-cli sourcemaps inject --org kieranhuggins --project torontojs-website ./dist && sentry-cli sourcemaps upload --org kieranhuggins --project torontojs-website ./dist"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +14,10 @@
     "@parcel/resolver-glob": "^2.10.0",
     "@parcel/transformer-sass": "^2.10.0",
     "@parcel/transformer-svg-react": "^2.10.0",
+    "@sentry/aws-serverless": "^8.28.0",
+    "@sentry/cli": "^2.34.1",
+    "@sentry/profiling-node": "^8.28.0",
+    "@sentry/react": "^8.28.0",
     "js-cookie": "^3.0.5",
     "jsonwebtoken": "^8.5.1",
     "parcel": "^2.10.0",
