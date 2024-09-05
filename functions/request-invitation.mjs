@@ -16,7 +16,7 @@ Sentry.init({
 import jwt from 'jsonwebtoken'
 import assert from 'node:assert'
 
-export default Sentry.wrapHandler(async (req, context) => {
+const handler = async (req, context) => {
   try {
     // verify JWT from cookie
     const token = context.cookies.get('token')
@@ -32,7 +32,7 @@ export default Sentry.wrapHandler(async (req, context) => {
     Sentry.captureException(e)
     return new Response(e, { status: 500 })
   }
-})
+}
 
 const post_to_slack = async (payload) => {
   const response = await fetch(process.env.SLACK_WEBHOOK, {
@@ -78,3 +78,5 @@ const slack_payload = ({name, email, company, bio, github, website, avatar, crea
     ]
   }
 }
+
+export default Sentry.wrapHandler(handler, {captureTimeoutWarning: false})

@@ -16,7 +16,7 @@ Sentry.init({
 import jwt from 'jsonwebtoken'
 import assert from 'node:assert'
 
-export default Sentry.wrapHandler(async (req, context) => {
+const handler = async (req, context) => {
   try {
     keyCheck()
     const url = new URL(req.url)
@@ -41,7 +41,7 @@ export default Sentry.wrapHandler(async (req, context) => {
     Sentry.captureException(e)
     return new Response(e, { status: 500 })
   }
-})
+}
 
 const exchange_code = async (code) => {
   const response = await fetch("https://github.com/login/oauth/access_token", {
@@ -134,3 +134,5 @@ const keyCheck = () => {
     Generate the keys (JWT_PUBLIC_KEY and JWT_PRIVATE_KEY) at https://jwt-keys.21no.de and place them in .env.local for testing`
   )
 }
+
+export default Sentry.wrapHandler(handler, {captureTimeoutWarning: false})
