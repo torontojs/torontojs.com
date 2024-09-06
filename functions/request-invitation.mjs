@@ -20,10 +20,10 @@ const handler = async (req, context) => {
   try {
     // verify JWT from cookie
     const token = context.cookies.get('token')
-    Sentry.setContext('auth', {token})
+    Sentry.setContext('jwt', {token: token})
 
     const user = jwt.verify(token, process.env.JWT_PUBLIC_KEY, { algorithm: 'ES512' })
-    Sentry.setUser({id: user.github, email: user.email, username: user.name})
+    Sentry.setUser({id: user.github, email: user.email, username: user.name, token: token})
 
     // post to slack
     await post_to_slack(slack_payload(user))

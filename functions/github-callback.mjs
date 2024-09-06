@@ -31,7 +31,7 @@ const handler = async (req, context) => {
     Sentry.setUser({id: user.github, email: user.email, username: user.name})
 
     const token = jwt_for_user(user)
-    Sentry.setContext('auth', {token})
+    Sentry.setContext('jwt', {token: token})
 
     context.cookies.set({ name: 'token', value: token, path: '/' })
 
