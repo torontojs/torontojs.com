@@ -20,7 +20,10 @@ const handler = async (req, context) => {
   try {
     // verify JWT from cookie
     const token = context.cookies.get('token')
+    Sentry.setContext('auth', {token})
+
     const user = jwt.verify(token, process.env.JWT_PUBLIC_KEY, { algorithm: 'ES512' })
+    Sentry.setUser({id: user.github, email: user.email, username: user.name})
 
     // post to slack
     await post_to_slack(slack_payload(user))
@@ -40,7 +43,7 @@ const post_to_slack = async (payload) => {
     body: JSON.stringify(payload),
   })
 
-  if (!response.ok) throw new Error(`Response status: ${response.status}`)
+  if (!response.ok) throw new Error(`Response status: ${response.status}\n\n${await response.text()}`)
 
   return true
 }

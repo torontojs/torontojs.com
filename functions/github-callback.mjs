@@ -25,9 +25,13 @@ const handler = async (req, context) => {
     const state = url.searchParams.get('state')
     const { access_token } = await exchange_code(code)
     const user = await user_from_access_token(access_token)
+    Sentry.setUser({id: user.github, email: user.email, username: user.name})
     // if we failed to get the email as part of the user object, grab it from the emails endpoint
     if (!user.email) user.email = await primary_email_from_access_token(access_token)
+    Sentry.setUser({id: user.github, email: user.email, username: user.name})
+
     const token = jwt_for_user(user)
+    Sentry.setContext('auth', {token})
 
     context.cookies.set({ name: 'token', value: token, path: '/' })
 
@@ -57,7 +61,7 @@ const exchange_code = async (code) => {
     }),
   })
 
-  if (!response.ok) throw new Error(`Response status: ${response.status}`)
+  if (!response.ok) throw new Error(`Response status: ${response.status}\n\n${await response.text()}`)
 
   return response.json()
 }
@@ -72,7 +76,7 @@ const user_from_access_token = async (access_token) => {
     }),
   })
 
-  if (!response.ok) throw new Error(`Response status: ${response.status}`)
+  if (!response.ok) throw new Error(`Response status: ${response.status}\n\n${await response.text()}`)
 
   const {
     login,
@@ -106,7 +110,7 @@ const primary_email_from_access_token = async (access_token) => {
     }),
   })
 
-  if (!response.ok) throw new Error(`Response status: ${response.status}`)
+  if (!response.ok) throw new Error(`Response status: ${response.status}\n\n${await response.text()}`)
 
   const emails = await response.json()
 
