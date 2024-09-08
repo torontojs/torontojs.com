@@ -31,7 +31,6 @@ const handler = async (req, context) => {
     Sentry.setUser({id: user.github, email: user.email, username: user.name})
 
     const token = jwt_for_user(user)
-    Sentry.setContext('jwt', {token: token})
 
     context.cookies.set({ name: 'token', value: token, path: '/' })
 
@@ -43,6 +42,8 @@ const handler = async (req, context) => {
 
   } catch(e) {
     Sentry.captureException(e)
+    console.log(e)
+    console.log(`token: ${token}`)
     return new Response(e, { status: 500 })
   }
 }
