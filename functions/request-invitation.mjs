@@ -62,10 +62,10 @@ const slack_payload = ({name, email, company, bio, github, website, avatar, crea
   //   "iat": 1724362049
   // }
   const header = (text='(undefined)') => { return { type: "header", text: { type: "plain_text", text } } }
-  const para = (text='(undefined)') => { return { type: "section", text: { type: "mrkdwn", text } } }
+  const para = (text='undefined') => { return { type: "section", text: { type: "mrkdwn", text } } }
   const section = (obj={}) => { return { type: 'section', fields: Object.entries(obj).map( ([key, val]) => field(key, val) ) } }
-  const field = (name, value='(undefined)') => { return { type: 'mrkdwn', text: `*${name}*\n${value}` } }
-  const bio_with_avatar = (text='(undefined)', image_url='https://www.gravatar.com/avatar/?d=identicon') => { return { type: 'section', text: { type: "mrkdwn", text }, accessory: { type: "image", image_url, alt_text: 'Github Avatar' } } }
+  const field = (name, value='undefined') => { return { type: 'mrkdwn', text: `*${name}*\n${value}` } }
+  const bio_with_avatar = (text='undefined', image_url='https://www.gravatar.com/avatar/?d=identicon') => { return { type: 'section', text: { type: "mrkdwn", text }, accessory: { type: "image", image_url, alt_text: 'Github Avatar' } } }
   const divider = () => { return { type: "divider" } }
 
   return {
