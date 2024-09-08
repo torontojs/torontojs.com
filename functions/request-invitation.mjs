@@ -38,6 +38,7 @@ const handler = async (req, context) => {
 }
 
 const post_to_slack = async (payload) => {
+  console.log(`payload:\n\n${JSON.stringify(payload, null, 2)}\n`)
   const response = await fetch(process.env.SLACK_WEBHOOK, {
     method: "POST",
     body: JSON.stringify(payload),
