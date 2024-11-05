@@ -8,7 +8,7 @@ import {
   FaComment
   FaStickyNote
   FaFlag
-  FaFolder
+  FaPenNib
 } from 'react-icons/fa'
 
 import GuildLogo from './guild_logo.png'
@@ -64,11 +64,11 @@ export default Navbar = ->
         Report Abuse
       </span>
     </a>
-    <a href='https://tldr.torontojs.com'
-      aria-label="Newsletter">
-      <FaFolder/>
+    <a href='https://blog.torontojs.com'
+      aria-label="Blog">
+      <FaPenNib/>
       <span className="label">
-        Newsletter
+        Blog
       </span>
     </a>
   </nav>
