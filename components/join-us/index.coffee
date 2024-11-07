@@ -47,7 +47,10 @@ class JoinUs extends React.Component
         else
           <>
             <p>
-              To help ensure authenticity, TorontoJS requires you request an invitation with your GitHub account.
+              To protect the community from spam and phishing, TorontoJS requires you request an invitation with your GitHub account.
+            </p>
+            <p>
+              Creating one is free and takes less than a minute.
             </p>
             <div className="buttons">
               <a
