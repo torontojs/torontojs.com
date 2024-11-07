@@ -50,7 +50,7 @@ class JoinUs extends React.Component
               To protect the community from spam and phishing, TorontoJS requires you request an invitation with your GitHub account.
             </p>
             <p>
-              Creating one is free and takes less than a minute.
+              Creating one is free and only takes a minute.
             </p>
             <div className="buttons">
               <a
