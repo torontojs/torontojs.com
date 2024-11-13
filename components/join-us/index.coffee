@@ -47,7 +47,10 @@ class JoinUs extends React.Component
         else
           <>
             <p>
-              To help ensure authenticity, TorontoJS requires you request an invitation with your GitHub account.
+              To protect the community from spam and phishing, TorontoJS requires you request an invitation with your GitHub account.
+            </p>
+            <p>
+              Creating one is free and only takes a minute.
             </p>
             <div className="buttons">
               <a
@@ -84,10 +87,10 @@ class JoinUs extends React.Component
 
   requestSent: =>
     <p>
-      Your request has been sent!
+      Your request has been submitted!
       <br/>
       <br/>
-      You should receive an invitation within a day.
+      Approvals or rejections can take up to a week but typically 1-2 days
     </p>
 
   canRequestInvite: =>
