@@ -87,10 +87,10 @@ class JoinUs extends React.Component
 
   requestSent: =>
     <p>
-      Your request has been sent!
+      Your request has been submitted!
       <br/>
       <br/>
-      You should receive an invitation within a day.
+      Approvals or rejections can take up to a week but typically 1-2 days
     </p>
 
   canRequestInvite: =>
