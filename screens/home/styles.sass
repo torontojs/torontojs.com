@@ -7,10 +7,17 @@
   main
     flex: 1
     .hero
+      position: relative
       color: white
-      background: var(--color-red)
+      background: var(--color-night)
       display: flex
       align-items: stretch
+      .cn-tower
+        position: absolute
+        bottom: 0
+        width: 80%
+        height: 80%
+        margin-left: -2%
       .container
         +container
         padding-top: 7rem
@@ -18,10 +25,10 @@
         display: flex
         flex: 1
         flex-direction: column
-        background-image: url('/logo.svg')
-        background-position: bottom left
-        background-repeat: no-repeat
-        background-size: 60dvh
+        // background-image: url('/logo.svg')
+        // background-position: bottom left
+        // background-repeat: no-repeat
+        // background-size: 60dvh
         +tablet
           background-size: 50dvh
         +phone
