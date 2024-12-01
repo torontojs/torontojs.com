@@ -1,4 +1,5 @@
 import React from 'react'
+import { getSunset } from 'sunrise-sunset-js'
 
 import ReactTypingEffect from 'react-typing-effect'
 
@@ -16,8 +17,9 @@ import './styles.sass'
 
 export default \
 class Home extends React.Component
-
-  afterDark = true
+  # Toronto Coordinates
+  sunset = getSunset(43.642567, -79.387054)
+  afterDark = new Date() > sunset
 
   @path = '/'
   render: ->

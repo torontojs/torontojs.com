@@ -27,7 +27,8 @@
     "react-responsive-modal": "^6.4.2",
     "react-router-dom": "^6.16.0",
     "react-typing-effect": "^2.0.5",
-    "sass": "^1.69.2"
+    "sass": "^1.69.2",
+    "sunrise-sunset-js": "^2.2.1"
   },
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.10.0",
