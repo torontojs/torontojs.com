@@ -1,4 +1,5 @@
 import React from 'react'
+import { getSunset } from 'sunrise-sunset-js'
 
 import ReactTypingEffect from 'react-typing-effect'
 
@@ -10,17 +11,24 @@ import {
   GuildList
 } from '/components/guild'
 
+import CnTower from '/components/cn-tower'
+
 import './styles.sass'
 
 export default \
 class Home extends React.Component
+  # Toronto Coordinates
+  sunset = getSunset(43.642567, -79.387054)
+  afterDark = new Date() > sunset
+
   @path = '/'
   render: ->
     <div className="Home">
-      <Navbar />
+      <Navbar afterDark={afterDark} />
       <main>
 
-        <div className="hero">
+        <div className="hero #{if afterDark then 'after-dark' else ''}">
+          <CnTower afterDark={afterDark} />
           <div className="container">
             <div className="title">
               <h1>

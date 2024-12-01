@@ -10,6 +10,12 @@ nav.Navbar
   transition: all 350ms ease-in-out
   &:hover
     background: var(--color-red-dark)
+  &.after-dark
+    background: var(--color-night)
+    a
+      +fancy-link
+      &:hover
+        background: var(--color-night)
   a
     +fancy-link
     display: block
