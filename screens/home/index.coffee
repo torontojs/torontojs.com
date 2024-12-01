@@ -61,7 +61,7 @@ class Home extends React.Component
                 <li>🎲 ~7 organizers</li>
               </ul>
             </div>
-            <GuildCard /> 
+            <GuildCard />
           </div>
           <div className="container events">
             <div className="future">
