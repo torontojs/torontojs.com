@@ -9,9 +9,11 @@
     .hero
       position: relative
       color: white
-      background: var(--color-night)
+      background: var(--color-red)
       display: flex
       align-items: stretch
+      &.after-dark
+        background: linear-gradient(to top, rgb(44, 32, 61) 0%, rgb(24, 26, 44) 50%, rgba(10, 10, 30, 1) 100%)
       .cn-tower
         position: absolute
         bottom: 0
@@ -25,10 +27,6 @@
         display: flex
         flex: 1
         flex-direction: column
-        // background-image: url('/logo.svg')
-        // background-position: bottom left
-        // background-repeat: no-repeat
-        // background-size: 60dvh
         +tablet
           background-size: 50dvh
         +phone

@@ -10,8 +10,7 @@ AnimatedCircle = ({ cx, cy, r, offset }) ->
     hueRef.current = (hueRef.current + 1) % 360
 
     # Set the fill color of the circle using HSL
-    if circleRef.current?
-      circleRef.current.style.fill = "hsl(#{hueRef.current + offset}, 100%, 50%)"
+    circleRef.current?.style.fill = "hsl(#{hueRef.current + offset}, 100%, 50%)"
 
     # Request the next frame to continue the animation
     requestAnimationFrame(animateHue)
@@ -47,7 +46,7 @@ AnimatedCircle = ({ cx, cy, r, offset }) ->
   </>
 
 # CNTower Component
-export default CNTower = ->
+export default CNTower = ({ afterDark = false })->
   <svg
     className="cn-tower"
     viewBox="0 0 199 199.333"
@@ -90,19 +89,21 @@ export default CNTower = ->
       fill="#FFF"
       d="M29.536 18.683c.26-.479.81-.99 1.97-1.192 1.376-.24 2.205.109 2.696.525l-.316-1.373s-.438-1.574-2.699-1.18c-1.953.339-1.77 1.768-1.77 1.768l.119 1.452zM30.365 15.436c.11-.203.343-.42.836-.506.584-.102.936.046 1.144.223l-.265-1.665s-.186-.668-1.146-.501c-.829.144-.75.75-.75.75l.18 1.699zM30.134 12.703c.087-.159.269-.329.654-.395.456-.08.732.036.894.174l-.207-1.496s-.146-.522-.896-.392c-.648.113-.587.587-.587.587l.142 1.522z"
     />
-    <AnimatedCircle cx={16.7} cy={64} r={0.7} offset={0} />
-    <AnimatedCircle cx={16.5} cy={60} r={1} offset={8} />
-    <AnimatedCircle cx={16.7} cy={56} r={1.2} offset={16} />
-    <AnimatedCircle cx={17.8} cy={52} r={1.3} offset={24} />
-    <AnimatedCircle cx={20.3} cy={48} r={1.4} offset={32} />
-    <AnimatedCircle cx={23.4} cy={45} r={1.5} offset={40} />
-    <AnimatedCircle cx={27} cy={42.2} r={1.6} offset={48} />
-    <AnimatedCircle cx={31} cy={40.4} r={1.7} offset={56} />
-    <AnimatedCircle cx={35.4} cy={39} r={1.8} offset={64} />
-    <AnimatedCircle cx={40.1} cy={38.5} r={1.76} offset={72} />
-    <AnimatedCircle cx={44.8} cy={39} r={1.68} offset={80} />
-    <AnimatedCircle cx={49.5} cy={40.5} r={1.6} offset={88} />
-    <AnimatedCircle cx={53.2} cy={43.5} r={1.52} offset={96} />
-    <AnimatedCircle cx={56.9} cy={47} r={1.4} offset={104} />
-    <AnimatedCircle cx={59.6} cy={50.9} r={1.2} offset={112} />
+    {afterDark && <>
+      <AnimatedCircle cx={16.7} cy={64} r={0.7} offset={0} />
+      <AnimatedCircle cx={16.5} cy={60} r={1} offset={8} />
+      <AnimatedCircle cx={16.7} cy={56} r={1.2} offset={16} />
+      <AnimatedCircle cx={17.8} cy={52} r={1.3} offset={24} />
+      <AnimatedCircle cx={20.3} cy={48} r={1.4} offset={32} />
+      <AnimatedCircle cx={23.4} cy={45} r={1.5} offset={40} />
+      <AnimatedCircle cx={27} cy={42.2} r={1.6} offset={48} />
+      <AnimatedCircle cx={31} cy={40.4} r={1.7} offset={56} />
+      <AnimatedCircle cx={35.4} cy={39} r={1.8} offset={64} />
+      <AnimatedCircle cx={40.1} cy={38.5} r={1.76} offset={72} />
+      <AnimatedCircle cx={44.8} cy={39} r={1.68} offset={80} />
+      <AnimatedCircle cx={49.5} cy={40.5} r={1.6} offset={88} />
+      <AnimatedCircle cx={53.2} cy={43.5} r={1.52} offset={96} />
+      <AnimatedCircle cx={56.9} cy={47} r={1.4} offset={104} />
+      <AnimatedCircle cx={59.6} cy={50.9} r={1.2} offset={112} />
+    </>}
   </svg>

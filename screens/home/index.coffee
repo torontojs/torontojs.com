@@ -16,14 +16,17 @@ import './styles.sass'
 
 export default \
 class Home extends React.Component
+
+  afterDark = true
+
   @path = '/'
   render: ->
     <div className="Home">
-      <Navbar />
+      <Navbar afterDark={afterDark} />
       <main>
 
-        <div className="hero">
-          <CnTower />
+        <div className="hero #{if afterDark then 'after-dark' else ''}">
+          <CnTower afterDark={afterDark} />
           <div className="container">
             <div className="title">
               <h1>

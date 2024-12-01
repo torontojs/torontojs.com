@@ -15,8 +15,8 @@ import GuildLogo from './guild_logo.png'
 
 import './styles.sass'
 
-export default Navbar = ->
-  <nav className='Navbar'>
+export default Navbar = ({ afterDark = false }) ->
+  <nav className="Navbar #{if afterDark then 'after-dark' else ''}">
     <JoinUs
       button={(toggle)->
         <a href='#'
