@@ -8,7 +8,7 @@ import Footer from '/components/footer'
 
 import {
   GuildCard
-  # GuildList
+  GuildList
 } from '/components/guild'
 
 import CnTower from '/components/cn-tower'
@@ -66,9 +66,11 @@ class Home extends React.Component
           <div className="container events">
             <div className="future">
               <h2>Upcoming Events</h2>
+              <GuildList when="UPCOMING" />
             </div>
             <div className="past">
               <h2>Past Events</h2>
+              <GuildList when="PAST" />
             </div>
           </div>
         </div>
