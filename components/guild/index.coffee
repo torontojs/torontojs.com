@@ -5,6 +5,7 @@ class Guild extends React.Component
     @ref ||= React.createRef()
 
   render: ->
+    return null if process.env.DISABLE_GUILD
     <div
       className={@constructor.name}
       ref={@ref}
