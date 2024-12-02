@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default \
 class Guild extends React.Component
   constructor: ->
@@ -5,7 +7,6 @@ class Guild extends React.Component
     @ref ||= React.createRef()
 
   render: ->
-    return null if process.env.DISABLE_GUILD
     <div
       className={@constructor.name}
       ref={@ref}
