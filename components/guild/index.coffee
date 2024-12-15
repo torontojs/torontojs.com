@@ -27,5 +27,5 @@ class GuildList extends Guild
     when: 'UPCOMING' # or PAST
 
   componentDidMount: ->
-    window.$guild.renderGuildEventList @ref.current, @props.guild, @props.when, (numItems)=>
+    window.$guild.renderGuildEventList @ref.current, @props.guild, @props.when, itemsDisplayed: (numItems)=>
       <div className="empty">No {@props.when.toLowerCase()} events</div> unless numItems
