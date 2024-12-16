@@ -22,9 +22,19 @@ class GuildCard extends Guild
 
 export \
 class GuildList extends Guild
+  constructor: ->
+    super arguments...
+    @state =
+      empty: false
+
   @defaultProps:
     guild: 'torontojs'
     when: 'UPCOMING' # or PAST
 
   componentDidMount: ->
-    window.$guild.renderGuildEventList @ref.current, @props.guild, @props.when
+    window.$guild.renderGuildEventList @ref.current, @props.guild, @props.when, itemsDisplayed: (numItems)=>
+      @setState empty: !numItems
+
+  render: ->
+    return <div className="empty">No {@props.when.toLowerCase()} events</div> if @state.empty
+    super arguments...
