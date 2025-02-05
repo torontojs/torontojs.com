@@ -1,0 +1,53 @@
+{
+    "title": "Roles",
+    "summary": "Roles and their descriptions at TorontoJS", 
+    "roles": [
+      {
+        "team": "Blog",
+        "role": "Producer",
+        "contacts": [
+          "marco@torontojs.com",
+          "dann@torontojs.com"
+        ],
+        "description": "Identify great content for blog posts and work with people to make them happen, from getting permission to cross-post to helping others write their first posts.",
+        "currentlyRecruiting": true
+      },
+      {
+        "team": "Web",
+        "role": "Historian",
+        "contacts": [
+          "dann@torontojs.com"
+        ],
+        "description": "Work with the web team to bring past event data onto the site and help develop creative projects like a visual timeline and photo import tools.",
+        "currentlyRecruiting": false
+      },
+      {
+        "team": "TorontoJS Social",
+        "role": "Co-organizer",
+        "contacts": [
+          "marco@torontojs.com"
+        ],
+        "description": "Help plan and host the JS Social, one of the most popular events, and contribute to its success.",
+        "currentlyRecruiting": true
+      },
+      {
+        "team": "TechTalk Online",
+        "role": "Co-organizer",
+        "contacts": [
+          "ken@torontojs.com"
+        ],
+        "description": "Organize annual, one-off, or recurring online events.",
+        "currentlyRecruiting": false
+      },
+      {
+        "team": "Promo",
+        "role": "Social Media Manager",
+        "contacts": [
+          "ken@torontojs.com"
+        ],
+        "description": "Manage social accounts and create content to highlight community contributions across platforms like LinkedIn, Meetup.com, Instagram, YouTube, and Twitter.",
+        "currentlyRecruiting": true
+      }
+    ]
+  }
+  
