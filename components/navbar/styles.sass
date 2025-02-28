@@ -8,6 +8,7 @@ nav.Navbar
   display: flex
   justify-content: center
   transition: all 350ms ease-in-out
+  position: relative
   &:hover
     background: var(--color-red-dark)
   &.after-dark
@@ -16,9 +17,14 @@ nav.Navbar
       +fancy-link
       &:hover
         background: var(--color-night)
+    .nav-links.open
+      background: var(--color-night)
+
   a
     +fancy-link
-    display: block
+    display: flex
+    flex-wrap: wrap
+    align-items: center
     cursor: pointer
     line-height: 40px
     margin: 0
@@ -28,13 +34,51 @@ nav.Navbar
     transition: all 350ms ease-in-out
     &:hover
       background: var(--color-red)
+      
+  .menu-toggle
+    display: none
+    background: none
+    border: none
+    color: white
+    font-size: 1.5rem
+    cursor: pointer
+    padding: 0.5rem
+    position: absolute
+    right: 0
+    z-index: 2
 
-    svg, img
-      height: 1em
-      font-size: 1.2rem
-      vertical-align: sub
-      margin-right: 0.33rem
+  .nav-links
+    display: flex
+    align-items: center
 
-    +tablet
-      span.label
-        display: none
+  svg, img
+    height: 1em
+    font-size: 1.2rem
+    margin-right: 0.5rem
+
+  +tablet
+    .menu-toggle
+      display: block
+
+    .nav-links
+      display: none
+      flex-direction: column
+      position: absolute
+      top: 0
+      right: 0
+      padding: 1em
+      text-align: left
+      z-index: 1
+      box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3)
+
+    a
+      padding: 1em
+      display: flex
+      justify-content: flex-start
+      line-height: 0
+
+    .nav-links.open
+      display: flex
+      background: var(--color-red)
+      align-items: flex-start
+ 
