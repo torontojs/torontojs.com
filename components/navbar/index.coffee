@@ -2,20 +2,20 @@ import React, { useState } from 'react'
 import JoinUs from '/components/join-us'
 
 import {
-  FaSlackHash,
-  FaGithub,
-  FaComment,
-  FaStickyNote,
-  FaFlag,
-  FaPenNib,
-  FaBars,
+  FaSlackHash
+  FaGithub
+  FaComment
+  FaStickyNote
+  FaFlag
+  FaPenNib
+  FaBars
   FaTimes
 } from 'react-icons/fa'
 
 import GuildLogo from './guild_logo.png'
 import './styles.sass'
 
-Navbar = ({ afterDark = false }) ->
+export default Navbar = ({ afterDark = false }) ->
   [menuOpen, setMenuOpen] = useState false
 
   <nav className="Navbar #{if afterDark then 'after-dark' else ''}">
@@ -59,4 +59,4 @@ Navbar = ({ afterDark = false }) ->
     </div>
   </nav>
 
-export default Navbar
+

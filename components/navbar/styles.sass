@@ -17,6 +17,8 @@ nav.Navbar
       +fancy-link
       &:hover
         background: var(--color-night)
+    .nav-links.open
+      background: var(--color-night)
 
   a
     +fancy-link
@@ -32,6 +34,7 @@ nav.Navbar
     transition: all 350ms ease-in-out
     &:hover
       background: var(--color-red)
+      
   .menu-toggle
     display: none
     background: none
@@ -41,9 +44,7 @@ nav.Navbar
     cursor: pointer
     padding: 0.5rem
     position: absolute
-    right: 1rem
-    top: 50%
-    transform: translateY(-50%)
+    right: 0
     z-index: 2
 
   .nav-links
@@ -54,7 +55,7 @@ nav.Navbar
     height: 1em
     font-size: 1.2rem
     margin-right: 0.5rem
-    
+
   +tablet
     .menu-toggle
       display: block
@@ -69,6 +70,7 @@ nav.Navbar
       text-align: left
       z-index: 1
       box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3)
+
     a
       padding: 1em
       display: flex
@@ -77,3 +79,6 @@ nav.Navbar
 
     .nav-links.open
       display: flex
+      background: var(--color-red)
+      align-items: flex-start
+ 
