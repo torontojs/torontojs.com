@@ -28,6 +28,8 @@ class Home extends React.Component
       <main>
 
         <div className="hero #{if afterDark then 'after-dark' else ''}">
+          <div className="stars" />
+          <div className="twinkling" />
           <CnTower afterDark={afterDark} />
           <div className="container">
             <div className="title">
