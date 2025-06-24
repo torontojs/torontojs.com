@@ -4,7 +4,7 @@ import Navbar from '/components/navbar'
 import Footer from '/components/footer'
 import ProfileCard from '/components/profile_card'
 import VolunteerList from './volunteers.json'
-import avatars from './avatars/*.jpg'
+import avatars from 'url:./avatars/*.jpg'
 import '/components/page/styles.sass'
 import './styles.sass'
 

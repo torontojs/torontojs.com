@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles.sass'
 
-import defaultImage from './torontojs.jpg'
+import defaultImage from 'url:./torontojs.jpg'
 
 ProfileCard = ({volunteer, avatar}) ->
   <a href={volunteer.profileURL} target="_blank" rel="noopener" className="ProfileCard">

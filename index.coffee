@@ -15,7 +15,7 @@ Sentry.init
   replaysOnErrorSampleRate: 1.0 # If you're not already sampling the entire session, change the sample rate to 100% when sampling sessions where errors occur.
 
 import React from 'react'
-import { render } from 'react-dom'
+import { createRoot } from 'react-dom/client'
 
 import {
   BrowserRouter
@@ -49,4 +49,5 @@ App = ->
     </Routes>
   </BrowserRouter>
 
-render <App/>, document.getElementById('app')
+createRoot document.getElementById 'app'
+  .render <App/>

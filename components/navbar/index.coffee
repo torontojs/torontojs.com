@@ -12,7 +12,7 @@ import {
   FaTimes
 } from 'react-icons/fa'
 
-import GuildLogo from './guild_logo.png'
+import GuildLogo from 'url:./guild_logo.png'
 import './styles.sass'
 
 export default Navbar = ({ afterDark = false }) ->
