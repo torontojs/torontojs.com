@@ -63,26 +63,21 @@ const slack_payload = ({ name, email, company, bio, github, website, avatar, cre
   // }
   const header = (text) => { return { type: 'header', text: { type: 'plain_text', text: text || 'undefined' } } }
 
-  const infoBlock = () => {
-    return {
-      type: "section",
-      text: {
-        type: "mrkdwn",
-        text: [
-          `Email: ${email || 'undefined'}`, 
-          `GitHub: <https://github.com/${github}|${github}>`, 
-          `Created At: ${created_at || 'undefined'}`, 
-          `Company: ${company || 'undefined'}`,
-          `Website: ${website || 'undefined'}`,
-          ``,
-          `Bio: ${bio}`
-        ].join("\n"),
-      },
-      accessory: {
-        type: "image",
-        image_url: 'https://www.gravatar.com/avatar/?d=identicon', 
-        alt_text: 'Github Avatar',
-      }
+  const infoBlock = {
+    type: 'section',
+    text: {
+      type: 'mrkdwn',
+          text: `Email: ${email}
+GitHub: <https://github.com/${github}|${github}>
+Created At: ${created_at}
+Company: ${company}
+Website: ${website}
+Bio: ${bio}`
+  },
+    accessory: {
+      type: 'image',
+      image_url: avatar || 'https://www.gravatar.com/avatar/?d=identicon', 
+      alt_text: 'Github Avatar',
     }
   }
 
@@ -91,7 +86,7 @@ const slack_payload = ({ name, email, company, bio, github, website, avatar, cre
     username: 'InviteBot™',
     blocks: [
       header(name),
-      infoBlock(),
+      infoBlock,
     ]
   }
 }
