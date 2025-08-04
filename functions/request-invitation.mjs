@@ -21,7 +21,7 @@ const handler = async (req, context) => {
     // verify JWT from cookie
     const token = context.cookies.get('token')
     const user = jwt.verify(token, process.env.JWT_PUBLIC_KEY, { algorithm: 'ES512' })
-    Sentry.setUser({id: user.github, email: user.email, username: user.name})
+    Sentry.setUser({ id: user.github, email: user.email, username: user.name })
 
     // post to slack
     await post_to_slack(slack_payload(user))
@@ -29,7 +29,7 @@ const handler = async (req, context) => {
     // return 200
     return new Response('gotcha', { status: 200 })
 
-  } catch(e) {
+  } catch (e) {
     Sentry.captureException(e)
     console.log(e)
     console.log(`token: ${token}`)
@@ -49,7 +49,7 @@ const post_to_slack = async (payload) => {
   return true
 }
 
-const slack_payload = ({name, email, company, bio, github, website, avatar, created_at}) => {
+const slack_payload = ({ name, email, company, bio, github, website, avatar, created_at }) => {
   // {
   //   "name": "Kieran Huggins",
   //   "email": "kieran@kieran.ca",
@@ -62,25 +62,38 @@ const slack_payload = ({name, email, company, bio, github, website, avatar, crea
   //   "iat": 1724362049
   // }
   const header = (text) => { return { type: 'header', text: { type: 'plain_text', text: text || 'undefined' } } }
-  const para = (text) => { return { type: 'section', text: { type: 'mrkdwn', text: text || 'undefined' } } }
-  const section = (obj={}) => { return { type: 'section', fields: Object.entries(obj).map( ([key, val]) => field(key, val) ) } }
-  const field = (name, value) => { return { type: 'mrkdwn', text: `*${name || 'undefined'}*\n${value || 'undefined'}` } }
-  const bio_with_avatar = (text, image_url) => { return { type: 'section', text: { type: 'mrkdwn', text: text || 'undefined' }, accessory: { type: 'image', image_url: image_url || 'https://www.gravatar.com/avatar/?d=identicon', alt_text: 'Github Avatar' } } }
-  const divider = () => { return { type: 'divider' } }
+
+  const infoBlock = () => {
+    return {
+      type: "section",
+      text: {
+        type: "mrkdwn",
+        text: [
+          `Email: ${email || 'undefined'}`, 
+          `GitHub: <https://github.com/${github}|${github}>`, 
+          `Created At: ${created_at || 'undefined'}`, 
+          `Company: ${company || 'undefined'}`
+          `Website: ${website || 'undefined'}`,
+          ``,
+          `Bio: ${bio}`
+        ].join("\n"),
+      },
+      accessory: {
+        type: "image",
+        image_url: 'https://www.gravatar.com/avatar/?d=identicon', 
+        alt_text: 'Github Avatar',
+      }
+    }
+  }
 
   return {
     channel: process.env.SLACK_CHANNEL,
     username: 'InviteBot™',
     blocks: [
       header(name),
-      para(`*Email*\n${email || 'no email available'}`),
-      divider(),
-      bio_with_avatar(bio, avatar),
-      divider(),
-      section({github: `<https://github.com/${github}|${github}>`, created_at}),
-      section({company, website})
+      infoBlock(),
     ]
   }
 }
 
-export default Sentry.wrapHandler(handler, {captureTimeoutWarning: false})
+export default Sentry.wrapHandler(handler, { captureTimeoutWarning: false })
