@@ -72,7 +72,7 @@ const slack_payload = ({ name, email, company, bio, github, website, avatar, cre
           `Email: ${email || 'undefined'}`, 
           `GitHub: <https://github.com/${github}|${github}>`, 
           `Created At: ${created_at || 'undefined'}`, 
-          `Company: ${company || 'undefined'}`
+          `Company: ${company || 'undefined'}`,
           `Website: ${website || 'undefined'}`,
           ``,
           `Bio: ${bio}`
