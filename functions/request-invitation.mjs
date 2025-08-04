@@ -117,7 +117,7 @@ const slack_payload = ({
   return {
     channel: process.env.SLACK_CHANNEL,
     username: "InviteBot™",
-    blocks: [header(name), infoBlock],
+    blocks: [header(name), infoBlock()],
   };
 };
 
