@@ -105,9 +105,8 @@ class JoinUs extends React.Component
     return false unless github = @state.user?.github
     @setState requesting: true
     res = await fetch "/.netlify/functions/request-invitation", method: "GET"
-    @setState requesting: false
     if res.ok
       Cookies.set "invitation_requested_at_#{github}", (new Date).toISOString(), expires: 7, path: '/'
-      @setState requested: true
+      @setState requesting: false, requested: true
     else
-      @setState requested: false, request_response: <p>There was a problem sending your request.<br/><br/>Please try again later.</p>
+      @setState requesting: false, requested: false, request_response: <p>There was a problem sending your request.<br/><br/>Please try again later.</p>
