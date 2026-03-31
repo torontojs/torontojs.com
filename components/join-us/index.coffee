@@ -101,6 +101,7 @@ class JoinUs extends React.Component
 
   requestInvite: (evt)=>
     evt?.preventDefault?()
+    return false if @state.requesting or @state.requested
     return false unless github = @state.user?.github
     @setState requesting: true
     res = await fetch "/.netlify/functions/request-invitation", method: "GET"
