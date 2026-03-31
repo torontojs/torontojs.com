@@ -76,12 +76,12 @@ class JoinUs extends React.Component
         </div>
       </div>
       <div className="buttons">
-        <a className="button primary" onClick={=> @requestInvite()}>
+        <button className="button primary" type="button" onClick={=> @requestInvite()}>
           Request Invitation
-        </a>
-        <a className="button" onClick={@signOut}>
+        </button>
+        <button className="button" type="button" onClick={@signOut}>
           Sign Out
-        </a>
+        </button>
       </div>
     </>
 
