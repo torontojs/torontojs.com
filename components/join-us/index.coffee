@@ -22,6 +22,7 @@ class JoinUs extends React.Component
       user: getUser()
       modal_open: deleteParam 'join-slack'
       requested: false
+      requesting: false
       request_response: null
 
   signOut: =>
@@ -76,12 +77,12 @@ class JoinUs extends React.Component
         </div>
       </div>
       <div className="buttons">
-        <a className="button primary" onClick={=> @requestInvite()}>
+        <button className="button primary" type="button" disabled={@state.requesting} onClick={=> @requestInvite()}>
           Request Invitation
-        </a>
-        <a className="button" onClick={@signOut}>
+        </button>
+        <button className="button" type="button" onClick={@signOut}>
           Sign Out
-        </a>
+        </button>
       </div>
     </>
 
@@ -100,10 +101,12 @@ class JoinUs extends React.Component
 
   requestInvite: (evt)=>
     evt?.preventDefault?()
+    return false if @state.requesting or @state.requested
     return false unless github = @state.user?.github
+    @setState requesting: true
     res = await fetch "/.netlify/functions/request-invitation", method: "GET"
     if res.ok
       Cookies.set "invitation_requested_at_#{github}", (new Date).toISOString(), expires: 7, path: '/'
-      @setState requested: true
+      @setState requesting: false, requested: true
     else
-      @setState requested: false, request_response: <p>There was a problem sending your request.<br/><br/>Please try again later.</p>
+      @setState requesting: false, requested: false, request_response: <p>There was a problem sending your request.<br/><br/>Please try again later.</p>
