@@ -49,12 +49,6 @@
         "avatarName": "danny"
       },
       {
-        "name": "Drey Moreau",
-        "profileURL": "https://www.linkedin.com/in/dreymoreau/",
-        "profileURLText": "linkedin.com",
-        "avatarName": "drey"
-      },
-      {
         "name": "Elizabeth Pinero",
         "profileURL": "https://www.linkedin.com/in/elizabeth-pinero-984471177/",
         "profileURLText": "linkedin.com",
@@ -94,6 +88,12 @@
         "profileURL": "https://gingerkiwi.dev/",
         "profileURLText": "gingerkiwi.dev",
         "avatarName": "liz"
+      },
+      {
+        "name": "Lune M",
+        "profileURL": "https://www.linkedin.com/in/lunem/",
+        "profileURLText": "linkedin.com",
+        "avatarName": "lune"
       },
       {
         "name": "Matt J Jackson",
