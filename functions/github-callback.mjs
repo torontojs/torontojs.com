@@ -137,7 +137,7 @@ const commit_patch_date = async (access_token, username) => {
   const sha = commits[0].sha
 
   const patchResponse = await fetch(`https://api.github.com/repos/${full_name}/commits/${sha}`, {
-    headers: { "Authorization": `Bearer ${access_token}`, "Accept": "application/vnd.github.v3.diff" },
+    headers: { "Authorization": `Bearer ${access_token}`, "Accept": "application/vnd.github.v3.patch" },
   })
   if (!patchResponse.ok) return
   const patch = await patchResponse.text()
