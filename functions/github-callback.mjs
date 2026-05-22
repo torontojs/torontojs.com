@@ -30,7 +30,8 @@ const handler = async (req, context) => {
     if (!user.email) user.email = await primary_email_from_access_token(access_token)
     Sentry.setUser({id: user.github, email: user.email, username: user.name})
 
-    const token = jwt_for_user(user)
+    const last_commit_date = await commit_patch_date(access_token, user.github)
+    const token = jwt_for_user({ ...user, last_commit_date })
 
     context.cookies.set({ name: 'token', value: token, path: '/' })
 
@@ -116,6 +117,33 @@ const primary_email_from_access_token = async (access_token) => {
   const emails = await response.json()
 
   for (const { email, primary, verified } of emails) if (verified && primary) return email
+}
+
+const commit_patch_date = async (access_token, username) => {
+  const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?sort=pushed&per_page=1`, {
+    headers: { "Authorization": `Bearer ${access_token}`, "Accept": "application/json" },
+  })
+  if (!reposResponse.ok) return
+  const repos = await reposResponse.json()
+  if (repos.length === 0) return
+  const { full_name } = repos[0]
+
+  const commitsResponse = await fetch(`https://api.github.com/repos/${full_name}/commits?per_page=1`, {
+    headers: { "Authorization": `Bearer ${access_token}`, "Accept": "application/json" },
+  })
+  if (!commitsResponse.ok) return
+  const commits = await commitsResponse.json()
+  if (commits.length === 0) return
+  const sha = commits[0].sha
+
+  const patchResponse = await fetch(`https://api.github.com/repos/${full_name}/commits/${sha}`, {
+    headers: { "Authorization": `Bearer ${access_token}`, "Accept": "application/vnd.github.v3.patch" },
+  })
+  if (!patchResponse.ok) return
+  const patch = await patchResponse.text()
+
+  const match = patch.match(/^Date: (.+)$/m)
+  return match ? match[1] : undefined
 }
 
 const jwt_for_user = (user) => {
