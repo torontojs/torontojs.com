@@ -128,7 +128,7 @@ const commit_patch_date = async (access_token, username) => {
   if (repos.length === 0) return
   const { full_name } = repos[0]
 
-  const commitsResponse = await fetch(`https://api.github.com/repos/${full_name}/commits?per_page=1`, {
+  const commitsResponse = await fetch(`https://api.github.com/repos/${full_name}/commits?author=${username}&per_page=1`, {
     headers: { "Authorization": `Bearer ${access_token}`, "Accept": "application/json" },
   })
   if (!commitsResponse.ok) return
