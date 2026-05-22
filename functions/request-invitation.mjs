@@ -61,6 +61,7 @@ const slack_payload = ({
   website,
   avatar,
   created_at,
+  last_commit_date,
 }) => {
   // {
   //   "name": "Kieran Huggins",
@@ -95,6 +96,14 @@ const slack_payload = ({
     };
   };
 
+  const commitDateLine = () => {
+    if (!last_commit_date) return "Last Commit: N/A"
+    const offsetMatch = last_commit_date.match(/([+-]\d{4})$/)
+    const offset = offsetMatch?.[1]
+    const sus = offset && !["-0400", "-0500"].includes(offset) ? " :sus:" : ""
+    return `Last Commit: ${last_commit_date}${sus}`
+  }
+
   const infoBlock = () => {
     return {
       type: "section",
@@ -104,6 +113,7 @@ const slack_payload = ({
           `Email: ${email || "undefined"}`,
           `GitHub: <https://github.com/${github}|${github}>`,
           `Created At: ${created_at || "undefined"}`,
+          commitDateLine(),
           `Company: ${company || "undefined"}`,
           `Website: ${website || "undefined"}`,
           ``,
