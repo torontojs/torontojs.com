@@ -120,13 +120,14 @@ const primary_email_from_access_token = async (access_token) => {
 }
 
 const commit_patch_date = async (access_token, username) => {
-  const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?sort=pushed&per_page=1`, {
+  const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?sort=pushed&per_page=10`, {
     headers: { "Authorization": `Bearer ${access_token}`, "Accept": "application/json" },
   })
   if (!reposResponse.ok) return
   const repos = await reposResponse.json()
-  if (repos.length === 0) return
-  const { full_name } = repos[0]
+  const nonFork = repos.find(r => !r.fork)
+  if (!nonFork) return
+  const { full_name } = nonFork
 
   const commitsResponse = await fetch(`https://api.github.com/repos/${full_name}/commits?author=${username}&per_page=1`, {
     headers: { "Authorization": `Bearer ${access_token}`, "Accept": "application/json" },
